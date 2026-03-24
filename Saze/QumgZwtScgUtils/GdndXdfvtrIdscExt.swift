@@ -31,3 +31,35 @@ extension View {
     return nil
   }
 }
+
+struct StrokeLabel: UIViewRepresentable {
+  var text: String
+  var strokeColor: UIColor = .black
+  var fillColor: UIColor = .white
+  var strokeWidth: CGFloat = -4
+  var font: UIFont = .boldSystemFont(ofSize: 24)
+  var alignment: NSTextAlignment = .center
+
+  func makeUIView(context: Context) -> UILabel {
+    let label = UILabel()
+    label.textAlignment = alignment
+    label.layer.allowsEdgeAntialiasing = true
+    label.layer.shouldRasterize = true
+    label.layer.rasterizationScale = UIScreen.main.scale
+    return label
+  }
+
+  func updateUIView(_ label: UILabel, context: Context) {
+    label.textAlignment = alignment
+    let attr = NSAttributedString(
+      string: text,
+      attributes: [
+        .strokeColor: strokeColor,
+        .foregroundColor: fillColor,
+        .strokeWidth: strokeWidth,
+        .font: font,
+      ]
+    )
+    label.attributedText = attr
+  }
+}
