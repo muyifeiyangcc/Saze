@@ -17,43 +17,33 @@ struct EckPjrFxxkProfile: View {
     }
   }
   let columns = [
-    GridItem(.adaptive(minimum: .infinity, maximum: .infinity)),
-    GridItem(.adaptive(minimum: .infinity, maximum: .infinity)),
+    GridItem(.flexible(), spacing: 25),
+    GridItem(.flexible(), spacing: 25),
   ]
   var body: some View {
     #if DEBUG
       let _ = forceRedraw
     #endif
-    ZStack {
-      GeometryReader { _ in
-        Image("Assets/saze_default_bg").resizable().scaledToFill().ignoresSafeArea()
-      }
+    GeometryReader { _ in
+      Image("Assets/saze_profile_bg").resizable().scaledToFill().ignoresSafeArea()
       VStack(spacing: 0) {
         Spacer().frame(height: 12.h)
-        HStack(spacing: 16.w) {
-          ZStack {
-            Color.white
-              .frame(width: 58.r, height: 58.r)
-              .clipShape(Circle())
-              .overlay(
-                Circle()
-                  .stroke(Color("zs2"), lineWidth: 1)
-              )
+        HStack(alignment: .top, spacing: 0) {
+          HStack(spacing: 10.w) {
             KFImage(URL(string: appState.wfzqCubCpmUser?.avatar ?? ""))
-              .fade(duration: 0.25)
+              .fade(duration: 0.2)
               .resizable()
               .scaledToFill()
-              .frame(width: 50.r, height: 50.r)
+              .frame(width: 62.r, height: 62.r)
               .clipShape(Circle())
-          }
-          ZStack {
+              .overlay(Circle().stroke(.white.opacity(0.1), lineWidth: 4.0))
             Text(appState.wfzqCubCpmUser?.name ?? "")
-              .foregroundColor(.black.opacity(0.25))
-              .font(.system(size: 24.sp, weight: .bold))
-              .offset(y: 2)
-            Text(appState.wfzqCubCpmUser?.name ?? "")
-              .foregroundColor(.black)
-              .font(.system(size: 24.sp, weight: .bold))
+              .foregroundColor(.zs1)
+              .font(.system(size: 16.sp, weight: .black))
+              .glowBorder(color: .fzs1, lineWidth: 4)
+            Image("Assets/saze_edit_icon")
+              .resizable().scaledToFit().frame(
+                width: 12.r, height: 12.r)
           }
           .onTapGesture {
             router.sazePath.append(
@@ -63,41 +53,38 @@ struct EckPjrFxxkProfile: View {
                     "http://192.168.9.129:4000/edit")!
               ))
           }
+          .padding(.top, 4.h)
           Spacer()
+          Image("Assets/saze_setting_icon")
+            .resizable().scaledToFit().frame(
+              width: 24.r, height: 24.r
+            )
+            .onTapGesture {
+              router.sazePath.append(
+                WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+                  url: URL(
+                    string:
+                      "http://192.168.9.129:4000/setting"
+                  )!
+                ))
+            }
         }
         .padding(.horizontal, 20.w)
-        Spacer().frame(height: 20.h)
         HStack(spacing: 0) {
-          VStack(alignment: .leading, spacing: 6.h) {
-            Text(
-              "\(filteredPictureDynamics.count)"
-            )
-            .foregroundColor(
-              .black
-            )
-            .font(.system(size: 20.sp, weight: .bold))
-            Text(
-              "Posts"
-            ).foregroundColor(
-              .black
-            )
-            .font(.system(size: 14.sp))
-          }
-          Spacer()
           VStack(alignment: .leading, spacing: 6.h) {
             Text(
               "\(appState.wfzqCubCpmUser?.follow.count ?? 0)"
             )
             .foregroundColor(
-              .black
+              .fzs1
             )
-            .font(.system(size: 20.sp, weight: .bold))
+            .font(.system(size: 16.sp, weight: .bold))
             Text(
               "Following"
             ).foregroundColor(
-              .black
+              .fzs1
             )
-            .font(.system(size: 14.sp))
+            .font(.system(size: 12.sp))
           }
           .onTapGesture {
             router.sazePath.append(
@@ -114,15 +101,15 @@ struct EckPjrFxxkProfile: View {
               "\(appState.wfzqCubCpmUser?.fans.count ?? 0)"
             )
             .foregroundColor(
-              .black
+              .fzs1
             )
-            .font(.system(size: 20.sp, weight: .bold))
+            .font(.system(size: 16.sp, weight: .bold))
             Text(
               "Followers"
             ).foregroundColor(
-              .black
+              .fzs1
             )
-            .font(.system(size: 14.sp))
+            .font(.system(size: 12.sp))
           }
           .onTapGesture {
             router.sazePath.append(
@@ -133,165 +120,132 @@ struct EckPjrFxxkProfile: View {
                 )!
               ))
           }
-          Spacer().frame(width: 33.w)
         }
-        .padding(.horizontal, 20.w)
-        Spacer().frame(height: 12.h)
-        HStack {
-          HStack(spacing: 4.w) {
-            Image("Assets/saze_edit_icon")
-              .resizable()
-              .scaledToFit()
-              .frame(
-                width: 22.r, height: 22.r
-              )
-            Text("Edit")
-              .foregroundColor(.black)
-              .font(.system(size: 16.sp))
-          }
-          .padding(.all, 8)
-          .background(.white)
-          .overlay(RoundedRectangle(cornerRadius: 12.r).stroke(Color("zs2"), lineWidth: 1))
-          .cornerRadius(12.r)
-          .onTapGesture {
-            router.sazePath.append(
-              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
-                url: URL(
-                  string:
-                    "http://192.168.9.129:4000/edit"
-                )!
-              ))
-          }
+        .padding(.leading, 102.w)
+        .padding(.trailing, 138.w)
+        Spacer().frame(height: 14.h)
+        HStack(spacing: 12.w) {
+          Image("Assets/saze_wallet_icon")
+            .resizable().scaledToFit().frame(
+              width: 40.r, height: 40.r)
+          Text("WALLET")
+            .foregroundColor(.zs1)
+            .font(.system(size: 20.sp, weight: .black))
+            .glowBorder(color: .fzs1, lineWidth: 4)
           Spacer()
-          HStack(spacing: 4.w) {
-            Image("Assets/saze_wallet_icon")
-              .resizable()
-              .scaledToFit()
-              .frame(
-                width: 22.r, height: 22.r
-              )
-            Text("Wallet")
-              .foregroundColor(.black)
-              .font(.system(size: 16.sp))
-          }
-          .padding(.all, 8)
-          .background(.white)
-          .overlay(RoundedRectangle(cornerRadius: 12.r).stroke(Color("zs2"), lineWidth: 1))
-          .cornerRadius(12.r)
-          .onTapGesture {
-            router.sazePath.append(
-              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
-                url: URL(
-                  string:
-                    "http://192.168.9.129:4000/coins"
-                )!
-              ))
-          }
-          Spacer()
-          HStack(spacing: 4.w) {
-            Image("Assets/saze_setting_icon")
-              .resizable()
-              .scaledToFit()
-              .frame(
-                width: 22.r, height: 22.r
-              )
-            Text("Setting")
-              .foregroundColor(.black)
-              .font(.system(size: 16.sp))
-          }
-          .padding(.all, 8)
-          .background(.white)
-          .overlay(RoundedRectangle(cornerRadius: 12.r).stroke(Color("zs2"), lineWidth: 1))
-          .cornerRadius(12.r)
-          .onTapGesture {
-            router.sazePath.append(
-              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
-                url: URL(
-                  string:
-                    "http://192.168.9.129:4000/setting"
-                )!
-              ))
-          }
         }
-        .padding(.horizontal, 20.w)
-        Spacer().frame(height: 20.h)
-        Text("All")
-          .font(.system(size: 16.sp, weight: .bold))
-          .foregroundColor(.white)
-          .padding(.horizontal, 24.5.w)
-          .padding(.vertical, 8.h)
-          .background(
-            LinearGradient(
-              colors: [
-                Color(red: 165 / 255, green: 237 / 255, blue: 57 / 255),
-                Color(red: 48 / 255, green: 234 / 255, blue: 255 / 255),
-              ],
-              startPoint: .leading,
-              endPoint: .trailing
-            )
-          )
-          .overlay(
-            RoundedRectangle(cornerRadius: 12.r)
-              .stroke(
-                Color(red: 48 / 255, green: 234 / 255, blue: 255 / 255), lineWidth: 1)
-          )
-          .cornerRadius(12)
-          .overlay(
-            Text("\(filteredPictureDynamics.count)")
-              .foregroundColor(.white).font(
-                .system(size: 12.sp)
-              )
-              .lineLimit(1)
-              .frame(width: 24.r, height: 24.r)
-              .background(Color("zs2"))
-              .clipShape(
-                Circle()
-              )
-              .offset(y: -12.r),
-            alignment: .topTrailing
-          )
-          .padding(.horizontal, 20.w)
-          .frame(maxWidth: .infinity, alignment: .leading)
-        Spacer().frame(height: 20.h)
+        .padding(.horizontal, 25.w)
+        .frame(maxWidth: .infinity)
+        .frame(height: 70.h)
+        .background(.white.opacity(0.2))
+        .background(.ultraThinMaterial)
+        .cornerRadius(40.r)
+        .onTapGesture {
+          router.sazePath.append(
+            WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+              url: URL(
+                string:
+                  "http://192.168.9.129:4000/coins"
+              )!
+            ))
+        }
+        .padding(.horizontal, 30.w)
+        Spacer().frame(height: 16.h)
         if filteredPictureDynamics.isEmpty {
           VStack {
-            Image("Assets/saze_empty").resizable().scaledToFit().frame(width: 158.r, height: 158.r)
-            Text("No Data")
-              .foregroundColor(.black)
-              .font(.system(size: 18.sp))
+            Spacer().frame(height: 20.h)
+            Text("POST")
+              .foregroundColor(.zts1)
+              .font(.system(size: 24.sp, weight: .black))
+              .glowBorder(color: .fzs1, lineWidth: 4)
+              .padding(.leading, 20.w)
+              .frame(maxWidth: .infinity, alignment: .leading)
+            VStack {
+              Image("Assets/saze_empty").resizable().scaledToFit().frame(
+                width: 152.r, height: 152.r)
+              Text("No Data")
+                .foregroundColor(.black)
+                .font(.system(size: 18.sp))
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
           }
           .frame(maxWidth: .infinity, maxHeight: .infinity)
+          .background(.white)
+          .clipShape(MacuSupJsqRoundedCorner(radius: 40.r, corners: [.topLeft, .topRight]))
+          .ignoresSafeArea()
         } else {
-          LazyVGrid(columns: columns, spacing: 16) {
-            ForEach(filteredPictureDynamics, id: \.self) { dynamicEntity in
-              GeometryReader { ggeo in
-                KFImage(URL(string: dynamicEntity.dynamicPic.first!))
-                  .fade(duration: 0.25)
-                  .resizable()
-                  .scaledToFill()
-                  .frame(width: ggeo.size.width, height: 204.h)
-                  .clipped()
-                  .cornerRadius(24.r)
-                  .overlay(
-                    RoundedRectangle(cornerRadius: 24.r)
-                      .stroke(Color.black, lineWidth: 2)
-                  )
-                  .onTapGesture {
-                    router.sazePath.append(
-                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
-                        url: URL(
-                          string:
-                            "http://192.168.9.129:4000/picPostDetails/\(dynamicEntity.dynamicId)"
-                        )!
-                      ))
-                  }
+          VStack {
+            Spacer().frame(height: 20.h)
+            Text("POST")
+              .foregroundColor(.zts1)
+              .font(.system(size: 24.sp, weight: .black))
+              .glowBorder(color: .fzs1, lineWidth: 4)
+              .padding(.leading, 20.w)
+              .frame(maxWidth: .infinity, alignment: .leading)
+            LazyVGrid(columns: columns) {
+              ForEach(filteredPictureDynamics, id: \.self) { dynamicEntity in
+                GeometryReader { geometry in
+                  KFImage(URL(string: dynamicEntity.dynamicPic.first!))
+                    .fade(duration: 0.25)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width)
+                    .frame(height: 211.h)
+                    .clipped()
+                    .cornerRadius(40.r)
+                    .overlay(
+                      HStack(spacing: 10.w) {
+                        Text("Check")
+                          .foregroundColor(.white)
+                          .font(.system(size: 16.sp, weight: .semibold))
+                        Image("Assets/saze_item_forward")
+                          .resizable().scaledToFit()
+                          .frame(width: 18.r, height: 18.r)
+                          .frame(width: 30.r, height: 30.r)
+                          .background(.zs1)
+                          .clipShape(Circle())
+                      }
+                      .padding(.horizontal, 10.w)
+                      .padding(.vertical, 6.h)
+                      .background(.white.opacity(0.2))
+                      .background(.ultraThinMaterial)
+                      .cornerRadius(100.r)
+                      .overlay(
+                        RoundedRectangle(cornerRadius: 100.r)
+                          .stroke(
+                            LinearGradient(
+                              gradient: Gradient(stops: [
+                                .init(color: Color.white, location: 0),
+                                .init(color: Color.white.opacity(0), location: 0.5381),
+                                .init(color: Color.white.opacity(0.75), location: 1),
+                              ]),
+                              startPoint: .topLeading,
+                              endPoint: .bottomTrailing
+                            ),
+                            lineWidth: 1
+                          )
+                      )
+                      .offset(y: -10.h), alignment: .bottom
+                    )
+                    .onTapGesture {
+                      router.sazePath.append(
+                        WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+                          url: URL(
+                            string:
+                              "http://192.168.9.129:4000/picPostDetails/\(dynamicEntity.dynamicId)"
+                          )!
+                        ))
+                    }
+                }
               }
-              .aspectRatio(1, contentMode: .fill)
             }
           }
           .padding(.horizontal, 20.w)
+          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+          .background(.white)
+          .clipShape(MacuSupJsqRoundedCorner(radius: 40.r, corners: [.topLeft, .topRight]))
+          .ignoresSafeArea()
         }
-        Spacer()
       }
     }
     .enableInjection()

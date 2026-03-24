@@ -10,6 +10,7 @@ struct IrlvCtgVhhFound: View {
   @Environment(\.modelContext) private var modelContext
   @EnvironmentObject var router: SvcdXfvTsxRouter
   @Query private var dynamics: [DynamicModel]
+  @Query private var users: [UserModel]
   var filteredVideoDynamics: [DynamicModel] {
     guard let blockList = appState.wfzqCubCpmUser?.blockList else {
       return dynamics.filter { $0.dynamicType == 1 }
@@ -18,115 +19,176 @@ struct IrlvCtgVhhFound: View {
       !blockList.contains($0.user?.userId ?? "") && $0.dynamicType == 1
     }
   }
+  var filteredUsers: [UserModel] {
+    let blockSet = Set(appState.wfzqCubCpmUser?.blockList ?? [])
+    return users.filter { model in
+      if blockSet.contains(model.userId) {
+        return false
+      }
+      if let currentUserId = appState.wfzqCubCpmUser?.userId {
+        return currentUserId != model.userId
+      }
+      return true
+    }
+  }
 
   var body: some View {
     #if DEBUG
       let _ = forceRedraw
     #endif
     GeometryReader { geo in
-      Image("Assets/saze_default_bg").resizable().scaledToFill().ignoresSafeArea()
+      Color.bgs1.ignoresSafeArea()
       VStack(spacing: 0) {
         Spacer().frame(height: 20.h)
         HStack(spacing: 0) {
-          Text("Hot Video")
-            .foregroundColor(.white)
-            .font(.system(size: 16.sp, weight: .bold))
-            .padding(.horizontal, 10.w)
-            .padding(.vertical, 8.h)
-            .background(
-              LinearGradient(
-                colors: [
-                  Color(red: 165 / 255, green: 237 / 255, blue: 57 / 255),
-                  Color(red: 48 / 255, green: 234 / 255, blue: 255 / 255),
-                ],
-                startPoint: .leading,
-                endPoint: .trailing
-              )
-            )
-            .overlay(
-              RoundedRectangle(cornerRadius: 20.r)
-                .stroke(
-                  Color(red: 48 / 255, green: 234 / 255, blue: 255 / 255), lineWidth: 1)
-            )
-            .cornerRadius(20.r)
+          Text("FOR YOU")
+            .foregroundColor(.zts1)
+            .font(.system(size: 27.sp, weight: .black))
+            .glowBorder(color: .fzs1, lineWidth: 4)
           Spacer()
-          Image("Assets/saze_vp_add")
-            .resizable().scaledToFit().frame(width: 30.r, height: 30.r)
-            .onTapGesture {
-              router.sazePath.append(
-                WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
-                  url: URL(
-                    string:
-                      "http://192.168.9.129:4000/publishVideoPost")!
-                ))
+          HStack {
+            Image("Assets/saze_video_add_icon")
+              .resizable().scaledToFit().frame(width: 18.r, height: 18.r)
+              .frame(width: 34.r, height: 34.r)
+              .background(.white.opacity(0.6))
+              .clipShape(Circle())
+              .overlay(Circle().stroke(.white.opacity(0.2), lineWidth: 3))
+            Text("SHARE")
+              .foregroundColor(.fzs1)
+              .font(.system(size: 14.sp, weight: .bold))
+          }
+          .onTapGesture {
+            router.sazePath.append(
+              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+                url: URL(
+                  string:
+                    "http://192.168.9.129:4000/publishVideoPost")!
+              ))
+          }
+        }
+        .padding(.horizontal, 15.w).padding(.leading, 5.w)
+        Spacer().frame(height: 13.h)
+        ScrollView(.horizontal) {
+          HStack(spacing: 20.w) {
+            ForEach(filteredUsers, id: \.self) { user in
+              let followed = appState.wfzqCubCpmUser?.follow.contains(user.userId) ?? false
+              VStack(spacing: 19.h) {
+                KFImage(URL(string: user.avatar))
+                  .fade(duration: 0.2)
+                  .resizable()
+                  .scaledToFill()
+                  .frame(width: 64.r, height: 64.r)
+                  .clipShape(Circle())
+                  .overlay(Circle().stroke(.white.opacity(0.1), lineWidth: 2.0))
+                  .overlay(
+                    Image(followed ? "Assets/saze_gou_icon" : "Assets/saze_video_add_icon")
+                      .resizable().scaledToFit().frame(width: 8.r, height: 8.r)
+                      .frame(width: 14.r, height: 14.r)
+                      .background(.white)
+                      .clipShape(Circle()),
+                    alignment: .bottomTrailing)
+                Text(user.name)
+                  .padding(.vertical, 6.h)
+                  .padding(.horizontal, 10.w)
+                  .frame(width: 80.w)
+                  .background(.white.opacity(0.2))
+                  .background(.ultraThinMaterial)
+                  .lineLimit(1)
+                  .cornerRadius(100.r)
+                  .overlay(
+                    RoundedRectangle(cornerRadius: 100.r)
+                      .stroke(
+                        LinearGradient(
+                          gradient: Gradient(stops: [
+                            .init(color: Color.white, location: 0),
+                            .init(color: Color.white.opacity(0), location: 0.5381),
+                            .init(color: Color.white.opacity(0.75), location: 1),
+                          ]),
+                          startPoint: .topLeading,
+                          endPoint: .bottomTrailing
+                        ),
+                        lineWidth: 1
+                      )
+                  )
+              }
+              .padding(.horizontal, 11.w)
+              .padding(.vertical, 14.h)
+              .background(.fzs1)
+              .cornerRadius(30.r)
+              .overlay(
+                RoundedRectangle(cornerRadius: 30.r)
+                  .stroke(
+                    LinearGradient(
+                      gradient: Gradient(stops: [
+                        .init(color: .white, location: 0),
+                        .init(color: Color.gray.opacity(0), location: 0.5757),
+                        .init(color: .white, location: 1),
+                      ]),
+                      startPoint: .topLeading,
+                      endPoint: .bottomTrailing
+                    ),
+                    lineWidth: 1
+                  )
+              )
             }
-        }.padding(.horizontal, 20.w)
-        Spacer().frame(height: 20.h)
+          }
+        }
+        .scrollIndicators(.hidden)
+        .padding(.leading, 20.w)
+        Spacer().frame(height: 24.h)
         ScrollView(.vertical) {
           VStack(spacing: 12.h) {
             ForEach(filteredVideoDynamics, id: \.self) { dynamicEntity in
-              VStack(spacing: 12.h) {
+              VStack(spacing: 0) {
                 HStack(spacing: 8.w) {
                   KFImage(URL(string: dynamicEntity.user?.avatar ?? ""))
                     .fade(duration: 0.25)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 36.r, height: 36.r)
+                    .frame(width: 44.r, height: 44.r)
                     .clipShape(Circle())
                   Text("\(dynamicEntity.user?.name ?? "")")
-                    .foregroundColor(.white)
-                    .font(.system(size: 14.sp, weight: .bold))
+                    .font(.system(size: 16.sp, weight: .bold))
+                    .foregroundColor(.fzs1)
                   Spacer()
                 }
+                Text(dynamicEntity.dynamicDesc)
+                  .foregroundColor(Color(red: 0.13, green: 0.13, blue: 0.13))
+                  .lineLimit(1)
+                  .font(.system(size: 14.sp))
+                  .frame(maxWidth: .infinity, alignment: .leading)
+                  .padding(.vertical, 10.h)
                 KFImage(URL(string: dynamicEntity.dynamicPic.first!))
                   .fade(duration: 0.25)
                   .resizable()
                   .scaledToFill()
-                  .frame(height: 268.h)
+                  .frame(width: .infinity, height: 235.h)
                   .cornerRadius(12.r)
                   .overlay(
-                    Image("Assets/saze_vp_item_play")
-                      .resizable().scaledToFit().frame(width: 30.r, height: 30.r),
-                    alignment: .center
+                    Image("Assets/saze_item_play")
+                      .resizable().scaledToFit().frame(width: 36.r, height: 36.r).offset(
+                        x: -10.r, y: -10.r),
+                    alignment: .bottomTrailing
                   )
-                  .overlay(
-                    VStack(spacing: 13.h) {
-                      VStack(spacing: 6.h) {
-                        Image("Assets/saze_post_item_dz")
-                          .resizable().scaledToFit().frame(width: 20.r, height: 20.r)
-                        Text("\(dynamicEntity.dynamicLikeCount)")
-                          .foregroundColor(.white)
-                          .font(.system(size: 16.sp))
-                      }
-                      .padding(.horizontal, 5.w)
-                      .padding(.vertical, 6.h)
-                      .background(.black)
-                      .cornerRadius(12.r)
-                      .overlay(RoundedRectangle(cornerRadius: 12.r).stroke(.white, lineWidth: 1))
-                      VStack(spacing: 6.h) {
-                        Image("Assets/saze_post_item_com")
-                          .resizable().scaledToFit().frame(width: 20.r, height: 20.r)
-                        Text("\(dynamicEntity.dynamicCommentCount)")
-                          .foregroundColor(.white)
-                          .font(.system(size: 16.sp))
-                      }
-                      .padding(.horizontal, 5.w)
-                      .padding(.vertical, 6.h)
-                      .background(.black)
-                      .cornerRadius(12.r)
-                      .overlay(RoundedRectangle(cornerRadius: 12.r).stroke(.white, lineWidth: 1))
-                    }
-                    .padding(.bottom, 10.h)
-                    .padding(.trailing, 10.w), alignment: .bottomTrailing)
-                Text(dynamicEntity.dynamicDesc)
-                  .foregroundColor(.white)
-                  .lineLimit(2)
-                  .font(.system(size: 12.sp))
-                  .frame(maxWidth: .infinity, alignment: .leading)
               }
-              .padding(.all, 8)
-              .background(.black)
-              .cornerRadius(16.r)
+              .padding(.all, 10)
+              .background(.white.opacity(0.6))
+              .cornerRadius(20.r)
+              .overlay(
+                RoundedRectangle(cornerRadius: 20.r)
+                  .stroke(
+                    LinearGradient(
+                      gradient: Gradient(stops: [
+                        .init(color: .white, location: 0),
+                        .init(color: .white.opacity(0), location: 0.5677),
+                        .init(color: .white, location: 1),
+                      ]),
+                      startPoint: .topLeading,
+                      endPoint: .bottomTrailing
+                    ),
+                    lineWidth: 1
+                  )
+              )
               .onTapGesture {
                 router.sazePath.append(
                   WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
@@ -140,7 +202,7 @@ struct IrlvCtgVhhFound: View {
           }
         }
         .scrollIndicators(.hidden)
-        .padding(.horizontal, 10.w)
+        .padding(.horizontal, 20.w)
         .padding(.bottom, 40.h)
       }
     }

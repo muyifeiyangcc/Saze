@@ -138,7 +138,10 @@ struct CnsOybInhRegister: View {
         }
       }
       ToolbarItem(placement: .navigationBarLeading) {
-        StrokeLabel(text: "SIGN UP", strokeColor: .fzs1, fillColor: .zts1)
+        Text("SIGN UP")
+          .foregroundColor(.zts1)
+          .font(.system(size: 24.sp, weight: .black))
+          .glowBorder(color: .fzs1, lineWidth: 4)
       }
     }
     .navigationBarBackButtonHidden(true)

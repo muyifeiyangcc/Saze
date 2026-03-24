@@ -32,34 +32,26 @@ extension View {
   }
 }
 
-struct StrokeLabel: UIViewRepresentable {
-  var text: String
-  var strokeColor: UIColor = .black
-  var fillColor: UIColor = .white
-  var strokeWidth: CGFloat = -4
-  var font: UIFont = .boldSystemFont(ofSize: 24)
-  var alignment: NSTextAlignment = .center
+struct GlowBorder: ViewModifier {
+  var color: Color
+  var lineWidth: Int
 
-  func makeUIView(context: Context) -> UILabel {
-    let label = UILabel()
-    label.textAlignment = alignment
-    label.layer.allowsEdgeAntialiasing = true
-    label.layer.shouldRasterize = true
-    label.layer.rasterizationScale = UIScreen.main.scale
-    return label
+  func body(content: Content) -> some View {
+    applyShadow(content: AnyView(content), lineWidth: lineWidth)
   }
 
-  func updateUIView(_ label: UILabel, context: Context) {
-    label.textAlignment = alignment
-    let attr = NSAttributedString(
-      string: text,
-      attributes: [
-        .strokeColor: strokeColor,
-        .foregroundColor: fillColor,
-        .strokeWidth: strokeWidth,
-        .font: font,
-      ]
-    )
-    label.attributedText = attr
+  func applyShadow(content: AnyView, lineWidth: Int) -> AnyView {
+    if lineWidth == 0 {
+      return content
+    } else {
+      return applyShadow(
+        content: AnyView(content.shadow(color: color, radius: 1)), lineWidth: lineWidth - 1)
+    }
+  }
+}
+
+extension View {
+  func glowBorder(color: Color, lineWidth: Int) -> some View {
+    self.modifier(GlowBorder(color: color, lineWidth: lineWidth))
   }
 }
