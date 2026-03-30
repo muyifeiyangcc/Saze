@@ -72,7 +72,7 @@ struct YwxKvvRbdkGuide: View {
               email: email,
               password: "123456789",
               avatar:
-                "http://huanniuchat.oss-ap-northeast-1.aliyuncs.com/leepy/leepy_default_photo.png",
+                "http://huanniuchat.oss-ap-northeast-1.aliyuncs.com/saze/saze_default_photo.png",
               name: "User6516",
               about: "Nothing",
               coins: 0
