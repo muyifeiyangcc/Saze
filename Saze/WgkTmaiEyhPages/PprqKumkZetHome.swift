@@ -9,30 +9,30 @@ struct PprqKumkZetHome: View {
   @EnvironmentObject var appState: RlbHdbTvacState
   @Environment(\.modelContext) private var modelContext
   @EnvironmentObject var router: SvcdXfvTsxRouter
-  @Query private var dynamics: [DynamicModel]
-  @Query private var users: [UserModel]
+  @Query private var dynamics: [BiekWudpWdqModel]
+  @Query private var users: [JnixAsuGeizModel]
   @State private var postTitleTypes = ["All", "Round", "Square", "Oval"]
   @State private var showPostTitleType = -1
-  var filteredPictureDynamics: [DynamicModel] {
-    let blockSet = Set(appState.wfzqCubCpmUser?.blockList ?? [])
+  var filteredPictureDynamics: [BiekWudpWdqModel] {
+    let blockSet = Set(appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr ?? [])
     return dynamics.filter { model in
-      if let userId = model.user?.userId, blockSet.contains(userId) {
+      if let SJAZElIhkpVkrSW0rayEYw6 = model.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6, blockSet.contains(SJAZElIhkpVkrSW0rayEYw6) {
         return false
       }
-      guard model.dynamicType == 0 else {
+      guard model.SJAZEsoZ0L6YgsKwJ0DlGuU == 0 else {
         return false
       }
-      return showPostTitleType == -1 || model.dynamicTitleType == showPostTitleType
+      return showPostTitleType == -1 || model.SJAZEEPjTSzGukeICl2u6ue == showPostTitleType
     }
   }
-  var filteredUsers: [UserModel] {
-    let blockSet = Set(appState.wfzqCubCpmUser?.blockList ?? [])
+  var filteredUsers: [JnixAsuGeizModel] {
+    let blockSet = Set(appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr ?? [])
     return users.filter { model in
-      if blockSet.contains(model.userId) {
+      if blockSet.contains(model.SJAZElIhkpVkrSW0rayEYw6) {
         return false
       }
-      if let currentUserId = appState.wfzqCubCpmUser?.userId {
-        return currentUserId != model.userId
+      if let currentUserId = appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 {
+        return currentUserId != model.SJAZElIhkpVkrSW0rayEYw6
       }
       return true
     }
@@ -43,7 +43,7 @@ struct PprqKumkZetHome: View {
       let _ = forceRedraw
     #endif
     GeometryReader { g in
-      Image("Assets/saze_home_bg").resizable().scaledToFill().ignoresSafeArea()
+      Image("Assets/saze_home_bg").resizable().ignoresSafeArea()
       Image("Assets/saze_home_rw").resizable().scaledToFill()
         .frame(width: 121.w, height: 238.h)
         .frame(maxWidth: .infinity, alignment: .top)
@@ -129,7 +129,7 @@ struct PprqKumkZetHome: View {
             ScrollView(.horizontal) {
               HStack(spacing: 10.w) {
                 ForEach(filteredPictureDynamics, id: \.self) { dynamicEntity in
-                  KFImage(URL(string: dynamicEntity.dynamicPic.first!))
+                  KFImage(URL(string: dynamicEntity.SJAZEJvLqXUWCmDFJBLleGx.first!))
                     .fade(duration: 0.25)
                     .resizable()
                     .scaledToFill()
@@ -174,7 +174,7 @@ struct PprqKumkZetHome: View {
                         WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                           url: URL(
                             string:
-                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.dynamicId)"
+                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"
                           )!
                         ))
                     }
@@ -185,7 +185,7 @@ struct PprqKumkZetHome: View {
             Spacer().frame(height: 24.h)
             ForEach(filteredUsers, id: \.self) { userModel in
               HStack(spacing: 16.w) {
-                KFImage(URL(string: userModel.avatar))
+                KFImage(URL(string: userModel.SJAZEitwQEriHyuWepBXcnG))
                   .fade(duration: 0.2)
                   .resizable()
                   .scaledToFill()
@@ -193,11 +193,11 @@ struct PprqKumkZetHome: View {
                   .clipShape(Circle())
                   .overlay(Circle().stroke(.white.opacity(0.1), lineWidth: 4.0))
                 VStack(spacing: 7.h) {
-                  Text(userModel.name)
+                  Text(userModel.SJAZEgk7Ot2T1adgYgUOQFz)
                     .foregroundColor(.white)
                     .font(.system(size: 16.sp, weight: .semibold))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                  Text(userModel.about)
+                  Text(userModel.SJAZEvngXxy127zPzUvo24P)
                     .foregroundColor(Color(red: 229 / 255, green: 229 / 255, blue: 229 / 255))
                     .font(.system(size: 13.sp, weight: .semibold))
                     .frame(maxWidth: .infinity, alignment: .leading)

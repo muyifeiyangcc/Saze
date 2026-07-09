@@ -19,7 +19,6 @@ struct YwxKvvRbdkGuide: View {
       GeometryReader { geometry in
         Image("Assets/saze_guide_bg")
           .resizable()
-          .scaledToFill()
           .ignoresSafeArea()
         VStack(spacing: 0) {
           Spacer().frame(height: 10.h)
@@ -66,24 +65,24 @@ struct YwxKvvRbdkGuide: View {
               isShowEula = true
               return
             }
-            let email = "vtfrvbdvtr@gmail.com"
-            let newUser = UserModel(
-              userId: "u99",
-              email: email,
-              password: "123456789",
-              avatar:
+            let SJAZEP9D18bMxoNRrHS3qbS = "vtfrvbdvtr@gmail.com"
+            let newUser = JnixAsuGeizModel(
+              SJAZElIhkpVkrSW0rayEYw6: "u99",
+              SJAZEP9D18bMxoNRrHS3qbS: SJAZEP9D18bMxoNRrHS3qbS,
+              SJAZE3JHV2UnFe5sJW0IY99: "123456789",
+              SJAZEitwQEriHyuWepBXcnG:
                 "http://huanniuchat.oss-ap-northeast-1.aliyuncs.com/saze/saze_default_photo.png",
-              name: "User6516",
-              about: "Nothing",
-              coins: 0
+              SJAZEgk7Ot2T1adgYgUOQFz: "User6516",
+              SJAZEvngXxy127zPzUvo24P: "Nothing",
+              SJAZEdRu89xECFhVxnCAcEw: 0
             )
             Task {
               await MainActor.run { isLoading = true }
               defer { isLoading = false }
               do {
                 try await Task.sleep(for: .milliseconds(518))
-                let descriptor = FetchDescriptor<UserModel>(
-                  predicate: #Predicate { $0.email == email }
+                let descriptor = FetchDescriptor<JnixAsuGeizModel>(
+                  predicate: #Predicate { $0.SJAZEP9D18bMxoNRrHS3qbS == SJAZEP9D18bMxoNRrHS3qbS }
                 )
                 let user = try modelContext.fetch(descriptor).first
                 await MainActor.run {

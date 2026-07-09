@@ -13,7 +13,7 @@ func bootstrapData(context: ModelContext) throws {
   let userDTOs = try decoder.decode([UserDTO].self, from: usersData)
 
   for dto in userDTOs {
-    context.insert(dto.toModel())
+    context.insert(dto.SJAZEJPFy9ykqn9XXvxsPWy())
   }
 
   // MARK: - Dynamics
@@ -23,7 +23,7 @@ func bootstrapData(context: ModelContext) throws {
   let dynamicDTOs = try decoder.decode([DynamicDTO].self, from: dynamicsData)
 
   for dto in dynamicDTOs {
-    context.insert(dto.toModel(modelContext: context))
+    context.insert(dto.SJAZEJPFy9ykqn9XXvxsPWy(modelContext: context))
   }
 
   try context.save()
@@ -37,6 +37,5 @@ func bootstrapIfNeeded(context: ModelContext) {
     try bootstrapData(context: context)
     UserDefaults.standard.set(true, forKey: key)
   } catch {
-    print("Bootstrap failed: \(error)")
   }
 }

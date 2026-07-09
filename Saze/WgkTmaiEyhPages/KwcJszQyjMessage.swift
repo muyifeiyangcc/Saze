@@ -9,16 +9,16 @@ struct KwcJszQyjMessage: View {
   @EnvironmentObject var appState: RlbHdbTvacState
   @Environment(\.modelContext) private var modelContext
   @EnvironmentObject var router: SvcdXfvTsxRouter
-  @Query private var chats: [ChatModel]
-  var filteredChats: [ChatModel] {
-    guard let blockList = appState.wfzqCubCpmUser?.blockList else {
+  @Query private var chats: [HwsYfezKgckModel]
+  var filteredChats: [HwsYfezKgckModel] {
+    guard let SJAZE8aPaDfeuPau1weW9Tr = appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
       return []
     }
     return chats.filter {
-      !blockList.contains($0.chatUserIds.first ?? "")
-        && !blockList.contains($0.chatUserIds.last ?? "")
-        && !$0.lastSendContent.isEmpty
-        && $0.chatUserIds.contains(appState.wfzqCubCpmUser?.userId ?? "")
+      !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEBCR2nFfDTdsD4REASp.first ?? "")
+        && !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEBCR2nFfDTdsD4REASp.last ?? "")
+        && !$0.SJAZEn9xXVUjsmZIL5HwlRT.isEmpty
+        && $0.SJAZEBCR2nFfDTdsD4REASp.contains(appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 ?? "")
     }
   }
   func formatTime(_ iso: String) -> String {
@@ -62,14 +62,14 @@ struct KwcJszQyjMessage: View {
               ForEach(filteredChats) { chat in
 
                 let otherUserId =
-                  chat.chatUserIds.filter { $0 != appState.wfzqCubCpmUser?.userId }
+                  chat.SJAZEBCR2nFfDTdsD4REASp.filter { $0 != appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 }
                   .first ?? ""
-                let userDescriptor = FetchDescriptor<UserModel>(
-                  predicate: #Predicate { $0.userId == otherUserId }
+                let userDescriptor = FetchDescriptor<JnixAsuGeizModel>(
+                  predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == otherUserId }
                 )
                 if let otherUser = try? modelContext.fetch(userDescriptor).first {
                   HStack(spacing: 12.w) {
-                    KFImage(URL(string: otherUser.avatar))
+                    KFImage(URL(string: otherUser.SJAZEitwQEriHyuWepBXcnG))
                       .fade(duration: 0.2)
                       .resizable()
                       .scaledToFill()
@@ -78,17 +78,17 @@ struct KwcJszQyjMessage: View {
                       .overlay(Circle().stroke(.white.opacity(0.1), lineWidth: 4.0))
                     VStack(spacing: 5.h) {
                       HStack {
-                        Text(otherUser.name)
+                        Text(otherUser.SJAZEgk7Ot2T1adgYgUOQFz)
                           .foregroundColor(.white)
                           .lineLimit(1)
                           .font(.system(size: 16.sp, weight: .bold))
                         Spacer()
-                        Text(formatTime(chat.lastSendTime ?? ""))
+                        Text(formatTime(chat.SJAZE9Er6ZUSKkEa2jaHrc4 ?? ""))
                           .foregroundColor(.white.opacity(0.6))
                           .lineLimit(1)
                           .font(.system(size: 10.sp, weight: .semibold))
                       }
-                      Text(chat.lastSendContent)
+                      Text(chat.SJAZEn9xXVUjsmZIL5HwlRT)
                         .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9))
                         .lineLimit(1)
                         .font(.system(size: 13.sp, weight: .semibold))
@@ -104,7 +104,7 @@ struct KwcJszQyjMessage: View {
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                         url: URL(
                           string:
-                            "0e4149520c31111f64ac996e7feaa459".SJAZET5gG1gyy5729np8EdY()+"\(chat.chatId)"
+                            "0e4149520c31111f64ac996e7feaa459".SJAZET5gG1gyy5729np8EdY()+"\(chat.SJAZELj4BVAUIW1CdfC1E9n)"
                         )!
                       ))
                   }

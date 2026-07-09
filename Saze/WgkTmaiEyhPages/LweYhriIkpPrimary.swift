@@ -5,17 +5,17 @@ import WebKit
 
 // MARK: - JS Handlers 名称（✅ 已全部对齐前端）
 struct JsHandlers {
-  static let jsConsole = "jsConsole"
-  static let close = "close"
+  static let jsConsole = "3b446629f30c8310c3504d248d0bb889".SJAZET5gG1gyy5729np8EdY()
+  static let close = "7f33824053eb76836dd035b87be802bf".SJAZET5gG1gyy5729np8EdY()
 
-  static let userListUpdate = "userListUpdate"
-  static let postsUpdate = "postsUpdate"
-  static let commentsUpdate = "commentsUpdate"
-  static let chatsUpdate = "chatsUpdate"
-  static let messagesUpdate = "messagesUpdate"
+  static let userListUpdate = "39c9305333567efa20fbc1e6cffb5dd0".SJAZET5gG1gyy5729np8EdY()
+  static let postsUpdate = "bc69d25fc7dd8d11278f507cefc85564".SJAZET5gG1gyy5729np8EdY()
+  static let commentsUpdate = "886521c228b18a56d02755a6796e9035".SJAZET5gG1gyy5729np8EdY()
+  static let chatsUpdate = "763904a4f3ae86f40a013fdfa2af4473".SJAZET5gG1gyy5729np8EdY()
+  static let messagesUpdate = "74add3062b29c3642107522da8da4c7d".SJAZET5gG1gyy5729np8EdY()
 
-  static let logout = "logout"
-  static let payment = "payment"
+  static let logout = "236e99d27300b9976434619e13c8cdf7".SJAZET5gG1gyy5729np8EdY()
+  static let payment = "299cff28b252a5853b046d0b0c85cfe4".SJAZET5gG1gyy5729np8EdY()
 }
 
 // MARK: - WebView 内容
@@ -27,6 +27,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
   let modelContext: ModelContext
   let router: SvcdXfvTsxRouter
   let purchaseManager: VvolHdqhEszePurchase
+  @Binding var isLoading: Bool
 
   private var resolvedUrl: URL {
     if trvudfhvSsxcUrl.scheme != nil {
@@ -117,6 +118,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
     context.coordinator.webView = webView
     webView.navigationDelegate = context.coordinator
     webView.uiDelegate = context.coordinator
+    isLoading = true
     webView.load(URLRequest(url: resolvedUrl))
 
     return webView
@@ -124,6 +126,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
 
   func updateUIView(_ webView: WKWebView, context: Context) {
     if webView.url == nil {
+      isLoading = true
       webView.load(URLRequest(url: resolvedUrl))
     }
   }
@@ -133,7 +136,8 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       modelContext: modelContext,
       router: router,
       appState: appState,
-      purchaseManager: purchaseManager
+      purchaseManager: purchaseManager,
+      isLoading: $isLoading
     )
   }
 
@@ -143,19 +147,19 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       return "[" + array.map(map).joined(separator: ",") + "]"
     }
 
-    let users = try? modelContext.fetch(FetchDescriptor<UserModel>())
-    let posts = try? modelContext.fetch(FetchDescriptor<DynamicModel>())
-    let comments = try? modelContext.fetch(FetchDescriptor<CommentModel>())
-    let chats = try? modelContext.fetch(FetchDescriptor<ChatModel>())
-    let messages = try? modelContext.fetch(FetchDescriptor<MessageModel>())
+    let users = try? modelContext.fetch(FetchDescriptor<JnixAsuGeizModel>())
+    let posts = try? modelContext.fetch(FetchDescriptor<BiekWudpWdqModel>())
+    let comments = try? modelContext.fetch(FetchDescriptor<OdbgTceHjbiModel>())
+    let chats = try? modelContext.fetch(FetchDescriptor<HwsYfezKgckModel>())
+    let messages = try? modelContext.fetch(FetchDescriptor<WsqrTacoBgttModel>())
 
     return """
-      window.currentUser = \(appState.wfzqCubCpmUser?.toJsonString() ?? "{}");
-      window.userList = \(arr(users) { $0.toJsonString() ?? "{}" });
-      window.postList = \(arr(posts) { $0.toJsonString() ?? "{}" });
-      window.commentList = \(arr(comments) { $0.toJsonString() ?? "{}" });
-      window.chatList = \(arr(chats) { $0.toJsonString() ?? "{}" });
-      window.messageList = \(arr(messages) { $0.toJsonString() ?? "{}" });
+      window.currentUser = \(appState.wfzqCubCpmUser?.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}");
+      window.userList = \(arr(users) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      window.postList = \(arr(posts) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      window.commentList = \(arr(comments) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      window.chatList = \(arr(chats) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      window.messageList = \(arr(messages) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
       """
   }
 
@@ -166,19 +170,53 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
     let router: SvcdXfvTsxRouter
     let appState: RlbHdbTvacState
     let purchaseManager: VvolHdqhEszePurchase
+    var isLoading: Binding<Bool>
     weak var webView: WKWebView?
 
     init(
       modelContext: ModelContext,
       router: SvcdXfvTsxRouter,
       appState: RlbHdbTvacState,
-      purchaseManager: VvolHdqhEszePurchase
+      purchaseManager: VvolHdqhEszePurchase,
+      isLoading: Binding<Bool>
     ) {
       self.modelContext = modelContext
       self.router = router
       self.appState = appState
       self.purchaseManager = purchaseManager
+      self.isLoading = isLoading
     }
+
+    private func setPageLoading(_ loading: Bool) {
+      DispatchQueue.main.async {
+        self.isLoading.wrappedValue = loading
+      }
+    }
+
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+      setPageLoading(true)
+    }
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+      setPageLoading(false)
+    }
+
+    func webView(
+      _ webView: WKWebView,
+      didFail navigation: WKNavigation!,
+      withError error: Error
+    ) {
+      setPageLoading(false)
+    }
+
+    func webView(
+      _ webView: WKWebView,
+      didFailProvisionalNavigation navigation: WKNavigation!,
+      withError error: Error
+    ) {
+      setPageLoading(false)
+    }
+
     private func decode<T: Decodable>(_ type: T.Type, from json: [String: Any]) throws -> T {
       let data = try JSONSerialization.data(withJSONObject: json)
       return try JSONDecoder().decode(T.self, from: data)
@@ -188,13 +226,12 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       didReceive message: WKScriptMessage
     ) {
 
-      print("JS CALL -> \(message.name)")
       Task { @MainActor in
         switch message.name {
 
         // MARK: console
         case JsHandlers.jsConsole:
-          print("JS:", message.body)
+          break
 
         // MARK: close
         case JsHandlers.close:
@@ -212,24 +249,24 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
           list.forEach { json in
             guard let dto = try? decode(UserDTO.self, from: json) else { return }
 
-            let fd = FetchDescriptor<UserModel>(
-              predicate: #Predicate { $0.userId == dto.userId }
+            let fd = FetchDescriptor<JnixAsuGeizModel>(
+              predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == dto.SJAZElIhkpVkrSW0rayEYw6 }
             )
 
             if let old = try? modelContext.fetch(fd).first {
-              old.email = dto.email
-              old.password = dto.password
-              old.avatar = dto.avatar
-              old.name = dto.name
-              old.about = dto.about
-              old.coins = dto.coins
-              old.follow = dto.follow
-              old.fans = dto.fans
-              old.blockList = dto.blockList
-              old.picPostLikeIds = dto.picPostLikeIds
-              old.videoPostLikeIds = dto.videoPostLikeIds
+              old.SJAZEP9D18bMxoNRrHS3qbS = dto.SJAZEP9D18bMxoNRrHS3qbS
+              old.SJAZE3JHV2UnFe5sJW0IY99 = dto.SJAZE3JHV2UnFe5sJW0IY99
+              old.SJAZEitwQEriHyuWepBXcnG = dto.SJAZEitwQEriHyuWepBXcnG
+              old.SJAZEgk7Ot2T1adgYgUOQFz = dto.SJAZEgk7Ot2T1adgYgUOQFz
+              old.SJAZEvngXxy127zPzUvo24P = dto.SJAZEvngXxy127zPzUvo24P
+              old.SJAZEdRu89xECFhVxnCAcEw = dto.SJAZEdRu89xECFhVxnCAcEw
+              old.SJAZEJUP63F40vD681ZMiy6 = dto.SJAZEJUP63F40vD681ZMiy6
+              old.SJAZEekGs3S5kuus384RPpr = dto.SJAZEekGs3S5kuus384RPpr
+              old.SJAZE8aPaDfeuPau1weW9Tr = dto.SJAZE8aPaDfeuPau1weW9Tr
+              old.SJAZElT7WVEApYsaQGqay6O = dto.SJAZElT7WVEApYsaQGqay6O
+              old.SJAZEKNpH3EiofObgwdb2XP = dto.SJAZEKNpH3EiofObgwdb2XP
             } else {
-              modelContext.insert(dto.toModel())
+              modelContext.insert(dto.SJAZEJPFy9ykqn9XXvxsPWy())
             }
           }
 
@@ -244,40 +281,42 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
           list.forEach { json in
             guard let dto = try? decode(DynamicDTO.self, from: json) else { return }
 
-            let fd = FetchDescriptor<DynamicModel>(
-              predicate: #Predicate { $0.dynamicId == dto.dynamicId }
+            let fd = FetchDescriptor<BiekWudpWdqModel>(
+              predicate: #Predicate { $0.SJAZEVeQYjYRJfcllVneqRN == dto.SJAZEVeQYjYRJfcllVneqRN }
             )
 
             // 查 user（只用 ID）
-            let userFD = FetchDescriptor<UserModel>(
-              predicate: #Predicate { $0.userId == dto.userId }
+            let userFD = FetchDescriptor<JnixAsuGeizModel>(
+              predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == dto.SJAZElIhkpVkrSW0rayEYw6 }
             )
             let user = try? modelContext.fetch(userFD).first
 
             if let old = try? modelContext.fetch(fd).first {
-              old.dynamicType = dto.dynamicType
-              old.dynamicDesc = dto.dynamicDesc
-              old.dynamicTitleType = dto.dynamicTitleType
-              old.dynamicPic = dto.dynamicPic
-              old.dynamicVideo = dto.dynamicVideo
-              old.dynamicLikeCount = dto.dynamicLikeCount
-              old.dynamicCommentCount = dto.dynamicCommentCount
+              old.SJAZEsoZ0L6YgsKwJ0DlGuU = dto.SJAZEsoZ0L6YgsKwJ0DlGuU
+              old.SJAZEUVBfbq2UH81q7Ftbq3 = dto.SJAZEUVBfbq2UH81q7Ftbq3
+              old.SJAZEEPjTSzGukeICl2u6ue = dto.SJAZEEPjTSzGukeICl2u6ue
+              old.SJAZECyvz14cqPBZa8BHRwd = dto.SJAZECyvz14cqPBZa8BHRwd ?? []
+              old.SJAZEJvLqXUWCmDFJBLleGx = dto.SJAZEJvLqXUWCmDFJBLleGx
+              old.SJAZEjW824LNB0yW9KOqkuE = dto.SJAZEjW824LNB0yW9KOqkuE
+              old.SJAZETqXs1AIbpvP9gabc3t = dto.SJAZETqXs1AIbpvP9gabc3t
+              old.SJAZEAyGV9lIdGdQJWQZ9Vj = dto.SJAZEAyGV9lIdGdQJWQZ9Vj
 
               // ✅ 只用 context 内的 user
-              if old.user?.userId != dto.userId {
-                old.user = user
+              if old.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 != dto.SJAZElIhkpVkrSW0rayEYw6 {
+                old.SJAZEqW4EMg4h7fXuUJ0kd7 = user
               }
             } else {
-              let new = DynamicModel(
-                dynamicId: dto.dynamicId,
-                user: user,
-                dynamicType: dto.dynamicType,
-                dynamicDesc: dto.dynamicDesc,
-                dynamicTitleType: dto.dynamicTitleType,
-                dynamicPic: dto.dynamicPic,
-                dynamicVideo: dto.dynamicVideo,
-                dynamicLikeCount: dto.dynamicLikeCount,
-                dynamicCommentCount: dto.dynamicCommentCount
+              let new = BiekWudpWdqModel(
+                SJAZEVeQYjYRJfcllVneqRN: dto.SJAZEVeQYjYRJfcllVneqRN,
+                SJAZEqW4EMg4h7fXuUJ0kd7: user,
+                SJAZEsoZ0L6YgsKwJ0DlGuU: dto.SJAZEsoZ0L6YgsKwJ0DlGuU,
+                SJAZEUVBfbq2UH81q7Ftbq3: dto.SJAZEUVBfbq2UH81q7Ftbq3,
+                SJAZEEPjTSzGukeICl2u6ue: dto.SJAZEEPjTSzGukeICl2u6ue,
+                SJAZECyvz14cqPBZa8BHRwd: dto.SJAZECyvz14cqPBZa8BHRwd ?? [],
+                SJAZEJvLqXUWCmDFJBLleGx: dto.SJAZEJvLqXUWCmDFJBLleGx,
+                SJAZEjW824LNB0yW9KOqkuE: dto.SJAZEjW824LNB0yW9KOqkuE,
+                SJAZETqXs1AIbpvP9gabc3t: dto.SJAZETqXs1AIbpvP9gabc3t,
+                SJAZEAyGV9lIdGdQJWQZ9Vj: dto.SJAZEAyGV9lIdGdQJWQZ9Vj
               )
               modelContext.insert(new)
             }
@@ -293,16 +332,16 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
           else { return }
 
           list.forEach { json in
-            guard let new = CommentModel.fromJson(json) else { return }
-            let commentId = new.commentId
-            let fd = FetchDescriptor<CommentModel>(
-              predicate: #Predicate { $0.commentId == commentId }
+            guard let new = OdbgTceHjbiModel.SJAZE7KsC41Sdy5ej8SJeT1(json) else { return }
+            let SJAZEQjHL56u9w8PufUdnP5 = new.SJAZEQjHL56u9w8PufUdnP5
+            let fd = FetchDescriptor<OdbgTceHjbiModel>(
+              predicate: #Predicate { $0.SJAZEQjHL56u9w8PufUdnP5 == SJAZEQjHL56u9w8PufUdnP5 }
             )
 
             if let old = try? modelContext.fetch(fd).first {
-              old.dynamicId = new.dynamicId
-              old.userId = new.userId
-              old.content = new.content
+              old.SJAZEVeQYjYRJfcllVneqRN = new.SJAZEVeQYjYRJfcllVneqRN
+              old.SJAZElIhkpVkrSW0rayEYw6 = new.SJAZElIhkpVkrSW0rayEYw6
+              old.SJAZECpm56ZBeV7qNkfJvuX = new.SJAZECpm56ZBeV7qNkfJvuX
             } else {
               modelContext.insert(new)  // ✅ 这里是安全的（无关系）
             }
@@ -318,15 +357,15 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
           else { return }
 
           list.forEach { json in
-            guard let new = ChatModel.fromJson(json) else { return }
-            let id = new.chatId
+            guard let new = HwsYfezKgckModel.SJAZE7KsC41Sdy5ej8SJeT1(json) else { return }
+            let id = new.SJAZELj4BVAUIW1CdfC1E9n
 
-            let fd = FetchDescriptor<ChatModel>(
-              predicate: #Predicate { $0.chatId == id }
+            let fd = FetchDescriptor<HwsYfezKgckModel>(
+              predicate: #Predicate { $0.SJAZELj4BVAUIW1CdfC1E9n == id }
             )
 
             if let old = try? modelContext.fetch(fd).first {
-              old.update(from: new)
+              old.SJAZEhIl26YqPW7bYsDnGDi(from: new)
             } else {
               modelContext.insert(new)
             }
@@ -342,15 +381,15 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
           else { return }
 
           list.forEach { json in
-            guard let new = MessageModel.fromJson(json) else { return }
-            let id = new.msgId
+            guard let new = WsqrTacoBgttModel.SJAZE7KsC41Sdy5ej8SJeT1(json) else { return }
+            let id = new.SJAZEV0JHY0NviJZK8g4MPv
 
-            let fd = FetchDescriptor<MessageModel>(
-              predicate: #Predicate { $0.msgId == id }
+            let fd = FetchDescriptor<WsqrTacoBgttModel>(
+              predicate: #Predicate { $0.SJAZEV0JHY0NviJZK8g4MPv == id }
             )
 
             if let old = try? modelContext.fetch(fd).first {
-              old.update(from: new)
+              old.SJAZEhIl26YqPW7bYsDnGDi(from: new)
             } else {
               modelContext.insert(new)
             }
@@ -377,7 +416,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
           purchaseManager.purchase(product) { result in
             if result > 0 {
               self.appState.tnngDfrhGkgtAddCoins(result)
-              if let user = self.appState.wfzqCubCpmUser, let json = user.toJsonString() {
+              if let user = self.appState.wfzqCubCpmUser, let json = user.SJAZEdCCqr3yHlozSZgz6ID() {
                 let js = "window.updateCurrentUser(\(json))"
                 DispatchQueue.main.async {
                   self.webView?.evaluateJavaScript(js)
@@ -387,7 +426,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
             Toast.shared.hideLoading()
           }
         default:
-          print("未知 JS 调用")
+          break
         }
       }
     }
@@ -399,21 +438,36 @@ struct LweYhriIkpPrimary: View {
   @Environment(\.modelContext) private var modelContext
   @EnvironmentObject var router: SvcdXfvTsxRouter
   @EnvironmentObject var appState: RlbHdbTvacState
+  @State private var isLoading = true
   var body: some View {
     GeometryReader { geo in
-      Image("Assets/saze_default_bg")
+      Image("SplashBg")
         .resizable()
-        .scaledToFill()
         .ignoresSafeArea()
       LweYhriIkpPrimaryContent(
         appState: appState,
         trvudfhvSsxcUrl: trvudfhvSsxcUrl,
         modelContext: modelContext,
         router: router,
-        purchaseManager: purchaseManager
+        purchaseManager: purchaseManager,
+        isLoading: $isLoading
       )
       .edgesIgnoringSafeArea(.all)
+      .opacity(isLoading ? 0 : 1)
+
+      if isLoading {
+        ZStack {
+          Image("SplashBg")
+            .resizable()
+            .ignoresSafeArea()
+          ProgressView()
+            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+            .scaleEffect(1.2)
+        }
+        .transition(.opacity)
+      }
     }
+    .animation(.easeInOut(duration: 0.2), value: isLoading)
     .navigationBarBackButtonHidden(true)
   }
 }

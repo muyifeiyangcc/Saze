@@ -9,24 +9,24 @@ struct IrlvCtgVhhFound: View {
   @EnvironmentObject var appState: RlbHdbTvacState
   @Environment(\.modelContext) private var modelContext
   @EnvironmentObject var router: SvcdXfvTsxRouter
-  @Query private var dynamics: [DynamicModel]
-  @Query private var users: [UserModel]
-  var filteredVideoDynamics: [DynamicModel] {
-    guard let blockList = appState.wfzqCubCpmUser?.blockList else {
-      return dynamics.filter { $0.dynamicType == 1 }
+  @Query private var dynamics: [BiekWudpWdqModel]
+  @Query private var users: [JnixAsuGeizModel]
+  var filteredVideoDynamics: [BiekWudpWdqModel] {
+    guard let SJAZE8aPaDfeuPau1weW9Tr = appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
+      return dynamics.filter { $0.SJAZEsoZ0L6YgsKwJ0DlGuU == 1 }
     }
     return dynamics.filter {
-      !blockList.contains($0.user?.userId ?? "") && $0.dynamicType == 1
+      !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 ?? "") && $0.SJAZEsoZ0L6YgsKwJ0DlGuU == 1
     }
   }
-  var filteredUsers: [UserModel] {
-    let blockSet = Set(appState.wfzqCubCpmUser?.blockList ?? [])
+  var filteredUsers: [JnixAsuGeizModel] {
+    let blockSet = Set(appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr ?? [])
     return users.filter { model in
-      if blockSet.contains(model.userId) {
+      if blockSet.contains(model.SJAZElIhkpVkrSW0rayEYw6) {
         return false
       }
-      if let currentUserId = appState.wfzqCubCpmUser?.userId {
-        return currentUserId != model.userId
+      if let currentUserId = appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 {
+        return currentUserId != model.SJAZElIhkpVkrSW0rayEYw6
       }
       return true
     }
@@ -71,9 +71,9 @@ struct IrlvCtgVhhFound: View {
         ScrollView(.horizontal) {
           HStack(spacing: 20.w) {
             ForEach(filteredUsers, id: \.self) { user in
-              let followed = appState.wfzqCubCpmUser?.follow.contains(user.userId) ?? false
+              let followed = appState.wfzqCubCpmUser?.SJAZEJUP63F40vD681ZMiy6.contains(user.SJAZElIhkpVkrSW0rayEYw6) ?? false
               VStack(spacing: 19.h) {
-                KFImage(URL(string: user.avatar))
+                KFImage(URL(string: user.SJAZEitwQEriHyuWepBXcnG))
                   .fade(duration: 0.2)
                   .resizable()
                   .scaledToFill()
@@ -87,7 +87,7 @@ struct IrlvCtgVhhFound: View {
                       .background(.white)
                       .clipShape(Circle()),
                     alignment: .bottomTrailing)
-                Text(user.name)
+                Text(user.SJAZEgk7Ot2T1adgYgUOQFz)
                   .padding(.vertical, 6.h)
                   .padding(.horizontal, 10.w)
                   .frame(width: 80.w)
@@ -141,28 +141,29 @@ struct IrlvCtgVhhFound: View {
             ForEach(filteredVideoDynamics, id: \.self) { dynamicEntity in
               VStack(spacing: 0) {
                 HStack(spacing: 8.w) {
-                  KFImage(URL(string: dynamicEntity.user?.avatar ?? ""))
+                  KFImage(URL(string: dynamicEntity.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZEitwQEriHyuWepBXcnG ?? ""))
                     .fade(duration: 0.25)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 44.r, height: 44.r)
                     .clipShape(Circle())
-                  Text("\(dynamicEntity.user?.name ?? "")")
+                  Text("\(dynamicEntity.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZEgk7Ot2T1adgYgUOQFz ?? "")")
                     .font(.system(size: 16.sp, weight: .bold))
                     .foregroundColor(.fzs1)
                   Spacer()
                 }
-                Text(dynamicEntity.dynamicDesc)
+                Text(dynamicEntity.SJAZEUVBfbq2UH81q7Ftbq3)
                   .foregroundColor(Color(red: 0.13, green: 0.13, blue: 0.13))
                   .lineLimit(1)
                   .font(.system(size: 14.sp))
                   .frame(maxWidth: .infinity, alignment: .leading)
                   .padding(.vertical, 10.h)
-                KFImage(URL(string: dynamicEntity.dynamicPic.first!))
+                KFImage(URL(string: dynamicEntity.SJAZEJvLqXUWCmDFJBLleGx.first!))
                   .fade(duration: 0.25)
                   .resizable()
                   .scaledToFill()
-                  .frame(width: .infinity, height: 235.h)
+                  .frame(maxWidth: .infinity)
+                  .frame(height: 235.h)
                   .cornerRadius(12.r)
                   .overlay(
                     Image("Assets/saze_item_play")
@@ -194,7 +195,7 @@ struct IrlvCtgVhhFound: View {
                   WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                     url: URL(
                       string:
-                        "a500ea99647cdcf57b4b633170e479af87bed8d63909abd0d58c0d82da0738ac".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.dynamicId)"
+                        "a500ea99647cdcf57b4b633170e479af87bed8d63909abd0d58c0d82da0738ac".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"
                     )!
                   ))
               }

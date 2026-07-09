@@ -6,11 +6,11 @@ struct JfsVizaSicgLogin: View {
     @ObserveInjection var forceRedraw
   #endif
   enum Field: Hashable {
-    case email
-    case password
+    case SJAZEP9D18bMxoNRrHS3qbS
+    case SJAZE3JHV2UnFe5sJW0IY99
   }
-  @State var email: String = ""
-  @State var password: String = ""
+  @State var SJAZEP9D18bMxoNRrHS3qbS: String = ""
+  @State var SJAZE3JHV2UnFe5sJW0IY99: String = ""
   @FocusState private var focusedField: Field?
   @EnvironmentObject var router: SvcdXfvTsxRouter
   @State private var isLoading = false
@@ -21,13 +21,13 @@ struct JfsVizaSicgLogin: View {
       let _ = forceRedraw
     #endif
     GeometryReader { geometry in
-      Image("SplashBg").resizable().scaledToFill().ignoresSafeArea()
+      Image("SplashBg").resizable().ignoresSafeArea()
       Image("Assets/saze_sign_rw").resizable().scaledToFit().frame(width: 59.w, height: 116.h)
         .frame(maxHeight: .infinity, alignment: .topLeading).offset(x: 53.w, y: 34.h)
       VStack(spacing: 0) {
         Spacer().frame(height: 145.h)
         TextField(
-          "", text: $email,
+          "", text: $SJAZEP9D18bMxoNRrHS3qbS,
           prompt: Text("Email")
             .foregroundColor(Color.fzs1.opacity(0.5))
             .font(.system(size: 16.sp)),
@@ -50,14 +50,14 @@ struct JfsVizaSicgLogin: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .email)
+        .focused($focusedField, equals: .SJAZEP9D18bMxoNRrHS3qbS)
         .submitLabel(.next)
         .onSubmit {
-          focusedField = .password
+          focusedField = .SJAZE3JHV2UnFe5sJW0IY99
         }
         Spacer().frame(height: 24.h)
         SecureField(
-          "", text: $password,
+          "", text: $SJAZE3JHV2UnFe5sJW0IY99,
           prompt: Text("Password")
             .foregroundColor(Color.fzs1.opacity(0.5))
             .font(.system(size: 16.sp)),
@@ -79,14 +79,14 @@ struct JfsVizaSicgLogin: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .password)
+        .focused($focusedField, equals: .SJAZE3JHV2UnFe5sJW0IY99)
         .submitLabel(.done)
         .onSubmit {
           focusedField = nil
         }
         Spacer()
         Button(action: {
-          guard !email.isEmpty, !password.isEmpty, !isLoading else { return }
+          guard !SJAZEP9D18bMxoNRrHS3qbS.isEmpty, !SJAZE3JHV2UnFe5sJW0IY99.isEmpty, !isLoading else { return }
           isLoading = true
           Task {
             defer {
@@ -94,8 +94,8 @@ struct JfsVizaSicgLogin: View {
             }
             do {
               try await Task.sleep(for: .milliseconds(613))
-              let descriptor = FetchDescriptor<UserModel>(
-                predicate: #Predicate { $0.email == email }
+              let descriptor = FetchDescriptor<JnixAsuGeizModel>(
+                predicate: #Predicate { $0.SJAZEP9D18bMxoNRrHS3qbS == SJAZEP9D18bMxoNRrHS3qbS }
               )
               let user = try modelContext.fetch(descriptor).first
               await MainActor.run {

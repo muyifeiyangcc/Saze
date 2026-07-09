@@ -1,3 +1,4 @@
+import SwiftData
 import SwiftUI
 
 struct CnsOybInhRegister: View {
@@ -5,27 +6,30 @@ struct CnsOybInhRegister: View {
     @ObserveInjection var forceRedraw
   #endif
   enum Field: Hashable {
-    case email
-    case password
+    case SJAZEP9D18bMxoNRrHS3qbS
+    case SJAZE3JHV2UnFe5sJW0IY99
     case againPassword
   }
-  @State var email: String = ""
-  @State var password: String = ""
+  @State var SJAZEP9D18bMxoNRrHS3qbS: String = ""
+  @State var SJAZE3JHV2UnFe5sJW0IY99: String = ""
   @State var againPassword: String = ""
   @FocusState private var focusedField: Field?
   @EnvironmentObject var router: SvcdXfvTsxRouter
+  @EnvironmentObject var appState: RlbHdbTvacState
+  @Environment(\.modelContext) private var modelContext
+  @State private var isLoading = false
   var body: some View {
     #if DEBUG
       let _ = forceRedraw
     #endif
     GeometryReader { geometry in
-      Image("SplashBg").resizable().scaledToFill().ignoresSafeArea()
+      Image("SplashBg").resizable().ignoresSafeArea()
       Image("Assets/saze_sign_rw").resizable().scaledToFit().frame(width: 59.w, height: 116.h)
         .frame(maxHeight: .infinity, alignment: .topLeading).offset(x: 53.w, y: 34.h)
       VStack(spacing: 0) {
         Spacer().frame(height: 145.h)
         TextField(
-          "", text: $email,
+          "", text: $SJAZEP9D18bMxoNRrHS3qbS,
           prompt: Text("Email")
             .foregroundColor(Color.fzs1.opacity(0.5))
             .font(.system(size: 16.sp)),
@@ -48,14 +52,14 @@ struct CnsOybInhRegister: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .email)
+        .focused($focusedField, equals: .SJAZEP9D18bMxoNRrHS3qbS)
         .submitLabel(.next)
         .onSubmit {
-          focusedField = .password
+          focusedField = .SJAZE3JHV2UnFe5sJW0IY99
         }
         Spacer().frame(height: 24.h)
         SecureField(
-          "", text: $password,
+          "", text: $SJAZE3JHV2UnFe5sJW0IY99,
           prompt: Text("Password")
             .foregroundColor(Color.fzs1.opacity(0.5))
             .font(.system(size: 16.sp)),
@@ -77,7 +81,7 @@ struct CnsOybInhRegister: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .password)
+        .focused($focusedField, equals: .SJAZE3JHV2UnFe5sJW0IY99)
         .submitLabel(.next)
         .onSubmit {
           focusedField = .againPassword
@@ -112,16 +116,79 @@ struct CnsOybInhRegister: View {
           focusedField = nil
         }
         Spacer()
-        Text("SIGN UP")
-          .foregroundColor(.white)
-          .font(.system(size: 20.sp, weight: .bold))
-          .frame(height: 53.h)
-          .frame(maxWidth: .infinity)
-          .background(
-            Color.fzs1
-          )
-          .cornerRadius(40)
-          .padding(.horizontal, 58.w)
+        Button(action: {
+          guard !isLoading else { return }
+          focusedField = nil
+
+          let email = SJAZEP9D18bMxoNRrHS3qbS.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+          let password = SJAZE3JHV2UnFe5sJW0IY99.trimmingCharacters(in: .whitespacesAndNewlines)
+          let confirmPassword = againPassword.trimmingCharacters(in: .whitespacesAndNewlines)
+
+          guard !email.isEmpty, !password.isEmpty, !confirmPassword.isEmpty else {
+            Toast.shared.showToast("Please fill in all fields.")
+            return
+          }
+
+          guard email.contains("@"), email.contains(".") else {
+            Toast.shared.showToast("Please enter a valid email.")
+            return
+          }
+
+          guard password == confirmPassword else {
+            Toast.shared.showToast("Passwords do not match.")
+            return
+          }
+
+          isLoading = true
+          defer { isLoading = false }
+
+          do {
+            let descriptor = FetchDescriptor<JnixAsuGeizModel>(
+              predicate: #Predicate { $0.SJAZEP9D18bMxoNRrHS3qbS == email }
+            )
+
+            if try modelContext.fetch(descriptor).first != nil {
+              Toast.shared.showToast("This email is already registered.")
+              return
+            }
+
+            let name = email.split(separator: "@").first.map(String.init) ?? "User"
+            let newUser = JnixAsuGeizModel(
+              SJAZElIhkpVkrSW0rayEYw6: UUID().uuidString,
+              SJAZEP9D18bMxoNRrHS3qbS: email,
+              SJAZE3JHV2UnFe5sJW0IY99: password,
+              SJAZEitwQEriHyuWepBXcnG:
+                "http://huanniuchat.oss-ap-northeast-1.aliyuncs.com/saze/saze_default_photo.png",
+              SJAZEgk7Ot2T1adgYgUOQFz: name,
+              SJAZEvngXxy127zPzUvo24P: "Nothing",
+              SJAZEdRu89xECFhVxnCAcEw: 0
+            )
+
+            modelContext.insert(newUser)
+            try modelContext.save()
+            appState.wfzqCubCpmUser = newUser
+            appState.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
+          } catch {
+            Toast.shared.showToast("Sign up failed. Please try again.")
+          }
+        }) {
+          if isLoading {
+            ProgressView()
+              .progressViewStyle(CircularProgressViewStyle(tint: .white))
+              .frame(maxWidth: .infinity)
+          } else {
+            Text("SIGN UP")
+              .foregroundColor(.white)
+              .font(.system(size: 20.sp, weight: .bold))
+              .frame(maxWidth: .infinity)
+          }
+        }
+        .frame(height: 53.h)
+        .background(
+          Color.fzs1
+        )
+        .cornerRadius(40)
+        .padding(.horizontal, 58.w)
         Spacer()
       }
       .padding(.horizontal, 30.w)

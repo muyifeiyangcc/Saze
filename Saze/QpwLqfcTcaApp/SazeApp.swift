@@ -29,11 +29,11 @@ struct SazeApp: App {
       container =
         try ModelContainer(
           for:
-            ChatModel.self,
-          MessageModel.self,
-          UserModel.self,
-          CommentModel.self,
-          DynamicModel.self,
+            HwsYfezKgckModel.self,
+          WsqrTacoBgttModel.self,
+          JnixAsuGeizModel.self,
+          OdbgTceHjbiModel.self,
+          BiekWudpWdqModel.self,
         )
     } catch {
       fatalError("\(error)")

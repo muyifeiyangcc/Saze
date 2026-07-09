@@ -9,11 +9,11 @@ struct EckPjrFxxkProfile: View {
   @EnvironmentObject var appState: RlbHdbTvacState
   @Environment(\.modelContext) private var modelContext
   @EnvironmentObject var router: SvcdXfvTsxRouter
-  @Query private var dynamics: [DynamicModel]
-  var filteredPictureDynamics: [DynamicModel] {
+  @Query private var dynamics: [BiekWudpWdqModel]
+  var filteredPictureDynamics: [BiekWudpWdqModel] {
     return dynamics.filter {
-      $0.dynamicType == 0
-        && $0.user?.userId == appState.wfzqCubCpmUser?.userId
+      $0.SJAZEsoZ0L6YgsKwJ0DlGuU == 0
+        && $0.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 == appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6
     }
   }
   let columns = [
@@ -25,19 +25,19 @@ struct EckPjrFxxkProfile: View {
       let _ = forceRedraw
     #endif
     GeometryReader { _ in
-      Image("Assets/saze_profile_bg").resizable().scaledToFill().ignoresSafeArea()
+      Image("Assets/saze_profile_bg").resizable().ignoresSafeArea()
       VStack(spacing: 0) {
         Spacer().frame(height: 12.h)
         HStack(alignment: .top, spacing: 0) {
           HStack(spacing: 10.w) {
-            KFImage(URL(string: appState.wfzqCubCpmUser?.avatar ?? ""))
+            KFImage(URL(string: appState.wfzqCubCpmUser?.SJAZEitwQEriHyuWepBXcnG ?? ""))
               .fade(duration: 0.2)
               .resizable()
               .scaledToFill()
               .frame(width: 62.r, height: 62.r)
               .clipShape(Circle())
               .overlay(Circle().stroke(.white.opacity(0.1), lineWidth: 4.0))
-            Text(appState.wfzqCubCpmUser?.name ?? "")
+            Text(appState.wfzqCubCpmUser?.SJAZEgk7Ot2T1adgYgUOQFz ?? "")
               .foregroundColor(.zs1)
               .font(.system(size: 16.sp, weight: .black))
               .glowBorder(color: .fzs1, lineWidth: 4)
@@ -73,7 +73,7 @@ struct EckPjrFxxkProfile: View {
         HStack(spacing: 0) {
           VStack(alignment: .leading, spacing: 6.h) {
             Text(
-              "\(appState.wfzqCubCpmUser?.follow.count ?? 0)"
+              "\(appState.wfzqCubCpmUser?.SJAZEJUP63F40vD681ZMiy6.count ?? 0)"
             )
             .foregroundColor(
               .fzs1
@@ -98,7 +98,7 @@ struct EckPjrFxxkProfile: View {
           Spacer()
           VStack(alignment: .leading, spacing: 6.h) {
             Text(
-              "\(appState.wfzqCubCpmUser?.fans.count ?? 0)"
+              "\(appState.wfzqCubCpmUser?.SJAZEekGs3S5kuus384RPpr.count ?? 0)"
             )
             .foregroundColor(
               .fzs1
@@ -185,7 +185,7 @@ struct EckPjrFxxkProfile: View {
             LazyVGrid(columns: columns) {
               ForEach(filteredPictureDynamics, id: \.self) { dynamicEntity in
                 GeometryReader { geometry in
-                  KFImage(URL(string: dynamicEntity.dynamicPic.first!))
+                  KFImage(URL(string: dynamicEntity.SJAZEJvLqXUWCmDFJBLleGx.first!))
                     .fade(duration: 0.25)
                     .resizable()
                     .scaledToFill()
@@ -232,7 +232,7 @@ struct EckPjrFxxkProfile: View {
                         WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                           url: URL(
                             string:
-                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.dynamicId)"
+                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"
                           )!
                         ))
                     }

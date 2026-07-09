@@ -2,187 +2,211 @@ import Foundation
 import SwiftData
 
 @Model
-final class DynamicModel {
+final class BiekWudpWdqModel {
 
   /// 帖子ID
   @Attribute(.unique)
-  var dynamicId: String
+  var SJAZEVeQYjYRJfcllVneqRN: String
 
   /// 关联用户
   @Relationship(deleteRule: .cascade)
-  var user: UserModel?
+  var SJAZEqW4EMg4h7fXuUJ0kd7: JnixAsuGeizModel?
 
   /// 帖子类型（0=图片，1=视频）
-  var dynamicType: Int
+  var SJAZEsoZ0L6YgsKwJ0DlGuU: Int
 
   /// 帖子描述
-  var dynamicDesc: String
+  var SJAZEUVBfbq2UH81q7Ftbq3: String
 
   /// 图片帖子类型下标
-  var dynamicTitleType: Int
+  var SJAZEEPjTSzGukeICl2u6ue: Int
+
+  var SJAZECyvz14cqPBZa8BHRwd: [String]
 
   /// 图片地址列表
-  var dynamicPic: [String]
+  var SJAZEJvLqXUWCmDFJBLleGx: [String]
 
   /// 视频地址
-  var dynamicVideo: String
+  var SJAZEjW824LNB0yW9KOqkuE: String
 
   /// 点赞数
-  var dynamicLikeCount: Int
+  var SJAZETqXs1AIbpvP9gabc3t: Int
 
   /// 评论数
-  var dynamicCommentCount: Int
+  var SJAZEAyGV9lIdGdQJWQZ9Vj: Int
 
   init(
-    dynamicId: String,
-    user: UserModel?,
-    dynamicType: Int,
-    dynamicDesc: String,
-    dynamicTitleType: Int,
-    dynamicPic: [String],
-    dynamicVideo: String,
-    dynamicLikeCount: Int,
-    dynamicCommentCount: Int
+    SJAZEVeQYjYRJfcllVneqRN: String,
+    SJAZEqW4EMg4h7fXuUJ0kd7: JnixAsuGeizModel?,
+    SJAZEsoZ0L6YgsKwJ0DlGuU: Int,
+    SJAZEUVBfbq2UH81q7Ftbq3: String,
+    SJAZEEPjTSzGukeICl2u6ue: Int,
+    SJAZECyvz14cqPBZa8BHRwd: [String] = [],
+    SJAZEJvLqXUWCmDFJBLleGx: [String],
+    SJAZEjW824LNB0yW9KOqkuE: String,
+    SJAZETqXs1AIbpvP9gabc3t: Int,
+    SJAZEAyGV9lIdGdQJWQZ9Vj: Int
   ) {
-    self.dynamicId = dynamicId
-    self.user = user
-    self.dynamicType = dynamicType
-    self.dynamicDesc = dynamicDesc
-    self.dynamicTitleType = dynamicTitleType
-    self.dynamicPic = dynamicPic
-    self.dynamicVideo = dynamicVideo
-    self.dynamicLikeCount = dynamicLikeCount
-    self.dynamicCommentCount = dynamicCommentCount
+    self.SJAZEVeQYjYRJfcllVneqRN = SJAZEVeQYjYRJfcllVneqRN
+    self.SJAZEqW4EMg4h7fXuUJ0kd7 = SJAZEqW4EMg4h7fXuUJ0kd7
+    self.SJAZEsoZ0L6YgsKwJ0DlGuU = SJAZEsoZ0L6YgsKwJ0DlGuU
+    self.SJAZEUVBfbq2UH81q7Ftbq3 = SJAZEUVBfbq2UH81q7Ftbq3
+    self.SJAZEEPjTSzGukeICl2u6ue = SJAZEEPjTSzGukeICl2u6ue
+    self.SJAZECyvz14cqPBZa8BHRwd = SJAZECyvz14cqPBZa8BHRwd
+    self.SJAZEJvLqXUWCmDFJBLleGx = SJAZEJvLqXUWCmDFJBLleGx
+    self.SJAZEjW824LNB0yW9KOqkuE = SJAZEjW824LNB0yW9KOqkuE
+    self.SJAZETqXs1AIbpvP9gabc3t = SJAZETqXs1AIbpvP9gabc3t
+    self.SJAZEAyGV9lIdGdQJWQZ9Vj = SJAZEAyGV9lIdGdQJWQZ9Vj
   }
 }
 
 // MARK: - JSON Support
-extension DynamicModel {
-  func update(from new: DynamicModel) {
-    dynamicType = new.dynamicType
-    dynamicDesc = new.dynamicDesc
-    dynamicTitleType = new.dynamicTitleType
-    dynamicPic = new.dynamicPic
-    dynamicVideo = new.dynamicVideo
-    dynamicLikeCount = new.dynamicLikeCount
-    dynamicCommentCount = new.dynamicCommentCount
+extension BiekWudpWdqModel {
+  func SJAZEhIl26YqPW7bYsDnGDi(from SJAZEbKNLayFNQOfK7BGEub: BiekWudpWdqModel) {
+    SJAZEsoZ0L6YgsKwJ0DlGuU = SJAZEbKNLayFNQOfK7BGEub.SJAZEsoZ0L6YgsKwJ0DlGuU
+    SJAZEUVBfbq2UH81q7Ftbq3 = SJAZEbKNLayFNQOfK7BGEub.SJAZEUVBfbq2UH81q7Ftbq3
+    SJAZEEPjTSzGukeICl2u6ue = SJAZEbKNLayFNQOfK7BGEub.SJAZEEPjTSzGukeICl2u6ue
+    SJAZECyvz14cqPBZa8BHRwd = SJAZEbKNLayFNQOfK7BGEub.SJAZECyvz14cqPBZa8BHRwd
+    SJAZEJvLqXUWCmDFJBLleGx = SJAZEbKNLayFNQOfK7BGEub.SJAZEJvLqXUWCmDFJBLleGx
+    SJAZEjW824LNB0yW9KOqkuE = SJAZEbKNLayFNQOfK7BGEub.SJAZEjW824LNB0yW9KOqkuE
+    SJAZETqXs1AIbpvP9gabc3t = SJAZEbKNLayFNQOfK7BGEub.SJAZETqXs1AIbpvP9gabc3t
+    SJAZEAyGV9lIdGdQJWQZ9Vj = SJAZEbKNLayFNQOfK7BGEub.SJAZEAyGV9lIdGdQJWQZ9Vj
 
-    if user?.userId != new.user?.userId {
-      user = new.user
+    if SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 != SJAZEbKNLayFNQOfK7BGEub.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 {
+      SJAZEqW4EMg4h7fXuUJ0kd7 = SJAZEbKNLayFNQOfK7BGEub.SJAZEqW4EMg4h7fXuUJ0kd7
     }
   }
   /// 转 Dictionary
-  func toJson() -> [String: Any] {
+  func SJAZErTTrSFzQqvk8CqQGVx() -> [String: Any] {
     return [
-      "e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY(): dynamicId,
-      "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY(): user?.userId ?? "",
-      "a0f7013a3f50839229f059dd7b5aeed1".SJAZET5gG1gyy5729np8EdY(): dynamicType,
-      "0d28bb4be5ccd97aca57cdd956bddfb1".SJAZET5gG1gyy5729np8EdY(): dynamicDesc,
-      "f6cad843cd3d3dcd47d1b5346673a1e2cedf43acd12a59e2c78c432fa7ba0b94".SJAZET5gG1gyy5729np8EdY(): dynamicTitleType,
-      "3e7c2d90422ac1c55c4b1c8f8429fca9".SJAZET5gG1gyy5729np8EdY(): dynamicPic,
-      "44cf9939f6386d0d9c74e1c187ea117e".SJAZET5gG1gyy5729np8EdY(): dynamicVideo,
-      "f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304".SJAZET5gG1gyy5729np8EdY(): dynamicLikeCount,
-      "032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071".SJAZET5gG1gyy5729np8EdY(): dynamicCommentCount,
+      "e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY(): SJAZEVeQYjYRJfcllVneqRN,
+      "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY(): SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 ?? "",
+      "a0f7013a3f50839229f059dd7b5aeed1".SJAZET5gG1gyy5729np8EdY(): SJAZEsoZ0L6YgsKwJ0DlGuU,
+      "0d28bb4be5ccd97aca57cdd956bddfb1".SJAZET5gG1gyy5729np8EdY(): SJAZEUVBfbq2UH81q7Ftbq3,
+      "f6cad843cd3d3dcd47d1b5346673a1e2cedf43acd12a59e2c78c432fa7ba0b94".SJAZET5gG1gyy5729np8EdY(): SJAZEEPjTSzGukeICl2u6ue,
+      "c66f0a438fd974b632e59d50e464ffca".SJAZET5gG1gyy5729np8EdY(): SJAZECyvz14cqPBZa8BHRwd,
+      "3e7c2d90422ac1c55c4b1c8f8429fca9".SJAZET5gG1gyy5729np8EdY(): SJAZEJvLqXUWCmDFJBLleGx,
+      "44cf9939f6386d0d9c74e1c187ea117e".SJAZET5gG1gyy5729np8EdY(): SJAZEjW824LNB0yW9KOqkuE,
+      "f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304".SJAZET5gG1gyy5729np8EdY(): SJAZETqXs1AIbpvP9gabc3t,
+      "032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071".SJAZET5gG1gyy5729np8EdY(): SJAZEAyGV9lIdGdQJWQZ9Vj,
     ]
   }
 
   /// 转 JSON 字符串
-  func toJsonString() -> String? {
-    guard let data = try? JSONSerialization.data(withJSONObject: toJson()) else {
+  func SJAZEdCCqr3yHlozSZgz6ID() -> String? {
+    guard let SJAZEkZrRMSHL5OBgA65cNH = try? JSONSerialization.data(withJSONObject: SJAZErTTrSFzQqvk8CqQGVx()) else {
       return nil
     }
-    return String(data: data, encoding: .utf8)
+    return String(data: SJAZEkZrRMSHL5OBgA65cNH, encoding: .utf8)
   }
 
-  /// 从 JSON 创建对象，并关联 UserModel
-  static func fromJson(
-    _ json: [String: Any],
-    modelContext: ModelContext
-  ) -> DynamicModel? {
+  /// 从 JSON 创建对象，并关联 JnixAsuGeizModel
+  static func SJAZE7KsC41Sdy5ej8SJeT1(
+    _ SJAZEnkLAphU8uUYFhKArrL: [String: Any],
+    modelContext SJAZEWoyFRmcFXlgp6kTJib: ModelContext
+  ) -> BiekWudpWdqModel? {
 
     guard
-      let dynamicId = json["e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let userId = json["648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let dynamicType = json["a0f7013a3f50839229f059dd7b5aeed1".SJAZET5gG1gyy5729np8EdY()] as? Int,
-      let dynamicDesc = json["0d28bb4be5ccd97aca57cdd956bddfb1".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let dynamicTitleType = json["f6cad843cd3d3dcd47d1b5346673a1e2cedf43acd12a59e2c78c432fa7ba0b94".SJAZET5gG1gyy5729np8EdY()] as? Int,
-      let dynamicPic = json["3e7c2d90422ac1c55c4b1c8f8429fca9".SJAZET5gG1gyy5729np8EdY()] as? [String],
-      let dynamicVideo = json["44cf9939f6386d0d9c74e1c187ea117e".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let dynamicLikeCount = json["f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304".SJAZET5gG1gyy5729np8EdY()] as? Int,
-      let dynamicCommentCount = json["032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071".SJAZET5gG1gyy5729np8EdY()] as? Int
+      let SJAZEVeQYjYRJfcllVneqRN = SJAZEnkLAphU8uUYFhKArrL["e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let SJAZElIhkpVkrSW0rayEYw6 = SJAZEnkLAphU8uUYFhKArrL["648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let SJAZEsoZ0L6YgsKwJ0DlGuU = SJAZEnkLAphU8uUYFhKArrL["a0f7013a3f50839229f059dd7b5aeed1".SJAZET5gG1gyy5729np8EdY()] as? Int,
+      let SJAZEUVBfbq2UH81q7Ftbq3 = SJAZEnkLAphU8uUYFhKArrL["0d28bb4be5ccd97aca57cdd956bddfb1".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let SJAZEEPjTSzGukeICl2u6ue = SJAZEnkLAphU8uUYFhKArrL["f6cad843cd3d3dcd47d1b5346673a1e2cedf43acd12a59e2c78c432fa7ba0b94".SJAZET5gG1gyy5729np8EdY()] as? Int,
+      let SJAZEJvLqXUWCmDFJBLleGx = SJAZEnkLAphU8uUYFhKArrL["3e7c2d90422ac1c55c4b1c8f8429fca9".SJAZET5gG1gyy5729np8EdY()] as? [String],
+      let SJAZEjW824LNB0yW9KOqkuE = SJAZEnkLAphU8uUYFhKArrL["44cf9939f6386d0d9c74e1c187ea117e".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let SJAZETqXs1AIbpvP9gabc3t = SJAZEnkLAphU8uUYFhKArrL["f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304".SJAZET5gG1gyy5729np8EdY()] as? Int,
+      let SJAZEAyGV9lIdGdQJWQZ9Vj = SJAZEnkLAphU8uUYFhKArrL["032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071".SJAZET5gG1gyy5729np8EdY()] as? Int
     else {
       return nil
     }
+    let SJAZECyvz14cqPBZa8BHRwd = SJAZEnkLAphU8uUYFhKArrL["c66f0a438fd974b632e59d50e464ffca".SJAZET5gG1gyy5729np8EdY()] as? [String] ?? []
 
     // 查询关联用户
-    let userDescriptor = FetchDescriptor<UserModel>(
-      predicate: #Predicate { $0.userId == userId }
+    let SJAZEW1A8KOP0BG880Z7jnO = FetchDescriptor<JnixAsuGeizModel>(
+      predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == SJAZElIhkpVkrSW0rayEYw6 }
     )
-    let user = try? modelContext.fetch(userDescriptor).first
+    let SJAZEqW4EMg4h7fXuUJ0kd7 = try? SJAZEWoyFRmcFXlgp6kTJib.fetch(SJAZEW1A8KOP0BG880Z7jnO).first
 
-    return DynamicModel(
-      dynamicId: dynamicId,
-      user: user,
-      dynamicType: dynamicType,
-      dynamicDesc: dynamicDesc,
-      dynamicTitleType: dynamicTitleType,
-      dynamicPic: dynamicPic,
-      dynamicVideo: dynamicVideo,
-      dynamicLikeCount: dynamicLikeCount,
-      dynamicCommentCount: dynamicCommentCount
+    return BiekWudpWdqModel(
+      SJAZEVeQYjYRJfcllVneqRN: SJAZEVeQYjYRJfcllVneqRN,
+      SJAZEqW4EMg4h7fXuUJ0kd7: SJAZEqW4EMg4h7fXuUJ0kd7,
+      SJAZEsoZ0L6YgsKwJ0DlGuU: SJAZEsoZ0L6YgsKwJ0DlGuU,
+      SJAZEUVBfbq2UH81q7Ftbq3: SJAZEUVBfbq2UH81q7Ftbq3,
+      SJAZEEPjTSzGukeICl2u6ue: SJAZEEPjTSzGukeICl2u6ue,
+      SJAZECyvz14cqPBZa8BHRwd: SJAZECyvz14cqPBZa8BHRwd,
+      SJAZEJvLqXUWCmDFJBLleGx: SJAZEJvLqXUWCmDFJBLleGx,
+      SJAZEjW824LNB0yW9KOqkuE: SJAZEjW824LNB0yW9KOqkuE,
+      SJAZETqXs1AIbpvP9gabc3t: SJAZETqXs1AIbpvP9gabc3t,
+      SJAZEAyGV9lIdGdQJWQZ9Vj: SJAZEAyGV9lIdGdQJWQZ9Vj
     )
   }
 }
 struct DynamicDTO: Codable {
 
   /// 帖子ID
-  let dynamicId: String
+  let SJAZEVeQYjYRJfcllVneqRN: String
 
   /// 发布人ID
-  let userId: String
+  let SJAZElIhkpVkrSW0rayEYw6: String
 
   /// 帖子类型（0=图片，1=视频）
-  let dynamicType: Int
+  let SJAZEsoZ0L6YgsKwJ0DlGuU: Int
 
   /// 帖子描述
-  let dynamicDesc: String
+  let SJAZEUVBfbq2UH81q7Ftbq3: String
 
   /// 图片帖子类型下标
-  let dynamicTitleType: Int
+  let SJAZEEPjTSzGukeICl2u6ue: Int
+
+  let SJAZECyvz14cqPBZa8BHRwd: [String]?
 
   /// 图片地址
-  let dynamicPic: [String]
+  let SJAZEJvLqXUWCmDFJBLleGx: [String]
 
   /// 视频地址
-  let dynamicVideo: String
+  let SJAZEjW824LNB0yW9KOqkuE: String
 
   /// 点赞数
-  let dynamicLikeCount: Int
+  let SJAZETqXs1AIbpvP9gabc3t: Int
 
   /// 评论数
-  let dynamicCommentCount: Int
+  let SJAZEAyGV9lIdGdQJWQZ9Vj: Int
+
+  enum CodingKeys: String, CodingKey {
+    case SJAZEVeQYjYRJfcllVneqRN = "e85aaddc015375ac9e850c24bc22b23b"
+    case SJAZElIhkpVkrSW0rayEYw6 = "648b7302c4ffa4b054fa5d1e4939b31e"
+    case SJAZEsoZ0L6YgsKwJ0DlGuU = "a0f7013a3f50839229f059dd7b5aeed1"
+    case SJAZEUVBfbq2UH81q7Ftbq3 = "0d28bb4be5ccd97aca57cdd956bddfb1"
+    case SJAZEEPjTSzGukeICl2u6ue = "f6cad843cd3d3dcd47d1b5346673a1e2cedf43acd12a59e2c78c432fa7ba0b94"
+    case SJAZECyvz14cqPBZa8BHRwd = "c66f0a438fd974b632e59d50e464ffca"
+    case SJAZEJvLqXUWCmDFJBLleGx = "3e7c2d90422ac1c55c4b1c8f8429fca9"
+    case SJAZEjW824LNB0yW9KOqkuE = "44cf9939f6386d0d9c74e1c187ea117e"
+    case SJAZETqXs1AIbpvP9gabc3t = "f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304"
+    case SJAZEAyGV9lIdGdQJWQZ9Vj = "032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071"
+  }
 }
 
 extension DynamicDTO {
 
-  /// DTO 转 Model，并关联 UserModel
-  func toModel(modelContext: ModelContext) -> DynamicModel {
+  /// DTO 转 Model，并关联 JnixAsuGeizModel
+  func SJAZEJPFy9ykqn9XXvxsPWy(modelContext SJAZEWoyFRmcFXlgp6kTJib: ModelContext) -> BiekWudpWdqModel {
     // 查询对应用户
-    let userDescriptor = FetchDescriptor<UserModel>(
-      predicate: #Predicate { $0.userId == self.userId }
+    let SJAZEW1A8KOP0BG880Z7jnO = FetchDescriptor<JnixAsuGeizModel>(
+      predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == self.SJAZElIhkpVkrSW0rayEYw6 }
     )
-    let user: UserModel? = try? modelContext.fetch(userDescriptor).first
+    let SJAZEqW4EMg4h7fXuUJ0kd7: JnixAsuGeizModel? = try? SJAZEWoyFRmcFXlgp6kTJib.fetch(SJAZEW1A8KOP0BG880Z7jnO).first
 
-    return DynamicModel(
-      dynamicId: dynamicId,
-      user: user,
-      dynamicType: dynamicType,
-      dynamicDesc: dynamicDesc,
-      dynamicTitleType: dynamicTitleType,
-      dynamicPic: dynamicPic,
-      dynamicVideo: dynamicVideo,
-      dynamicLikeCount: dynamicLikeCount,
-      dynamicCommentCount: dynamicCommentCount
+    return BiekWudpWdqModel(
+      SJAZEVeQYjYRJfcllVneqRN: SJAZEVeQYjYRJfcllVneqRN,
+      SJAZEqW4EMg4h7fXuUJ0kd7: SJAZEqW4EMg4h7fXuUJ0kd7,
+      SJAZEsoZ0L6YgsKwJ0DlGuU: SJAZEsoZ0L6YgsKwJ0DlGuU,
+      SJAZEUVBfbq2UH81q7Ftbq3: SJAZEUVBfbq2UH81q7Ftbq3,
+      SJAZEEPjTSzGukeICl2u6ue: SJAZEEPjTSzGukeICl2u6ue,
+      SJAZECyvz14cqPBZa8BHRwd: SJAZECyvz14cqPBZa8BHRwd ?? [],
+      SJAZEJvLqXUWCmDFJBLleGx: SJAZEJvLqXUWCmDFJBLleGx,
+      SJAZEjW824LNB0yW9KOqkuE: SJAZEjW824LNB0yW9KOqkuE,
+      SJAZETqXs1AIbpvP9gabc3t: SJAZETqXs1AIbpvP9gabc3t,
+      SJAZEAyGV9lIdGdQJWQZ9Vj: SJAZEAyGV9lIdGdQJWQZ9Vj
     )
   }
 }

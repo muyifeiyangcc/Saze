@@ -2,76 +2,76 @@ import Foundation
 import SwiftData
 
 @Model
-final class CommentModel {
+final class OdbgTceHjbiModel {
 
   /// 评论ID
   @Attribute(.unique)
-  var commentId: String
+  var SJAZEQjHL56u9w8PufUdnP5: String
 
   /// 所属帖子ID
-  var dynamicId: String
+  var SJAZEVeQYjYRJfcllVneqRN: String
 
   /// 评论用户ID
-  var userId: String
+  var SJAZElIhkpVkrSW0rayEYw6: String
 
   /// 评论内容
-  var content: String
+  var SJAZECpm56ZBeV7qNkfJvuX: String
 
   init(
-    dynamicId: String,
-    commentId: String,
-    userId: String,
-    content: String
+    SJAZEVeQYjYRJfcllVneqRN: String,
+    SJAZEQjHL56u9w8PufUdnP5: String,
+    SJAZElIhkpVkrSW0rayEYw6: String,
+    SJAZECpm56ZBeV7qNkfJvuX: String
   ) {
-    self.dynamicId = dynamicId
-    self.commentId = commentId
-    self.userId = userId
-    self.content = content
+    self.SJAZEVeQYjYRJfcllVneqRN = SJAZEVeQYjYRJfcllVneqRN
+    self.SJAZEQjHL56u9w8PufUdnP5 = SJAZEQjHL56u9w8PufUdnP5
+    self.SJAZElIhkpVkrSW0rayEYw6 = SJAZElIhkpVkrSW0rayEYw6
+    self.SJAZECpm56ZBeV7qNkfJvuX = SJAZECpm56ZBeV7qNkfJvuX
   }
 }
 
 // MARK: - JSON Support
-extension CommentModel {
+extension OdbgTceHjbiModel {
 
-  func update(from new: CommentModel) {
-    dynamicId = new.dynamicId
-    userId = new.userId
-    content = new.content
+  func SJAZEhIl26YqPW7bYsDnGDi(from SJAZEbKNLayFNQOfK7BGEub: OdbgTceHjbiModel) {
+    SJAZEVeQYjYRJfcllVneqRN = SJAZEbKNLayFNQOfK7BGEub.SJAZEVeQYjYRJfcllVneqRN
+    SJAZElIhkpVkrSW0rayEYw6 = SJAZEbKNLayFNQOfK7BGEub.SJAZElIhkpVkrSW0rayEYw6
+    SJAZECpm56ZBeV7qNkfJvuX = SJAZEbKNLayFNQOfK7BGEub.SJAZECpm56ZBeV7qNkfJvuX
   }
   /// 转 Dictionary
-  func toJson() -> [String: Any] {
+  func SJAZErTTrSFzQqvk8CqQGVx() -> [String: Any] {
     return [
-      "e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY(): dynamicId,
-      "0675a0f0bb4270f3387b94f783428ef0".SJAZET5gG1gyy5729np8EdY(): commentId,
-      "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY(): userId,
-      "dffc92176bacb25e94507635340730bd".SJAZET5gG1gyy5729np8EdY(): content,
+      "e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY(): SJAZEVeQYjYRJfcllVneqRN,
+      "0675a0f0bb4270f3387b94f783428ef0".SJAZET5gG1gyy5729np8EdY(): SJAZEQjHL56u9w8PufUdnP5,
+      "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY(): SJAZElIhkpVkrSW0rayEYw6,
+      "dffc92176bacb25e94507635340730bd".SJAZET5gG1gyy5729np8EdY(): SJAZECpm56ZBeV7qNkfJvuX,
     ]
   }
 
   /// 转 JSON String
-  func toJsonString() -> String? {
-    guard let data = try? JSONSerialization.data(withJSONObject: toJson()) else {
+  func SJAZEdCCqr3yHlozSZgz6ID() -> String? {
+    guard let SJAZEkZrRMSHL5OBgA65cNH = try? JSONSerialization.data(withJSONObject: SJAZErTTrSFzQqvk8CqQGVx()) else {
       return nil
     }
-    return String(data: data, encoding: .utf8)
+    return String(data: SJAZEkZrRMSHL5OBgA65cNH, encoding: .utf8)
   }
 
   /// 从 JSON 创建对象
-  static func fromJson(_ json: [String: Any]) -> CommentModel? {
+  static func SJAZE7KsC41Sdy5ej8SJeT1(_ SJAZEnkLAphU8uUYFhKArrL: [String: Any]) -> OdbgTceHjbiModel? {
     guard
-      let dynamicId = json["e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let commentId = json["0675a0f0bb4270f3387b94f783428ef0".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let userId = json["648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let content = json["dffc92176bacb25e94507635340730bd".SJAZET5gG1gyy5729np8EdY()] as? String
+      let SJAZEVeQYjYRJfcllVneqRN = SJAZEnkLAphU8uUYFhKArrL["e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let SJAZEQjHL56u9w8PufUdnP5 = SJAZEnkLAphU8uUYFhKArrL["0675a0f0bb4270f3387b94f783428ef0".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let SJAZElIhkpVkrSW0rayEYw6 = SJAZEnkLAphU8uUYFhKArrL["648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let SJAZECpm56ZBeV7qNkfJvuX = SJAZEnkLAphU8uUYFhKArrL["dffc92176bacb25e94507635340730bd".SJAZET5gG1gyy5729np8EdY()] as? String
     else {
       return nil
     }
 
-    return CommentModel(
-      dynamicId: dynamicId,
-      commentId: commentId,
-      userId: userId,
-      content: content
+    return OdbgTceHjbiModel(
+      SJAZEVeQYjYRJfcllVneqRN: SJAZEVeQYjYRJfcllVneqRN,
+      SJAZEQjHL56u9w8PufUdnP5: SJAZEQjHL56u9w8PufUdnP5,
+      SJAZElIhkpVkrSW0rayEYw6: SJAZElIhkpVkrSW0rayEYw6,
+      SJAZECpm56ZBeV7qNkfJvuX: SJAZECpm56ZBeV7qNkfJvuX
     )
   }
 }

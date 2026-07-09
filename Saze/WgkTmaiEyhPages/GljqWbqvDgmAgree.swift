@@ -29,7 +29,7 @@ struct GljqWbqvDgmAgree: View {
       let _ = forceRedraw
     #endif
     GeometryReader { geo in
-      Image("Assets/saze_splash_bg").resizable().scaledToFill().ignoresSafeArea()
+      Image("Assets/saze_splash_bg").resizable().ignoresSafeArea()
       ProgressView()
         .progressViewStyle(CircularProgressViewStyle(tint: Color("text1")))
       GljqWbqvDgmAgreeContent(trvudfhvSsxcUrl: trvudfhvSsxcUrl)

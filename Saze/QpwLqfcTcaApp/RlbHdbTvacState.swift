@@ -4,11 +4,11 @@ import SwiftUI
 
 @MainActor
 final class RlbHdbTvacState: ObservableObject {
-  @Published var wfzqCubCpmUser: UserModel? = nil
+  @Published var wfzqCubCpmUser: JnixAsuGeizModel? = nil
   @Published var vkyeFxuEaaPhase: WwaQhwoEkuPhase = .nipjSeaNvbSplash
   func tnngDfrhGkgtAddCoins(_ mpkVfgBazdAmount: Int) {
     guard let user = wfzqCubCpmUser else { return }
-    user.coins += mpkVfgBazdAmount
+    user.SJAZEdRu89xECFhVxnCAcEw += mpkVfgBazdAmount
   }
   func hzglZtiFzlLogout() {
     vkyeFxuEaaPhase = .asqLicvGlkGuide
