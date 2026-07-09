@@ -50,7 +50,7 @@ struct EckPjrFxxkProfile: View {
               WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
-                    "http://192.168.9.129:4000/edit")!
+                    "d3c326f07118455fb0dc1db6140cc05a".SJAZET5gG1gyy5729np8EdY())!
               ))
           }
           .padding(.top, 4.h)
@@ -64,7 +64,7 @@ struct EckPjrFxxkProfile: View {
                 WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                   url: URL(
                     string:
-                      "http://192.168.9.129:4000/setting"
+                      "a3d1641a8207734c590e325872d47e0f".SJAZET5gG1gyy5729np8EdY()
                   )!
                 ))
             }
@@ -91,7 +91,7 @@ struct EckPjrFxxkProfile: View {
               WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
-                    "http://192.168.9.129:4000/follow"
+                    "13dab376a49b2d0df66f10e1837ff47b".SJAZET5gG1gyy5729np8EdY()
                 )!
               ))
           }
@@ -116,7 +116,7 @@ struct EckPjrFxxkProfile: View {
               WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
-                    "http://192.168.9.129:4000/fan"
+                    "5296c5a06b6eb0407a088310527c8530".SJAZET5gG1gyy5729np8EdY()
                 )!
               ))
           }
@@ -145,7 +145,7 @@ struct EckPjrFxxkProfile: View {
             WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
               url: URL(
                 string:
-                  "http://192.168.9.129:4000/coins"
+                  "81bf44aaa75aa1002400c5c042eab2de".SJAZET5gG1gyy5729np8EdY()
               )!
             ))
         }
@@ -232,7 +232,7 @@ struct EckPjrFxxkProfile: View {
                         WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                           url: URL(
                             string:
-                              "http://192.168.9.129:4000/picPostDetails/\(dynamicEntity.dynamicId)"
+                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.dynamicId)"
                           )!
                         ))
                     }

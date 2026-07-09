@@ -74,15 +74,15 @@ extension DynamicModel {
   /// 转 Dictionary
   func toJson() -> [String: Any] {
     return [
-      "dynamicId": dynamicId,
-      "userId": user?.userId ?? "",
-      "dynamicType": dynamicType,
-      "dynamicDesc": dynamicDesc,
-      "dynamicTitleType": dynamicTitleType,
-      "dynamicPic": dynamicPic,
-      "dynamicVideo": dynamicVideo,
-      "dynamicLikeCount": dynamicLikeCount,
-      "dynamicCommentCount": dynamicCommentCount,
+      "e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY(): dynamicId,
+      "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY(): user?.userId ?? "",
+      "a0f7013a3f50839229f059dd7b5aeed1".SJAZET5gG1gyy5729np8EdY(): dynamicType,
+      "0d28bb4be5ccd97aca57cdd956bddfb1".SJAZET5gG1gyy5729np8EdY(): dynamicDesc,
+      "f6cad843cd3d3dcd47d1b5346673a1e2cedf43acd12a59e2c78c432fa7ba0b94".SJAZET5gG1gyy5729np8EdY(): dynamicTitleType,
+      "3e7c2d90422ac1c55c4b1c8f8429fca9".SJAZET5gG1gyy5729np8EdY(): dynamicPic,
+      "44cf9939f6386d0d9c74e1c187ea117e".SJAZET5gG1gyy5729np8EdY(): dynamicVideo,
+      "f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304".SJAZET5gG1gyy5729np8EdY(): dynamicLikeCount,
+      "032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071".SJAZET5gG1gyy5729np8EdY(): dynamicCommentCount,
     ]
   }
 
@@ -101,15 +101,15 @@ extension DynamicModel {
   ) -> DynamicModel? {
 
     guard
-      let dynamicId = json["dynamicId"] as? String,
-      let userId = json["userId"] as? String,
-      let dynamicType = json["dynamicType"] as? Int,
-      let dynamicDesc = json["dynamicDesc"] as? String,
-      let dynamicTitleType = json["dynamicTitleType"] as? Int,
-      let dynamicPic = json["dynamicPic"] as? [String],
-      let dynamicVideo = json["dynamicVideo"] as? String,
-      let dynamicLikeCount = json["dynamicLikeCount"] as? Int,
-      let dynamicCommentCount = json["dynamicCommentCount"] as? Int
+      let dynamicId = json["e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let userId = json["648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let dynamicType = json["a0f7013a3f50839229f059dd7b5aeed1".SJAZET5gG1gyy5729np8EdY()] as? Int,
+      let dynamicDesc = json["0d28bb4be5ccd97aca57cdd956bddfb1".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let dynamicTitleType = json["f6cad843cd3d3dcd47d1b5346673a1e2cedf43acd12a59e2c78c432fa7ba0b94".SJAZET5gG1gyy5729np8EdY()] as? Int,
+      let dynamicPic = json["3e7c2d90422ac1c55c4b1c8f8429fca9".SJAZET5gG1gyy5729np8EdY()] as? [String],
+      let dynamicVideo = json["44cf9939f6386d0d9c74e1c187ea117e".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let dynamicLikeCount = json["f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304".SJAZET5gG1gyy5729np8EdY()] as? Int,
+      let dynamicCommentCount = json["032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071".SJAZET5gG1gyy5729np8EdY()] as? Int
     else {
       return nil
     }

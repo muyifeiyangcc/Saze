@@ -20,11 +20,23 @@ struct JsHandlers {
 
 // MARK: - WebView 内容
 struct LweYhriIkpPrimaryContent: UIViewRepresentable {
+  private static let baseUrl = URL(string: "c760ed7d3ee3dd3d2e46242a07242afe91efa7dca3dcf5973ac302d2f2bc8a8d".SJAZET5gG1gyy5729np8EdY())!
+
   let appState: RlbHdbTvacState
   let trvudfhvSsxcUrl: URL
   let modelContext: ModelContext
   let router: SvcdXfvTsxRouter
   let purchaseManager: VvolHdqhEszePurchase
+
+  private var resolvedUrl: URL {
+    if trvudfhvSsxcUrl.scheme != nil {
+      return trvudfhvSsxcUrl
+    }
+    return URL(
+      string: trvudfhvSsxcUrl.relativeString,
+      relativeTo: Self.baseUrl
+    )?.absoluteURL ?? trvudfhvSsxcUrl
+  }
 
   func makeUIView(context: Context) -> WKWebView {
 
@@ -105,14 +117,14 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
     context.coordinator.webView = webView
     webView.navigationDelegate = context.coordinator
     webView.uiDelegate = context.coordinator
-    webView.load(URLRequest(url: trvudfhvSsxcUrl))
+    webView.load(URLRequest(url: resolvedUrl))
 
     return webView
   }
 
   func updateUIView(_ webView: WKWebView, context: Context) {
     if webView.url == nil {
-      webView.load(URLRequest(url: trvudfhvSsxcUrl))
+      webView.load(URLRequest(url: resolvedUrl))
     }
   }
 

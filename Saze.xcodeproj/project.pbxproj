@@ -20,28 +20,16 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				x.txt,
 			);
 			target = DDEC92272F713BB00012F2B3 /* Saze */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		DDEC92832F713C330012F2B3 /* Exceptions for "Saze" folder in "Compile Sources" phase from "Saze" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = DDEC92242F713BB00012F2B3 /* Sources */;
-			membershipExceptions = (
-				x.txt,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DDEC922A2F713BB00012F2B3 /* Saze */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				DDEC92822F713C330012F2B3 /* Exceptions for "Saze" folder in "Saze" target */,
-				DDEC92832F713C330012F2B3 /* Exceptions for "Saze" folder in "Compile Sources" phase from "Saze" target */,
 			);
 			path = Saze;
 			sourceTree = "<group>";

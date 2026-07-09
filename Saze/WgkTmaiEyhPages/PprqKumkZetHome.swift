@@ -68,7 +68,7 @@ struct PprqKumkZetHome: View {
               WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
-                    "http://192.168.9.129:4000/publishPicPost")!
+                    "43d13a3a0778a485eaba1ffe0f2b056e".SJAZET5gG1gyy5729np8EdY())!
               ))
           }
           .padding(.top, 15.h)
@@ -112,7 +112,7 @@ struct PprqKumkZetHome: View {
             WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
               url: URL(
                 string:
-                  "http://192.168.9.129:4000/aiDetails")!
+                  "75e3bbc7b6c7a719263fad7a92bad5d9".SJAZET5gG1gyy5729np8EdY())!
             ))
         }
         .frame(maxWidth: .infinity, alignment: .center)
@@ -174,7 +174,7 @@ struct PprqKumkZetHome: View {
                         WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                           url: URL(
                             string:
-                              "http://192.168.9.129:4000/picPostDetails/\(dynamicEntity.dynamicId)"
+                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.dynamicId)"
                           )!
                         ))
                     }

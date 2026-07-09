@@ -62,7 +62,7 @@ struct IrlvCtgVhhFound: View {
               WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
-                    "http://192.168.9.129:4000/publishVideoPost")!
+                    "df60f0f939fd7c5e2ccc5e4e47a260576b200420d790c959078ac470fe4fad3f".SJAZET5gG1gyy5729np8EdY())!
               ))
           }
         }
@@ -194,7 +194,7 @@ struct IrlvCtgVhhFound: View {
                   WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                     url: URL(
                       string:
-                        "http://192.168.9.129:4000/videoPostDetails/\(dynamicEntity.dynamicId)"
+                        "a500ea99647cdcf57b4b633170e479af87bed8d63909abd0d58c0d82da0738ac".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.dynamicId)"
                     )!
                   ))
               }

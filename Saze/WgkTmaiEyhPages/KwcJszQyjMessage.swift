@@ -104,7 +104,7 @@ struct KwcJszQyjMessage: View {
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                         url: URL(
                           string:
-                            "http://192.168.9.129:4000/chat/\(chat.chatId)"
+                            "0e4149520c31111f64ac996e7feaa459".SJAZET5gG1gyy5729np8EdY()+"\(chat.chatId)"
                         )!
                       ))
                   }

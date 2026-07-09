@@ -76,16 +76,16 @@ extension MessageModel {
   /// 转 Dictionary
   func toJson() -> [String: Any] {
     return [
-      "loading": loading as Any,
-      "msgId": msgId,
-      "chatId": chatId,
-      "userId": userId,
-      "name": name as Any,
-      "avatar": avatar as Any,
-      "position": position as Any,
-      "sendContent": sendContent,
-      "sendPicUrl": sendPicUrl,
-      "sendTime": sendTime as Any,
+      "12245d91f902a3046159f5fb454b6348".SJAZET5gG1gyy5729np8EdY(): loading as Any,
+      "cd5892851cd9f6c4675c019358bc01d2".SJAZET5gG1gyy5729np8EdY(): msgId,
+      "e4cb87984b078b806310573a2a50913f".SJAZET5gG1gyy5729np8EdY(): chatId,
+      "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY(): userId,
+      "58bfd5af727f1b843c15df60a668899f".SJAZET5gG1gyy5729np8EdY(): name as Any,
+      "27274062c7e2431266a12b6a7fbc51cf".SJAZET5gG1gyy5729np8EdY(): avatar as Any,
+      "59fdf3d1fcf8c839944c9bd16d5a2025".SJAZET5gG1gyy5729np8EdY(): position as Any,
+      "6aa08015b8f3774685d3e6c182e17f67".SJAZET5gG1gyy5729np8EdY(): sendContent,
+      "4966c003c0ea5918b72fae298ee8b547".SJAZET5gG1gyy5729np8EdY(): sendPicUrl,
+      "70f86d4fac127dde5322adea8bf270f0".SJAZET5gG1gyy5729np8EdY(): sendTime as Any,
     ]
   }
 
@@ -100,26 +100,26 @@ extension MessageModel {
   /// 从 JSON 创建对象
   static func fromJson(_ json: [String: Any]) -> MessageModel? {
     guard
-      let msgId = json["msgId"] as? String,
-      let chatId = json["chatId"] as? String,
-      let userId = json["userId"] as? String,
-      let sendContent = json["sendContent"] as? String,
-      let sendPicUrl = json["sendPicUrl"] as? String
+      let msgId = json["cd5892851cd9f6c4675c019358bc01d2".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let chatId = json["e4cb87984b078b806310573a2a50913f".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let userId = json["648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let sendContent = json["6aa08015b8f3774685d3e6c182e17f67".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let sendPicUrl = json["4966c003c0ea5918b72fae298ee8b547".SJAZET5gG1gyy5729np8EdY()] as? String
     else {
       return nil
     }
 
     return MessageModel(
-      loading: json["loading"] as? Bool,
+      loading: json["12245d91f902a3046159f5fb454b6348".SJAZET5gG1gyy5729np8EdY()] as? Bool,
       msgId: msgId,
       chatId: chatId,
       userId: userId,
-      name: json["name"] as? String,
-      avatar: json["avatar"] as? String,
-      position: json["position"] as? String,
+      name: json["58bfd5af727f1b843c15df60a668899f".SJAZET5gG1gyy5729np8EdY()] as? String,
+      avatar: json["27274062c7e2431266a12b6a7fbc51cf".SJAZET5gG1gyy5729np8EdY()] as? String,
+      position: json["59fdf3d1fcf8c839944c9bd16d5a2025".SJAZET5gG1gyy5729np8EdY()] as? String,
       sendContent: sendContent,
       sendPicUrl: sendPicUrl,
-      sendTime: json["sendTime"] as? String
+      sendTime: json["70f86d4fac127dde5322adea8bf270f0".SJAZET5gG1gyy5729np8EdY()] as? String
     )
   }
 }

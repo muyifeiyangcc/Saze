@@ -153,7 +153,7 @@ struct YwxKvvRbdkGuide: View {
                 .onTapGesture {
                   router.sazePath.append(
                     WwaQhwoEkuRoute.wfueZroFsmnPrimary(
-                      url: URL(string: "http://192.168.9.129:4000/userAgreement")!))
+                      url: URL(string: "700fd2d489dc5595a739a1cf71131326".SJAZET5gG1gyy5729np8EdY())!))
                 }
               Text(" and ")
                 .foregroundColor(Color(red: 51 / 255, green: 51 / 255, blue: 51 / 255))
@@ -165,7 +165,7 @@ struct YwxKvvRbdkGuide: View {
                 .onTapGesture {
                   router.sazePath.append(
                     WwaQhwoEkuRoute.wfueZroFsmnPrimary(
-                      url: URL(string: "http://192.168.9.129:4000/privacyPolicy")!))
+                      url: URL(string: "a567708a9115a1d84c52702fdc3a5ad6".SJAZET5gG1gyy5729np8EdY())!))
                 }
             }
           }

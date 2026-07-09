@@ -41,10 +41,10 @@ extension CommentModel {
   /// 转 Dictionary
   func toJson() -> [String: Any] {
     return [
-      "dynamicId": dynamicId,
-      "commentId": commentId,
-      "userId": userId,
-      "content": content,
+      "e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY(): dynamicId,
+      "0675a0f0bb4270f3387b94f783428ef0".SJAZET5gG1gyy5729np8EdY(): commentId,
+      "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY(): userId,
+      "dffc92176bacb25e94507635340730bd".SJAZET5gG1gyy5729np8EdY(): content,
     ]
   }
 
@@ -59,10 +59,10 @@ extension CommentModel {
   /// 从 JSON 创建对象
   static func fromJson(_ json: [String: Any]) -> CommentModel? {
     guard
-      let dynamicId = json["dynamicId"] as? String,
-      let commentId = json["commentId"] as? String,
-      let userId = json["userId"] as? String,
-      let content = json["content"] as? String
+      let dynamicId = json["e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let commentId = json["0675a0f0bb4270f3387b94f783428ef0".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let userId = json["648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY()] as? String,
+      let content = json["dffc92176bacb25e94507635340730bd".SJAZET5gG1gyy5729np8EdY()] as? String
     else {
       return nil
     }
