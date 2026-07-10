@@ -1,17 +1,17 @@
 import SwiftUI
 
 struct QngkUgjVaosEula: View {
-  @Binding var isAgreeEula: Bool
-  @Binding var isShowEula: Bool
+  @Binding var SJAZElk5cR2mJTpUpBW: Bool
+  @Binding var SJAZETmH1ztuz9Pe2hI: Bool
   var body: some View {
-    GeometryReader { geometry in
+    GeometryReader { SJAZE7He6SSx0CclF0a in
       Color.black.opacity(0.2).ignoresSafeArea()
       VStack(spacing: 0) {
         Spacer().frame(height: 63.h)
         Text("EULA")
           .foregroundColor(.zts1)
           .font(.system(size: 24.sp, weight: .black))
-          .glowBorder(color: .fzs1, lineWidth: 4)
+          .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
         Spacer().frame(height: 6.h)
         Text(
           """
@@ -30,8 +30,8 @@ struct QngkUgjVaosEula: View {
         Spacer()
         HStack(spacing: 23.w) {
           Button(action: {
-            isAgreeEula = false
-            isShowEula = false
+            SJAZElk5cR2mJTpUpBW = false
+            SJAZETmH1ztuz9Pe2hI = false
           }) {
             Text("CANCLE")
               .foregroundColor(.white)
@@ -42,8 +42,8 @@ struct QngkUgjVaosEula: View {
           .background(.fzs1)
           .cornerRadius(20)
           Button(action: {
-            isShowEula = false
-            isAgreeEula = true
+            SJAZETmH1ztuz9Pe2hI = false
+            SJAZElk5cR2mJTpUpBW = true
           }) {
             Text("I AGREE")
               .foregroundColor(.black)
@@ -63,7 +63,7 @@ struct QngkUgjVaosEula: View {
       .background(
         Image("Assets/saze_guide_eula_bg").resizable().scaledToFill()
       )
-      .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+      .position(x: SJAZE7He6SSx0CclF0a.size.width / 2, y: SJAZE7He6SSx0CclF0a.size.height / 2)
     }
   }
 }

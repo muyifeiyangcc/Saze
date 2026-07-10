@@ -2,7 +2,7 @@ import Combine
 import Foundation
 import StoreKit
 
-struct CoinProduct: Hashable, Identifiable, Decodable {
+struct CoinProduct: Hashable, Identifiable, Codable {
   let id: String
   let price: Double
   let coin: Int

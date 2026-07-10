@@ -39,6 +39,43 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
     )?.absoluteURL ?? trvudfhvSsxcUrl
   }
 
+  static func coinsSettingJson(from configs: [CoinProduct]) -> String {
+    let items: [[String: Any]] = configs.map {
+      [
+        "key": $0.id,
+        "cions": $0.coin,
+        "money": $0.price,
+      ]
+    }
+    guard
+      let data = try? JSONSerialization.data(withJSONObject: items),
+      let string = String(data: data, encoding: .utf8)
+    else {
+      return "[]"
+    }
+    return string
+  }
+
+  static func coinsSettingScript(from configs: [CoinProduct]) -> String {
+    let json = coinsSettingJson(from: configs)
+    return """
+      (function() {
+        var coinsSetting = \(json);
+        window.other = Object.assign({}, window.other || {}, { coinsSetting: coinsSetting });
+        window.coinsSetting = coinsSetting;
+        window.paymentList = coinsSetting;
+        window.appConfig = Object.assign({}, window.appConfig || {}, { coinsSetting: coinsSetting });
+        try {
+          window.localStorage.setItem('coinsSetting', JSON.stringify(coinsSetting));
+        } catch (e) {}
+        if (typeof window.updateCoinsSetting === 'function') {
+          window.updateCoinsSetting(coinsSetting);
+        }
+        window.dispatchEvent(new CustomEvent('coinsSettingUpdate', { detail: coinsSetting }));
+      })();
+      """
+  }
+
   func makeUIView(context: Context) -> WKWebView {
 
     let preferences = WKWebpagePreferences()
@@ -160,6 +197,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       window.commentList = \(arr(comments) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
       window.chatList = \(arr(chats) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
       window.messageList = \(arr(messages) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      \(Self.coinsSettingScript(from: purchaseManager.configs))
       """
   }
 
@@ -193,12 +231,18 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       }
     }
 
+    private func syncCoinsSetting() {
+      let js = LweYhriIkpPrimaryContent.coinsSettingScript(from: purchaseManager.configs)
+      webView?.evaluateJavaScript(js)
+    }
+
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
       setPageLoading(true)
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
       setPageLoading(false)
+      syncCoinsSetting()
     }
 
     func webView(
@@ -412,7 +456,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
               $0.productIdentifier == key
             })
           else { return }
-          Toast.shared.showLoading()
+          Toast.SJAZEcdY89CWWjnmZSU.SJAZESQA2cPpZujcz7a()
           purchaseManager.purchase(product) { result in
             if result > 0 {
               self.appState.tnngDfrhGkgtAddCoins(result)
@@ -423,7 +467,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
                 }
               }
             }
-            Toast.shared.hideLoading()
+            Toast.SJAZEcdY89CWWjnmZSU.SJAZELtA1C2LYDIukXm()
           }
         default:
           break

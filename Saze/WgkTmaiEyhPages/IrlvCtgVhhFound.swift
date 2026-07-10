@@ -44,7 +44,7 @@ struct IrlvCtgVhhFound: View {
           Text("FOR YOU")
             .foregroundColor(.zts1)
             .font(.system(size: 27.sp, weight: .black))
-            .glowBorder(color: .fzs1, lineWidth: 4)
+            .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
           Spacer()
           HStack {
             Image("Assets/saze_video_add_icon")

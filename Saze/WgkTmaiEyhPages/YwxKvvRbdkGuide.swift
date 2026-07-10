@@ -172,7 +172,7 @@ struct YwxKvvRbdkGuide: View {
       }
       .overlay {
         if isShowEula {
-          QngkUgjVaosEula(isAgreeEula: $isAgreeEula, isShowEula: $isShowEula)
+          QngkUgjVaosEula(SJAZElk5cR2mJTpUpBW: $isAgreeEula, SJAZETmH1ztuz9Pe2hI: $isShowEula)
         }
       }
       .navigationDestination(for: WwaQhwoEkuRoute.self) { route in

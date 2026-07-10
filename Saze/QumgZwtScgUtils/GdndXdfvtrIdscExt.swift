@@ -3,29 +3,29 @@ import UIKit
 
 extension View {
 
-  func enableSwipeBack() -> some View {
+  func SJAZEJNYyXIDohrI1ON() -> some View {
     self.onAppear {
-      guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-        let window = windowScene.windows.first,
-        let navigationController =
-          (window.rootViewController as? UINavigationController)
-          ?? findNavigationController(in: window.rootViewController)
+      guard let SJAZEnQWnCxpLpY0Wjv = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+        let SJAZE8bM6AiWLU84gCE = SJAZEnQWnCxpLpY0Wjv.windows.first,
+        let SJAZEKVP4JQQlcMjOwv =
+          (SJAZE8bM6AiWLU84gCE.rootViewController as? UINavigationController)
+          ?? SJAZEQTyadPxlNzwIG0(SJAZEHneO3zVi8SCO0X: SJAZE8bM6AiWLU84gCE.rootViewController)
       else { return }
-      navigationController.interactivePopGestureRecognizer?.isEnabled = true
-      navigationController.interactivePopGestureRecognizer?.delegate = nil
+      SJAZEKVP4JQQlcMjOwv.interactivePopGestureRecognizer?.isEnabled = true
+      SJAZEKVP4JQQlcMjOwv.interactivePopGestureRecognizer?.delegate = nil
     }
   }
 
-  private func findNavigationController(in viewController: UIViewController?)
+  private func SJAZEQTyadPxlNzwIG0(SJAZEHneO3zVi8SCO0X: UIViewController?)
     -> UINavigationController?
   {
-    guard let viewController else { return nil }
-    if let nav = viewController as? UINavigationController {
-      return nav
+    guard let SJAZEHneO3zVi8SCO0X else { return nil }
+    if let SJAZEdcGyFxaWvMqcgj = SJAZEHneO3zVi8SCO0X as? UINavigationController {
+      return SJAZEdcGyFxaWvMqcgj
     }
-    for child in viewController.children {
-      if let found = findNavigationController(in: child) {
-        return found
+    for SJAZEkLKURwV72XY6UR in SJAZEHneO3zVi8SCO0X.children {
+      if let SJAZExcxiuNJQTmQTGS = SJAZEQTyadPxlNzwIG0(SJAZEHneO3zVi8SCO0X: SJAZEkLKURwV72XY6UR) {
+        return SJAZExcxiuNJQTmQTGS
       }
     }
     return nil
@@ -33,25 +33,25 @@ extension View {
 }
 
 struct GlowBorder: ViewModifier {
-  var color: Color
-  var lineWidth: Int
+  var SJAZEaZ0P7Y8YCftoQE: Color
+  var SJAZEZHOfP46j8LSO66: Int
 
   func body(content: Content) -> some View {
-    applyShadow(content: AnyView(content), lineWidth: lineWidth)
+    SJAZE0rnMtUTgalw3LC(SJAZEkj2kBBz23bWTK1: AnyView(content), SJAZEXv2y95TOQQKZGC: SJAZEZHOfP46j8LSO66)
   }
 
-  func applyShadow(content: AnyView, lineWidth: Int) -> AnyView {
-    if lineWidth == 0 {
-      return content
+  func SJAZE0rnMtUTgalw3LC(SJAZEkj2kBBz23bWTK1: AnyView, SJAZEXv2y95TOQQKZGC: Int) -> AnyView {
+    if SJAZEXv2y95TOQQKZGC == 0 {
+      return SJAZEkj2kBBz23bWTK1
     } else {
-      return applyShadow(
-        content: AnyView(content.shadow(color: color, radius: 1)), lineWidth: lineWidth - 1)
+      return SJAZE0rnMtUTgalw3LC(
+        SJAZEkj2kBBz23bWTK1: AnyView(SJAZEkj2kBBz23bWTK1.shadow(color: SJAZEaZ0P7Y8YCftoQE, radius: 1)), SJAZEXv2y95TOQQKZGC: SJAZEXv2y95TOQQKZGC - 1)
     }
   }
 }
 
 extension View {
-  func glowBorder(color: Color, lineWidth: Int) -> some View {
-    self.modifier(GlowBorder(color: color, lineWidth: lineWidth))
+  func SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: Color, SJAZEaXDVDe3fq251lp: Int) -> some View {
+    self.modifier(GlowBorder(SJAZEaZ0P7Y8YCftoQE: SJAZEZInLVMwuK3b7Nt, SJAZEZHOfP46j8LSO66: SJAZEaXDVDe3fq251lp))
   }
 }

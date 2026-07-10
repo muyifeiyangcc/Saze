@@ -100,7 +100,7 @@ struct JfsVizaSicgLogin: View {
               let user = try modelContext.fetch(descriptor).first
               await MainActor.run {
                 guard let user = user else {
-                  Toast.shared.showToast("Invalid email or password. Please try again.")
+                  Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Invalid email or password. Please try again.")
                   return
                 }
                 appState.wfzqCubCpmUser = user
@@ -108,7 +108,7 @@ struct JfsVizaSicgLogin: View {
               }
             } catch {
               await MainActor.run {
-                Toast.shared.showToast("Invalid email or password. Please try again.")
+                Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Invalid email or password. Please try again.")
               }
             }
           }
@@ -149,11 +149,11 @@ struct JfsVizaSicgLogin: View {
         Text("SIGN IN")
           .foregroundColor(.zts1)
           .font(.system(size: 24.sp, weight: .black))
-          .glowBorder(color: .fzs1, lineWidth: 4)
+          .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
       }
     }
     .navigationBarBackButtonHidden(true)
-    .enableSwipeBack()
+    .SJAZEJNYyXIDohrI1ON()
     .enableInjection()
   }
 }

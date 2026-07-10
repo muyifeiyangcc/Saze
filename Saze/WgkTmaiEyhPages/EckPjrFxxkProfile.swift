@@ -40,7 +40,7 @@ struct EckPjrFxxkProfile: View {
             Text(appState.wfzqCubCpmUser?.SJAZEgk7Ot2T1adgYgUOQFz ?? "")
               .foregroundColor(.zs1)
               .font(.system(size: 16.sp, weight: .black))
-              .glowBorder(color: .fzs1, lineWidth: 4)
+              .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
             Image("Assets/saze_edit_icon")
               .resizable().scaledToFit().frame(
                 width: 12.r, height: 12.r)
@@ -131,7 +131,7 @@ struct EckPjrFxxkProfile: View {
           Text("WALLET")
             .foregroundColor(.zs1)
             .font(.system(size: 20.sp, weight: .black))
-            .glowBorder(color: .fzs1, lineWidth: 4)
+            .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
           Spacer()
         }
         .padding(.horizontal, 25.w)
@@ -157,7 +157,7 @@ struct EckPjrFxxkProfile: View {
             Text("POST")
               .foregroundColor(.zts1)
               .font(.system(size: 24.sp, weight: .black))
-              .glowBorder(color: .fzs1, lineWidth: 4)
+              .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
               .padding(.leading, 20.w)
               .frame(maxWidth: .infinity, alignment: .leading)
             VStack {
@@ -171,7 +171,7 @@ struct EckPjrFxxkProfile: View {
           }
           .frame(maxWidth: .infinity, maxHeight: .infinity)
           .background(.white)
-          .clipShape(MacuSupJsqRoundedCorner(radius: 40.r, corners: [.topLeft, .topRight]))
+          .clipShape(MacuSupJsqRoundedCorner(SJAZE2hUbpFoA9MRWSb: 40.r, SJAZEvOx831LUvSBpIz: [.topLeft, .topRight]))
           .ignoresSafeArea()
         } else {
           VStack {
@@ -179,7 +179,7 @@ struct EckPjrFxxkProfile: View {
             Text("POST")
               .foregroundColor(.zts1)
               .font(.system(size: 24.sp, weight: .black))
-              .glowBorder(color: .fzs1, lineWidth: 4)
+              .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
               .padding(.leading, 20.w)
               .frame(maxWidth: .infinity, alignment: .leading)
             LazyVGrid(columns: columns) {
@@ -243,7 +243,7 @@ struct EckPjrFxxkProfile: View {
           .padding(.horizontal, 20.w)
           .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
           .background(.white)
-          .clipShape(MacuSupJsqRoundedCorner(radius: 40.r, corners: [.topLeft, .topRight]))
+          .clipShape(MacuSupJsqRoundedCorner(SJAZE2hUbpFoA9MRWSb: 40.r, SJAZEvOx831LUvSBpIz: [.topLeft, .topRight]))
           .ignoresSafeArea()
         }
       }

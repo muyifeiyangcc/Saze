@@ -44,7 +44,7 @@ struct SazeApp: App {
     WindowGroup {
       HzbdGyvZrklContentView()
         .task {
-          bootstrapIfNeeded(context: container.mainContext)
+          SJAZEBtKPXjGjkPCjf0(SJAZEmM6fbP5wodtaiZ: container.mainContext)
         }
         .environmentObject(appState)
         .environmentObject(purchaseManager)

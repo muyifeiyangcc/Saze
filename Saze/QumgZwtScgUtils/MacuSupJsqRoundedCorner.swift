@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct MacuSupJsqRoundedCorner: Shape {
-  var radius: CGFloat
-  var corners: UIRectCorner
+  var SJAZE2hUbpFoA9MRWSb: CGFloat
+  var SJAZEvOx831LUvSBpIz: UIRectCorner
 
-  func path(in rect: CGRect) -> Path {
-    let path = UIBezierPath(
-      roundedRect: rect,
-      byRoundingCorners: corners,
-      cornerRadii: CGSize(width: radius, height: radius)
+  func path(in SJAZErIYapVAiCpDStt: CGRect) -> Path {
+    let SJAZEfBskqmbar45EHU = UIBezierPath(
+      roundedRect: SJAZErIYapVAiCpDStt,
+      byRoundingCorners: SJAZEvOx831LUvSBpIz,
+      cornerRadii: CGSize(width: SJAZE2hUbpFoA9MRWSb, height: SJAZE2hUbpFoA9MRWSb)
     )
-    return Path(path.cgPath)
+    return Path(SJAZEfBskqmbar45EHU.cgPath)
   }
 }

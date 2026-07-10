@@ -54,7 +54,7 @@ struct PprqKumkZetHome: View {
           Text("SHARE YOUR\nBEAUTY！")
             .foregroundColor(Color(red: 211 / 255, green: 238 / 255, blue: 241 / 255))
             .font(.system(size: 24.sp, weight: .black))
-            .glowBorder(color: Color(red: 25 / 255, green: 44 / 255, blue: 65 / 255), lineWidth: 4)
+            .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: Color(red: 25 / 255, green: 44 / 255, blue: 65 / 255), SJAZEaXDVDe3fq251lp: 4)
           Spacer()
           VStack(spacing: 5.h) {
             Image("Assets/saze_home_share").resizable().scaledToFit().frame(
@@ -122,7 +122,7 @@ struct PprqKumkZetHome: View {
             Text("POPULAR PHOTO")
               .foregroundColor(.zts1)
               .font(.system(size: 18.sp, weight: .black))
-              .glowBorder(color: .fzs1, lineWidth: 4)
+              .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
               .padding(.leading, 20.w)
               .frame(maxWidth: .infinity, alignment: .leading)
             Spacer().frame(height: 16.h)
@@ -218,7 +218,7 @@ struct PprqKumkZetHome: View {
         .padding(.bottom, 80.h)
         .frame(maxWidth: .infinity)
         .background(.white)
-        .clipShape(MacuSupJsqRoundedCorner(radius: 20, corners: [.topLeft, .topRight]))
+        .clipShape(MacuSupJsqRoundedCorner(SJAZE2hUbpFoA9MRWSb: 20, SJAZEvOx831LUvSBpIz: [.topLeft, .topRight]))
         .ignoresSafeArea()
       }
     }

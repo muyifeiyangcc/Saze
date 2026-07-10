@@ -125,17 +125,17 @@ struct CnsOybInhRegister: View {
           let confirmPassword = againPassword.trimmingCharacters(in: .whitespacesAndNewlines)
 
           guard !email.isEmpty, !password.isEmpty, !confirmPassword.isEmpty else {
-            Toast.shared.showToast("Please fill in all fields.")
+            Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Please fill in all fields.")
             return
           }
 
           guard email.contains("@"), email.contains(".") else {
-            Toast.shared.showToast("Please enter a valid email.")
+            Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Please enter a valid email.")
             return
           }
 
           guard password == confirmPassword else {
-            Toast.shared.showToast("Passwords do not match.")
+            Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Passwords do not match.")
             return
           }
 
@@ -148,7 +148,7 @@ struct CnsOybInhRegister: View {
             )
 
             if try modelContext.fetch(descriptor).first != nil {
-              Toast.shared.showToast("This email is already registered.")
+              Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("This email is already registered.")
               return
             }
 
@@ -169,7 +169,7 @@ struct CnsOybInhRegister: View {
             appState.wfzqCubCpmUser = newUser
             appState.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
           } catch {
-            Toast.shared.showToast("Sign up failed. Please try again.")
+            Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Sign up failed. Please try again.")
           }
         }) {
           if isLoading {
@@ -208,11 +208,11 @@ struct CnsOybInhRegister: View {
         Text("SIGN UP")
           .foregroundColor(.zts1)
           .font(.system(size: 24.sp, weight: .black))
-          .glowBorder(color: .fzs1, lineWidth: 4)
+          .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
       }
     }
     .navigationBarBackButtonHidden(true)
-    .enableSwipeBack()
+    .SJAZEJNYyXIDohrI1ON()
     .enableInjection()
   }
 }

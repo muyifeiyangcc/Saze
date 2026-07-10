@@ -2,53 +2,53 @@ import Combine
 import SwiftUI
 
 final class Toast: ObservableObject {
-  static let shared = Toast()
+  static let SJAZEcdY89CWWjnmZSU = Toast()
 
-  @Published var message: String = ""
-  @Published var isShowingToast: Bool = false
+  @Published var SJAZEZevDC8JH6JagRq: String = ""
+  @Published var SJAZEgWHOrXJZFt7HX4: Bool = false
 
-  @Published var isLoading: Bool = false
+  @Published var SJAZEcdFjH73fd5AZ9G: Bool = false
 
-  private var timer: AnyCancellable?
+  private var SJAZE76VPIemmnBgqmh: AnyCancellable?
 
   private init() {}
 
-  func showToast(_ message: String, duration: TimeInterval = 2) {
-    self.message = message
+  func SJAZErg181XkeSUsp4M(_ SJAZEdy2gCuT2BMhyef: String, SJAZEW9SpyvrzG1YfFq: TimeInterval = 2) {
+    self.SJAZEZevDC8JH6JagRq = SJAZEdy2gCuT2BMhyef
     withAnimation {
-      self.isShowingToast = true
+      self.SJAZEgWHOrXJZFt7HX4 = true
     }
 
-    timer?.cancel()
-    timer = Just(())
-      .delay(for: .seconds(duration), scheduler: RunLoop.main)
+    SJAZE76VPIemmnBgqmh?.cancel()
+    SJAZE76VPIemmnBgqmh = Just(())
+      .delay(for: .seconds(SJAZEW9SpyvrzG1YfFq), scheduler: RunLoop.main)
       .sink { [weak self] _ in
         withAnimation {
-          self?.isShowingToast = false
+          self?.SJAZEgWHOrXJZFt7HX4 = false
         }
       }
   }
 
-  func showLoading() {
+  func SJAZESQA2cPpZujcz7a() {
     withAnimation {
-      self.isLoading = true
+      self.SJAZEcdFjH73fd5AZ9G = true
     }
   }
 
-  func hideLoading() {
+  func SJAZELtA1C2LYDIukXm() {
     withAnimation {
-      self.isLoading = false
+      self.SJAZEcdFjH73fd5AZ9G = false
     }
   }
 }
 
 struct MzyhRcjWazgToastView: View {
-  @ObservedObject var manager = Toast.shared
+  @ObservedObject var SJAZESSwRdisJcuggvT = Toast.SJAZEcdY89CWWjnmZSU
 
   var body: some View {
     ZStack {
-      if manager.isShowingToast {
-        Text(manager.message)
+      if SJAZESSwRdisJcuggvT.SJAZEgWHOrXJZFt7HX4 {
+        Text(SJAZESSwRdisJcuggvT.SJAZEZevDC8JH6JagRq)
           .font(.system(size: 14))
           .foregroundColor(.black.opacity(0.8))
           .padding(.horizontal, 16)
@@ -62,7 +62,7 @@ struct MzyhRcjWazgToastView: View {
           .zIndex(1000)
       }
 
-      if manager.isLoading {
+      if SJAZESSwRdisJcuggvT.SJAZEcdFjH73fd5AZ9G {
         Color.black.opacity(0.3)
           .ignoresSafeArea()
           .transition(.opacity)
@@ -82,6 +82,6 @@ struct MzyhRcjWazgToastView: View {
           .zIndex(1000)
       }
     }
-    .animation(.easeInOut, value: manager.isShowingToast || manager.isLoading)
+    .animation(.easeInOut, value: SJAZESSwRdisJcuggvT.SJAZEgWHOrXJZFt7HX4 || SJAZESSwRdisJcuggvT.SJAZEcdFjH73fd5AZ9G)
   }
 }

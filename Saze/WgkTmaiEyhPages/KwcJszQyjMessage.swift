@@ -44,7 +44,7 @@ struct KwcJszQyjMessage: View {
         Text("MESSAGE")
           .foregroundColor(.zts1)
           .font(.system(size: 24.sp, weight: .black))
-          .glowBorder(color: .fzs1, lineWidth: 4)
+          .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
           .frame(maxWidth: .infinity, alignment: .leading)
         Spacer().frame(height: 16.h)
         if filteredChats.isEmpty {
