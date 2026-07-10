@@ -4,8 +4,8 @@ struct SJAZEbmjsmblupfView: View {
   #if DEBUG
     @ObserveInjection var forceRedraw
   #endif
-  var SJAZEDdtxt36SxEs2AJvhi4: (() -> Void)?
-  var SJAZEM0OnEKdu7gD0I8pbs5: (() -> Void)?
+  var SJAZEDdtxt36SxEs2AJvhi4: () -> Void = {}
+  var SJAZEM0OnEKdu7gD0I8pbs5: () -> Void = {}
 
   var body: some View {
     #if DEBUG
@@ -36,9 +36,7 @@ struct SJAZEbmjsmblupfView: View {
           .foregroundColor(Color(red: 51 / 255, green: 51 / 255, blue: 51 / 255))
           .font(.system(size: 15.sp))
 
-        Button {
-          SJAZEDdtxt36SxEs2AJvhi4?()
-        } label: {
+        Button(action: SJAZEDdtxt36SxEs2AJvhi4) {
           Text("log in")
             .foregroundColor(.white)
             .font(.system(size: 20.sp))
@@ -49,9 +47,7 @@ struct SJAZEbmjsmblupfView: View {
         .padding(.top, 20.h)
         .padding(.bottom, 20.h)
 
-        Button {
-          SJAZEM0OnEKdu7gD0I8pbs5?()
-        } label: {
+        Button(action: SJAZEM0OnEKdu7gD0I8pbs5) {
           Text("cancel")
             .foregroundColor(Color(red: 25 / 255, green: 44 / 255, blue: 65 / 255))
             .font(.system(size: 20.sp))

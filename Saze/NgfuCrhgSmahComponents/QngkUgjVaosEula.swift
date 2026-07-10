@@ -3,6 +3,7 @@ import SwiftUI
 struct QngkUgjVaosEula: View {
   @Binding var SJAZElk5cR2mJTpUpBW: Bool
   @Binding var SJAZETmH1ztuz9Pe2hI: Bool
+  let SJAZE5Y6UMc9APagan0DFzL: String
   var body: some View {
     GeometryReader { SJAZE7He6SSx0CclF0a in
       Color.black.opacity(0.2).ignoresSafeArea()
@@ -31,6 +32,7 @@ struct QngkUgjVaosEula: View {
         HStack(spacing: 23.w) {
           Button(action: {
             SJAZElk5cR2mJTpUpBW = false
+            UserDefaults.standard.set(false, forKey: SJAZE5Y6UMc9APagan0DFzL)
             SJAZETmH1ztuz9Pe2hI = false
           }) {
             Text("CANCLE")
@@ -44,6 +46,7 @@ struct QngkUgjVaosEula: View {
           Button(action: {
             SJAZETmH1ztuz9Pe2hI = false
             SJAZElk5cR2mJTpUpBW = true
+            UserDefaults.standard.set(true, forKey: SJAZE5Y6UMc9APagan0DFzL)
           }) {
             Text("I AGREE")
               .foregroundColor(.black)

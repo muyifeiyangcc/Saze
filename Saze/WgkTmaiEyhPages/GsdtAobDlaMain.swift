@@ -90,11 +90,33 @@ struct GsdtAobDlaMain: View {
         .padding(.horizontal, 20.w)
       }
     }
+    .overlay {
+      if router.SJAZEuKXhyaL8SY2zlyCFBd {
+        Color.black.opacity(0.35)
+          .ignoresSafeArea()
+          .onTapGesture {
+            router.SJAZEuKXhyaL8SY2zlyCFBd = false
+          }
+        SJAZEbmjsmblupfView(
+          SJAZEDdtxt36SxEs2AJvhi4: {
+            router.SJAZEuKXhyaL8SY2zlyCFBd = false
+            appState.hzglZtiFzlLogout()
+          },
+          SJAZEM0OnEKdu7gD0I8pbs5: {
+            router.SJAZEuKXhyaL8SY2zlyCFBd = false
+          }
+        )
+      }
+    }
     .environmentObject(router)
     .onAppear {
+      router.SJAZE5Y6UMc9APagan0DFzLCurrentUserId = appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 ?? ""
       guard appState.SJAZEAFUXImAX7mbSMxbzNK else { return }
       appState.SJAZEAFUXImAX7mbSMxbzNK = false
       router.sazePath.append(WwaQhwoEkuMainRoute.cnsOybInhRfibnes)
+    }
+    .onChange(of: appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6) { _, SJAZEP4MqNS1uhfgcPHXAv8 in
+      router.SJAZE5Y6UMc9APagan0DFzLCurrentUserId = SJAZEP4MqNS1uhfgcPHXAv8 ?? ""
     }
     .onChange(of: appState.SJAZEAFUXImAX7mbSMxbzNK) { _, SJAZEUJbqkK5I4HoVqQAg7a in
       guard SJAZEUJbqkK5I4HoVqQAg7a else { return }

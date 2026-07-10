@@ -58,8 +58,8 @@ struct IrlvCtgVhhFound: View {
               .font(.system(size: 14.sp, weight: .bold))
           }
           .onTapGesture {
-            router.sazePath.append(
-              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+            router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
                     "df60f0f939fd7c5e2ccc5e4e47a260576b200420d790c959078ac470fe4fad3f".SJAZET5gG1gyy5729np8EdY())!
@@ -132,8 +132,8 @@ struct IrlvCtgVhhFound: View {
               )
               .contentShape(RoundedRectangle(cornerRadius: 30.r))
               .onTapGesture {
-                router.sazePath.append(
-                  WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+                router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                     url: URL(
                       string:
                         "5e0f812461366afc492a2284cee5f382".SJAZET5gG1gyy5729np8EdY()+"\(user.SJAZElIhkpVkrSW0rayEYw6)"
@@ -201,8 +201,8 @@ struct IrlvCtgVhhFound: View {
                   )
               )
               .onTapGesture {
-                router.sazePath.append(
-                  WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+                router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                     url: URL(
                       string:
                         "a500ea99647cdcf57b4b633170e479af87bed8d63909abd0d58c0d82da0738ac".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"

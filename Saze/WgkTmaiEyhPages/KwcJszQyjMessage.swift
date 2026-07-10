@@ -138,8 +138,8 @@ struct SJAZEM0OnEKdu7gD0I8pbs5: View {
       .background(.fzs1)
       .cornerRadius(41.r)
       .onTapGesture {
-        router.sazePath.append(
-          WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+        router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
             url: URL(
               string:
                 "0e4149520c31111f64ac996e7feaa459".SJAZET5gG1gyy5729np8EdY()+"\(SJAZE46goRBlwHcZ2NTR7Zj.SJAZELj4BVAUIW1CdfC1E9n)"

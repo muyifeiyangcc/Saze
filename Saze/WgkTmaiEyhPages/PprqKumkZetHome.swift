@@ -63,8 +63,8 @@ struct PprqKumkZetHome: View {
               .font(.system(size: 14.sp, weight: .bold))
           }
           .onTapGesture {
-            router.sazePath.append(
-              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+            router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
                     "43d13a3a0778a485eaba1ffe0f2b056e".SJAZET5gG1gyy5729np8EdY())!
@@ -107,8 +107,8 @@ struct PprqKumkZetHome: View {
             )
         )
         .onTapGesture {
-          router.sazePath.append(
-            WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+          router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
               url: URL(
                 string:
                   "75e3bbc7b6c7a719263fad7a92bad5d9".SJAZET5gG1gyy5729np8EdY())!
@@ -169,8 +169,8 @@ struct PprqKumkZetHome: View {
                       .offset(y: -10.h), alignment: .bottom
                     )
                     .onTapGesture {
-                      router.sazePath.append(
-                        WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+                      router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                           url: URL(
                             string:
                               "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"

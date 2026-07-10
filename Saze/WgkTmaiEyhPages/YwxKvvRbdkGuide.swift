@@ -5,8 +5,9 @@ struct YwxKvvRbdkGuide: View {
   #if DEBUG
     @ObserveInjection var forceRedraw
   #endif
+  private let SJAZEuKXhyaL8SY2zlyCFBd = "sazeDidAgreeEula"
   @State private var isLoading = false
-  @State private var isAgreeEula = false
+  @State private var isAgreeEula = UserDefaults.standard.bool(forKey: "sazeDidAgreeEula")
   @State private var isShowEula = false
   @EnvironmentObject var appState: RlbHdbTvacState
   @Environment(\.modelContext) private var modelContext
@@ -140,6 +141,7 @@ struct YwxKvvRbdkGuide: View {
               .frame(width: 19.r, height: 19.r)
               .onTapGesture {
                 isAgreeEula.toggle()
+                UserDefaults.standard.set(isAgreeEula, forKey: SJAZEuKXhyaL8SY2zlyCFBd)
               }
             HStack(spacing: 0) {
               Text("Agree with  ")
@@ -172,7 +174,11 @@ struct YwxKvvRbdkGuide: View {
       }
       .overlay {
         if isShowEula {
-          QngkUgjVaosEula(SJAZElk5cR2mJTpUpBW: $isAgreeEula, SJAZETmH1ztuz9Pe2hI: $isShowEula)
+          QngkUgjVaosEula(
+            SJAZElk5cR2mJTpUpBW: $isAgreeEula,
+            SJAZETmH1ztuz9Pe2hI: $isShowEula,
+            SJAZE5Y6UMc9APagan0DFzL: SJAZEuKXhyaL8SY2zlyCFBd
+          )
         }
       }
       .navigationDestination(for: WwaQhwoEkuRoute.self) { route in

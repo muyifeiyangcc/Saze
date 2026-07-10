@@ -171,7 +171,7 @@ struct UserDTO: Codable {
       }
       throw DecodingError.keyNotFound(
         SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZELX2d1e8HxRz4S9.first ?? "")!,
-        DecodingError.Context(codingPath: SJAZEm457iSGmOI4UEZPFCn.codingPath, debugDescription: "Missing user string field")
+        DecodingError.Context(codingPath: SJAZEm457iSGmOI4UEZPFCn.codingPath, debugDescription: "")
       )
     }
 
@@ -183,7 +183,7 @@ struct UserDTO: Codable {
       }
       throw DecodingError.keyNotFound(
         SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZELX2d1e8HxRz4S9.first ?? "")!,
-        DecodingError.Context(codingPath: SJAZEm457iSGmOI4UEZPFCn.codingPath, debugDescription: "Missing user int field")
+        DecodingError.Context(codingPath: SJAZEm457iSGmOI4UEZPFCn.codingPath, debugDescription: "")
       )
     }
 

@@ -46,8 +46,8 @@ struct EckPjrFxxkProfile: View {
                 width: 12.r, height: 12.r)
           }
           .onTapGesture {
-            router.sazePath.append(
-              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+            router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
                     "d3c326f07118455fb0dc1db6140cc05a".SJAZET5gG1gyy5729np8EdY())!
@@ -60,8 +60,8 @@ struct EckPjrFxxkProfile: View {
               width: 24.r, height: 24.r
             )
             .onTapGesture {
-              router.sazePath.append(
-                WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+              router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                   url: URL(
                     string:
                       "a3d1641a8207734c590e325872d47e0f".SJAZET5gG1gyy5729np8EdY()
@@ -87,8 +87,8 @@ struct EckPjrFxxkProfile: View {
             .font(.system(size: 12.sp))
           }
           .onTapGesture {
-            router.sazePath.append(
-              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+            router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
                     "13dab376a49b2d0df66f10e1837ff47b".SJAZET5gG1gyy5729np8EdY()
@@ -112,8 +112,8 @@ struct EckPjrFxxkProfile: View {
             .font(.system(size: 12.sp))
           }
           .onTapGesture {
-            router.sazePath.append(
-              WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+            router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
                     "5296c5a06b6eb0407a088310527c8530".SJAZET5gG1gyy5729np8EdY()
@@ -141,8 +141,8 @@ struct EckPjrFxxkProfile: View {
         .background(.ultraThinMaterial)
         .cornerRadius(40.r)
         .onTapGesture {
-          router.sazePath.append(
-            WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+          router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
               url: URL(
                 string:
                   "81bf44aaa75aa1002400c5c042eab2de".SJAZET5gG1gyy5729np8EdY()
@@ -228,8 +228,8 @@ struct EckPjrFxxkProfile: View {
                       .offset(y: -10.h), alignment: .bottom
                     )
                     .onTapGesture {
-                      router.sazePath.append(
-                        WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+                      router.SJAZE5Y6UMc9APagan0DFzL(
+                      WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                           url: URL(
                             string:
                               "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"
