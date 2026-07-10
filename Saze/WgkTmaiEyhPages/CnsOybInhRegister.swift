@@ -166,7 +166,8 @@ struct CnsOybInhRegister: View {
 
             modelContext.insert(newUser)
             try modelContext.save()
-            appState.wfzqCubCpmUser = newUser
+            appState.SJAZEw6XG9fZlRZQgwEl(newUser)
+            appState.SJAZEAFUXImAX7mbSMxbzNK = true
             appState.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
           } catch {
             Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Sign up failed. Please try again.")

@@ -38,6 +38,8 @@ struct GsdtAobDlaMain: View {
       }
       .navigationDestination(for: WwaQhwoEkuMainRoute.self) { route in
         switch route {
+        case .cnsOybInhRfibnes:
+          CnsOybInhRfibnesView()
         case .wfueZroFsmnPrimary(let url):
           LweYhriIkpPrimary(trvudfhvSsxcUrl: url)
         }
@@ -89,6 +91,16 @@ struct GsdtAobDlaMain: View {
       }
     }
     .environmentObject(router)
+    .onAppear {
+      guard appState.SJAZEAFUXImAX7mbSMxbzNK else { return }
+      appState.SJAZEAFUXImAX7mbSMxbzNK = false
+      router.sazePath.append(WwaQhwoEkuMainRoute.cnsOybInhRfibnes)
+    }
+    .onChange(of: appState.SJAZEAFUXImAX7mbSMxbzNK) { _, SJAZEUJbqkK5I4HoVqQAg7a in
+      guard SJAZEUJbqkK5I4HoVqQAg7a else { return }
+      appState.SJAZEAFUXImAX7mbSMxbzNK = false
+      router.sazePath.append(WwaQhwoEkuMainRoute.cnsOybInhRfibnes)
+    }
     .enableInjection()
   }
 }

@@ -10,7 +10,7 @@ struct PprqKumkZetHome: View {
   @Environment(\.modelContext) private var modelContext
   @EnvironmentObject var router: SvcdXfvTsxRouter
   @Query private var dynamics: [BiekWudpWdqModel]
-  @Query private var users: [JnixAsuGeizModel]
+  @Query private var chats: [HwsYfezKgckModel]
   @State private var postTitleTypes = ["All", "Round", "Square", "Oval"]
   @State private var showPostTitleType = -1
   var filteredPictureDynamics: [BiekWudpWdqModel] {
@@ -25,16 +25,15 @@ struct PprqKumkZetHome: View {
       return showPostTitleType == -1 || model.SJAZEEPjTSzGukeICl2u6ue == showPostTitleType
     }
   }
-  var filteredUsers: [JnixAsuGeizModel] {
-    let blockSet = Set(appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr ?? [])
-    return users.filter { model in
-      if blockSet.contains(model.SJAZElIhkpVkrSW0rayEYw6) {
-        return false
-      }
-      if let currentUserId = appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 {
-        return currentUserId != model.SJAZElIhkpVkrSW0rayEYw6
-      }
-      return true
+  var filteredChats: [HwsYfezKgckModel] {
+    guard let SJAZE8aPaDfeuPau1weW9Tr = appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
+      return []
+    }
+    return chats.filter {
+      !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEBCR2nFfDTdsD4REASp.first ?? "")
+        && !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEBCR2nFfDTdsD4REASp.last ?? "")
+        && !$0.SJAZEn9xXVUjsmZIL5HwlRT.isEmpty
+        && $0.SJAZEBCR2nFfDTdsD4REASp.contains(appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 ?? "")
     }
   }
 
@@ -183,34 +182,22 @@ struct PprqKumkZetHome: View {
             }
             .padding(.leading, 20.w)
             Spacer().frame(height: 24.h)
-            ForEach(filteredUsers, id: \.self) { userModel in
-              HStack(spacing: 16.w) {
-                KFImage(URL(string: userModel.SJAZEitwQEriHyuWepBXcnG))
-                  .fade(duration: 0.2)
-                  .resizable()
-                  .scaledToFill()
-                  .frame(width: 62.r, height: 62.r)
-                  .clipShape(Circle())
-                  .overlay(Circle().stroke(.white.opacity(0.1), lineWidth: 4.0))
-                VStack(spacing: 7.h) {
-                  Text(userModel.SJAZEgk7Ot2T1adgYgUOQFz)
-                    .foregroundColor(.white)
-                    .font(.system(size: 16.sp, weight: .semibold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                  Text(userModel.SJAZEvngXxy127zPzUvo24P)
-                    .foregroundColor(Color(red: 229 / 255, green: 229 / 255, blue: 229 / 255))
-                    .font(.system(size: 13.sp, weight: .semibold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .frame(maxWidth: .infinity)
+              if filteredChats.isEmpty {
+                  VStack {
+                    Image("Assets/saze_empty").resizable().scaledToFill().frame(
+                      width: 152.r, height: 152.r)
+                    Text("No Data")
+                      .font(.system(size: 16.sp))
+                      .foregroundColor(.black)
+                  }
+                  .frame(maxWidth: .infinity, maxHeight: .infinity)
+              }else{
+                  ForEach(filteredChats) { chat in
+                    SJAZEM0OnEKdu7gD0I8pbs5(SJAZE46goRBlwHcZ2NTR7Zj: chat)
+                    .padding(.horizontal, 20.w)
+                    .padding(.bottom, 8.h)
+                  }
               }
-              .padding(.all, 6.w)
-              .frame(maxWidth: .infinity)
-              .background(.fzs1)
-              .cornerRadius(41.r)
-              .padding(.horizontal, 20.w)
-              .padding(.bottom, 8.h)
-            }
           }
         }
         .scrollIndicators(.hidden)

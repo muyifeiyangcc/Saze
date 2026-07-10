@@ -163,36 +163,48 @@ struct UserDTO: Codable {
   init(from SJAZEm457iSGmOI4UEZPFCn: Decoder) throws {
     let SJAZEZzBMTsbZH1eTmZ0UYE = try SJAZEm457iSGmOI4UEZPFCn.container(keyedBy: SJAZE4OU5IQASx7t7MYpuDY.self)
 
-    func SJAZES2esTmmgnftTVXKURY(_ SJAZEYQCh4mV3otG15oWCCx: String, _ SJAZEKkIRsdymhvGBWjm2Av: String) throws -> String {
-      if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode(String.self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
-        return SJAZEhYgxetNNG33SvhOYiX
+    func SJAZES2esTmmgnftTVXKURY(_ SJAZELX2d1e8HxRz4S9: String...) throws -> String {
+      for SJAZEYQCh4mV3otG15oWCCx in SJAZELX2d1e8HxRz4S9 {
+        if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode(String.self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
+          return SJAZEhYgxetNNG33SvhOYiX
+        }
       }
-      return try SJAZEZzBMTsbZH1eTmZ0UYE.decode(String.self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEKkIRsdymhvGBWjm2Av)!)
+      throw DecodingError.keyNotFound(
+        SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZELX2d1e8HxRz4S9.first ?? "")!,
+        DecodingError.Context(codingPath: SJAZEm457iSGmOI4UEZPFCn.codingPath, debugDescription: "Missing user string field")
+      )
     }
 
-    func SJAZEbyKTokdCesaJOWy3GE(_ SJAZEYQCh4mV3otG15oWCCx: String, _ SJAZEKkIRsdymhvGBWjm2Av: String) throws -> Int {
-      if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode(Int.self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
-        return SJAZEhYgxetNNG33SvhOYiX
+    func SJAZEbyKTokdCesaJOWy3GE(_ SJAZELX2d1e8HxRz4S9: String...) throws -> Int {
+      for SJAZEYQCh4mV3otG15oWCCx in SJAZELX2d1e8HxRz4S9 {
+        if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode(Int.self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
+          return SJAZEhYgxetNNG33SvhOYiX
+        }
       }
-      return try SJAZEZzBMTsbZH1eTmZ0UYE.decode(Int.self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEKkIRsdymhvGBWjm2Av)!)
+      throw DecodingError.keyNotFound(
+        SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZELX2d1e8HxRz4S9.first ?? "")!,
+        DecodingError.Context(codingPath: SJAZEm457iSGmOI4UEZPFCn.codingPath, debugDescription: "Missing user int field")
+      )
     }
 
-    func SJAZEURvXfUxj1SQF9geMwH(_ SJAZEYQCh4mV3otG15oWCCx: String, _ SJAZEKkIRsdymhvGBWjm2Av: String) -> [String] {
-      if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode([String].self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
-        return SJAZEhYgxetNNG33SvhOYiX
+    func SJAZEURvXfUxj1SQF9geMwH(_ SJAZELX2d1e8HxRz4S9: String...) -> [String] {
+      for SJAZEYQCh4mV3otG15oWCCx in SJAZELX2d1e8HxRz4S9 {
+        if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode([String].self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
+          return SJAZEhYgxetNNG33SvhOYiX
+        }
       }
-      return (try? SJAZEZzBMTsbZH1eTmZ0UYE.decode([String].self, forKey: SJAZE4OU5IQASx7t7MYpuDY(stringValue: SJAZEKkIRsdymhvGBWjm2Av)!)) ?? []
+      return []
     }
 
     SJAZElIhkpVkrSW0rayEYw6 = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZElIhkpVkrSW0rayEYw6.rawValue, "userId")
     SJAZEP9D18bMxoNRrHS3qbS = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEP9D18bMxoNRrHS3qbS.rawValue, "email")
     SJAZE3JHV2UnFe5sJW0IY99 = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZE3JHV2UnFe5sJW0IY99.rawValue, "password")
-    SJAZEitwQEriHyuWepBXcnG = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEitwQEriHyuWepBXcnG.rawValue, "userName")
-    SJAZEgk7Ot2T1adgYgUOQFz = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEgk7Ot2T1adgYgUOQFz.rawValue, "userDesc")
-    SJAZEvngXxy127zPzUvo24P = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEvngXxy127zPzUvo24P.rawValue, "avatar")
-    SJAZEdRu89xECFhVxnCAcEw = try SJAZEbyKTokdCesaJOWy3GE(CodingKeys.SJAZEdRu89xECFhVxnCAcEw.rawValue, "gender")
-    SJAZEJUP63F40vD681ZMiy6 = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEJUP63F40vD681ZMiy6.rawValue, "followList")
-    SJAZEekGs3S5kuus384RPpr = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEekGs3S5kuus384RPpr.rawValue, "fansList")
+    SJAZEitwQEriHyuWepBXcnG = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEitwQEriHyuWepBXcnG.rawValue, "avatar")
+    SJAZEgk7Ot2T1adgYgUOQFz = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEgk7Ot2T1adgYgUOQFz.rawValue, "name", "userName")
+    SJAZEvngXxy127zPzUvo24P = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEvngXxy127zPzUvo24P.rawValue, "about", "userDesc")
+    SJAZEdRu89xECFhVxnCAcEw = try SJAZEbyKTokdCesaJOWy3GE(CodingKeys.SJAZEdRu89xECFhVxnCAcEw.rawValue, "coins", "gender")
+    SJAZEJUP63F40vD681ZMiy6 = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEJUP63F40vD681ZMiy6.rawValue, "follow", "followList")
+    SJAZEekGs3S5kuus384RPpr = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEekGs3S5kuus384RPpr.rawValue, "fans", "fansList")
     SJAZE8aPaDfeuPau1weW9Tr = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZE8aPaDfeuPau1weW9Tr.rawValue, "blockList")
     SJAZElT7WVEApYsaQGqay6O = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZElT7WVEApYsaQGqay6O.rawValue, "picPostLikeIds")
     SJAZEKNpH3EiofObgwdb2XP = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEKNpH3EiofObgwdb2XP.rawValue, "videoPostLikeIds")

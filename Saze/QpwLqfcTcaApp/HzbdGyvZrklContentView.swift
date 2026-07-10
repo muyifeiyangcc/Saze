@@ -11,6 +11,8 @@ struct HzbdGyvZrklContentView: View {
         LwprZdcRfqfSplash()
       case .asqLicvGlkGuide:
         YwxKvvRbdkGuide()
+      case .cnsOybInhRfibnes:
+        CnsOybInhRfibnesView()
       case .vzxtUcsAkqqMain:
         GsdtAobDlaMain()
       }

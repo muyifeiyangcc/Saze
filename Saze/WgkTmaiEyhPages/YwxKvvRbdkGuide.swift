@@ -87,10 +87,10 @@ struct YwxKvvRbdkGuide: View {
                 let user = try modelContext.fetch(descriptor).first
                 await MainActor.run {
                   if let user = user {
-                    appState.wfzqCubCpmUser = user
+                    appState.SJAZEw6XG9fZlRZQgwEl(user)
                   } else {
                     modelContext.insert(newUser)
-                    appState.wfzqCubCpmUser = newUser
+                    appState.SJAZEw6XG9fZlRZQgwEl(newUser)
                   }
                   appState.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
                 }
@@ -183,6 +183,8 @@ struct YwxKvvRbdkGuide: View {
           JfsVizaSicgLogin()
         case .vccMliWsyRegister:
           CnsOybInhRegister()
+        case .cnsOybInhRfibnes:
+          CnsOybInhRfibnesView()
         default:
           EmptyView()
         }

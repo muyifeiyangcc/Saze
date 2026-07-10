@@ -130,6 +130,16 @@ struct IrlvCtgVhhFound: View {
                     lineWidth: 1
                   )
               )
+              .contentShape(RoundedRectangle(cornerRadius: 30.r))
+              .onTapGesture {
+                router.sazePath.append(
+                  WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
+                    url: URL(
+                      string:
+                        "5e0f812461366afc492a2284cee5f382".SJAZET5gG1gyy5729np8EdY()+"\(user.SJAZElIhkpVkrSW0rayEYw6)"
+                    )!
+                  ))
+              }
             }
           }
         }

@@ -103,7 +103,7 @@ struct JfsVizaSicgLogin: View {
                   Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Invalid email or password. Please try again.")
                   return
                 }
-                appState.wfzqCubCpmUser = user
+                appState.SJAZEw6XG9fZlRZQgwEl(user)
                 appState.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
               }
             } catch {
