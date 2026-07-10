@@ -26,6 +26,30 @@ func SJAZEDz9nk36LruPFV5(SJAZEEcjE84nmaAcs4n: ModelContext) throws {
     SJAZEEcjE84nmaAcs4n.insert(SJAZE0Ochk1Zo0PIU7u.SJAZEJPFy9ykqn9XXvxsPWy(modelContext: SJAZEEcjE84nmaAcs4n))
   }
 
+  // MARK: - Chats
+  let SJAZEhx7lUeF0SaBW1m = Bundle.main.url(forResource: "chats", withExtension: "json")!
+  let SJAZE6r1SqK8xYqbwnJ = try Data(contentsOf: SJAZEhx7lUeF0SaBW1m)
+  let SJAZEkM81tD9vCjbd4A =
+    try JSONSerialization.jsonObject(with: SJAZE6r1SqK8xYqbwnJ) as? [[String: Any]] ?? []
+
+  for SJAZEA3kZ8lyUPvcbSN in SJAZEkM81tD9vCjbd4A {
+    if let SJAZEDmh0OqpK3cYqdn = HwsYfezKgckModel.SJAZE7KsC41Sdy5ej8SJeT1(SJAZEA3kZ8lyUPvcbSN) {
+      SJAZEEcjE84nmaAcs4n.insert(SJAZEDmh0OqpK3cYqdn)
+    }
+  }
+
+  // MARK: - Messages
+  let SJAZEzT1gbJxwCzxTpK = Bundle.main.url(forResource: "messages", withExtension: "json")!
+  let SJAZEIkUy2GsB5y9duW = try Data(contentsOf: SJAZEzT1gbJxwCzxTpK)
+  let SJAZEcF8Nte1QzYu5dx =
+    try JSONSerialization.jsonObject(with: SJAZEIkUy2GsB5y9duW) as? [[String: Any]] ?? []
+
+  for SJAZEk2oJaIuR4unW30 in SJAZEcF8Nte1QzYu5dx {
+    if let SJAZE0gWQhdfyeSQmS8 = WsqrTacoBgttModel.SJAZE7KsC41Sdy5ej8SJeT1(SJAZEk2oJaIuR4unW30) {
+      SJAZEEcjE84nmaAcs4n.insert(SJAZE0gWQhdfyeSQmS8)
+    }
+  }
+
   try SJAZEEcjE84nmaAcs4n.save()
 }
 

@@ -99,27 +99,32 @@ extension WsqrTacoBgttModel {
 
   /// 从 JSON 创建对象
   static func SJAZE7KsC41Sdy5ej8SJeT1(_ SJAZEnkLAphU8uUYFhKArrL: [String: Any]) -> WsqrTacoBgttModel? {
+    func SJAZE0lmYlYb24mJ5zZXfzO(_ SJAZEyil1v2wyYoqHb5HehM: String) -> Any? {
+      SJAZEnkLAphU8uUYFhKArrL[SJAZEyil1v2wyYoqHb5HehM.SJAZET5gG1gyy5729np8EdY()]
+        ?? SJAZEnkLAphU8uUYFhKArrL[SJAZEyil1v2wyYoqHb5HehM]
+    }
+
     guard
-      let SJAZEV0JHY0NviJZK8g4MPv = SJAZEnkLAphU8uUYFhKArrL["cd5892851cd9f6c4675c019358bc01d2".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let SJAZELj4BVAUIW1CdfC1E9n = SJAZEnkLAphU8uUYFhKArrL["e4cb87984b078b806310573a2a50913f".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let SJAZElIhkpVkrSW0rayEYw6 = SJAZEnkLAphU8uUYFhKArrL["648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let SJAZEh8TGBtYc153tJnv69x = SJAZEnkLAphU8uUYFhKArrL["6aa08015b8f3774685d3e6c182e17f67".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let SJAZE3yBY2FOAR0QlYHLIML = SJAZEnkLAphU8uUYFhKArrL["4966c003c0ea5918b72fae298ee8b547".SJAZET5gG1gyy5729np8EdY()] as? String
+      let SJAZEV0JHY0NviJZK8g4MPv = SJAZE0lmYlYb24mJ5zZXfzO("cd5892851cd9f6c4675c019358bc01d2") as? String,
+      let SJAZELj4BVAUIW1CdfC1E9n = SJAZE0lmYlYb24mJ5zZXfzO("e4cb87984b078b806310573a2a50913f") as? String,
+      let SJAZElIhkpVkrSW0rayEYw6 = SJAZE0lmYlYb24mJ5zZXfzO("648b7302c4ffa4b054fa5d1e4939b31e") as? String,
+      let SJAZEh8TGBtYc153tJnv69x = SJAZE0lmYlYb24mJ5zZXfzO("6aa08015b8f3774685d3e6c182e17f67") as? String,
+      let SJAZE3yBY2FOAR0QlYHLIML = SJAZE0lmYlYb24mJ5zZXfzO("4966c003c0ea5918b72fae298ee8b547") as? String
     else {
       return nil
     }
 
     return WsqrTacoBgttModel(
-      SJAZE4aOsw2iWPPkxu1080X: SJAZEnkLAphU8uUYFhKArrL["12245d91f902a3046159f5fb454b6348".SJAZET5gG1gyy5729np8EdY()] as? Bool,
+      SJAZE4aOsw2iWPPkxu1080X: SJAZE0lmYlYb24mJ5zZXfzO("12245d91f902a3046159f5fb454b6348") as? Bool,
       SJAZEV0JHY0NviJZK8g4MPv: SJAZEV0JHY0NviJZK8g4MPv,
       SJAZELj4BVAUIW1CdfC1E9n: SJAZELj4BVAUIW1CdfC1E9n,
       SJAZElIhkpVkrSW0rayEYw6: SJAZElIhkpVkrSW0rayEYw6,
-      SJAZEgk7Ot2T1adgYgUOQFz: SJAZEnkLAphU8uUYFhKArrL["58bfd5af727f1b843c15df60a668899f".SJAZET5gG1gyy5729np8EdY()] as? String,
-      SJAZEitwQEriHyuWepBXcnG: SJAZEnkLAphU8uUYFhKArrL["27274062c7e2431266a12b6a7fbc51cf".SJAZET5gG1gyy5729np8EdY()] as? String,
-      SJAZE8oqYzAMSa6f1FlJDva: SJAZEnkLAphU8uUYFhKArrL["59fdf3d1fcf8c839944c9bd16d5a2025".SJAZET5gG1gyy5729np8EdY()] as? String,
+      SJAZEgk7Ot2T1adgYgUOQFz: SJAZE0lmYlYb24mJ5zZXfzO("58bfd5af727f1b843c15df60a668899f") as? String,
+      SJAZEitwQEriHyuWepBXcnG: SJAZE0lmYlYb24mJ5zZXfzO("27274062c7e2431266a12b6a7fbc51cf") as? String,
+      SJAZE8oqYzAMSa6f1FlJDva: SJAZE0lmYlYb24mJ5zZXfzO("59fdf3d1fcf8c839944c9bd16d5a2025") as? String,
       SJAZEh8TGBtYc153tJnv69x: SJAZEh8TGBtYc153tJnv69x,
       SJAZE3yBY2FOAR0QlYHLIML: SJAZE3yBY2FOAR0QlYHLIML,
-      SJAZEM4cS8csFnzWCulr6jU: SJAZEnkLAphU8uUYFhKArrL["70f86d4fac127dde5322adea8bf270f0".SJAZET5gG1gyy5729np8EdY()] as? String
+      SJAZEM4cS8csFnzWCulr6jU: SJAZE0lmYlYb24mJ5zZXfzO("70f86d4fac127dde5322adea8bf270f0") as? String
     )
   }
 }

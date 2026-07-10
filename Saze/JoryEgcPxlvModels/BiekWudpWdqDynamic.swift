@@ -184,6 +184,62 @@ struct DynamicDTO: Codable {
     case SJAZETqXs1AIbpvP9gabc3t = "f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304"
     case SJAZEAyGV9lIdGdQJWQZ9Vj = "032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071"
   }
+
+  private struct SJAZESmF9YE6Ugl08Npi4Ae: CodingKey {
+    let stringValue: String
+    let intValue: Int? = nil
+
+    init?(stringValue: String) {
+      self.stringValue = stringValue
+    }
+
+    init?(intValue: Int) {
+      return nil
+    }
+  }
+
+  init(from SJAZEm457iSGmOI4UEZPFCn: Decoder) throws {
+    let SJAZEZzBMTsbZH1eTmZ0UYE = try SJAZEm457iSGmOI4UEZPFCn.container(keyedBy: SJAZESmF9YE6Ugl08Npi4Ae.self)
+
+    func SJAZEISF6h2D0xpKIUGuYdZ(_ SJAZEYQCh4mV3otG15oWCCx: String, _ SJAZEKkIRsdymhvGBWjm2Av: String) throws -> String {
+      if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode(String.self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
+        return SJAZEhYgxetNNG33SvhOYiX
+      }
+      return try SJAZEZzBMTsbZH1eTmZ0UYE.decode(String.self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEKkIRsdymhvGBWjm2Av)!)
+    }
+
+    func SJAZEZiVcjD7tR38RqEqDxY(_ SJAZEYQCh4mV3otG15oWCCx: String, _ SJAZEKkIRsdymhvGBWjm2Av: String) throws -> Int {
+      if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode(Int.self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
+        return SJAZEhYgxetNNG33SvhOYiX
+      }
+      return try SJAZEZzBMTsbZH1eTmZ0UYE.decode(Int.self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEKkIRsdymhvGBWjm2Av)!)
+    }
+
+    func SJAZEaW0ZtsT27YYyJUOT2d(_ SJAZEYQCh4mV3otG15oWCCx: String, _ SJAZEKkIRsdymhvGBWjm2Av: String) throws -> [String] {
+      if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode([String].self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
+        return SJAZEhYgxetNNG33SvhOYiX
+      }
+      return try SJAZEZzBMTsbZH1eTmZ0UYE.decode([String].self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEKkIRsdymhvGBWjm2Av)!)
+    }
+
+    func SJAZExojJCPpyxfpsM5RIl9(_ SJAZEYQCh4mV3otG15oWCCx: String, _ SJAZEKkIRsdymhvGBWjm2Av: String) -> [String]? {
+      if let SJAZEhYgxetNNG33SvhOYiX = try? SJAZEZzBMTsbZH1eTmZ0UYE.decode([String].self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEYQCh4mV3otG15oWCCx)!) {
+        return SJAZEhYgxetNNG33SvhOYiX
+      }
+      return try? SJAZEZzBMTsbZH1eTmZ0UYE.decode([String].self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEKkIRsdymhvGBWjm2Av)!)
+    }
+
+    SJAZEVeQYjYRJfcllVneqRN = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEVeQYjYRJfcllVneqRN.rawValue, "dynamicId")
+    SJAZElIhkpVkrSW0rayEYw6 = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZElIhkpVkrSW0rayEYw6.rawValue, "userId")
+    SJAZEsoZ0L6YgsKwJ0DlGuU = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEsoZ0L6YgsKwJ0DlGuU.rawValue, "dynamicType")
+    SJAZEUVBfbq2UH81q7Ftbq3 = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEUVBfbq2UH81q7Ftbq3.rawValue, "dynamicDesc")
+    SJAZEEPjTSzGukeICl2u6ue = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEEPjTSzGukeICl2u6ue.rawValue, "dynamicTitleType")
+    SJAZECyvz14cqPBZa8BHRwd = SJAZExojJCPpyxfpsM5RIl9(CodingKeys.SJAZECyvz14cqPBZa8BHRwd.rawValue, "dynamicTag")
+    SJAZEJvLqXUWCmDFJBLleGx = try SJAZEaW0ZtsT27YYyJUOT2d(CodingKeys.SJAZEJvLqXUWCmDFJBLleGx.rawValue, "dynamicPic")
+    SJAZEjW824LNB0yW9KOqkuE = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEjW824LNB0yW9KOqkuE.rawValue, "dynamicVideo")
+    SJAZETqXs1AIbpvP9gabc3t = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZETqXs1AIbpvP9gabc3t.rawValue, "dynamicLikeCount")
+    SJAZEAyGV9lIdGdQJWQZ9Vj = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEAyGV9lIdGdQJWQZ9Vj.rawValue, "dynamicCommentCount")
+  }
 }
 
 extension DynamicDTO {

@@ -61,10 +61,15 @@ extension HwsYfezKgckModel {
 
   /// 从 JSON 创建对象
   static func SJAZE7KsC41Sdy5ej8SJeT1(_ SJAZEnkLAphU8uUYFhKArrL: [String: Any]) -> HwsYfezKgckModel? {
+    func SJAZE0lmYlYb24mJ5zZXfzO(_ SJAZEyil1v2wyYoqHb5HehM: String) -> Any? {
+      SJAZEnkLAphU8uUYFhKArrL[SJAZEyil1v2wyYoqHb5HehM.SJAZET5gG1gyy5729np8EdY()]
+        ?? SJAZEnkLAphU8uUYFhKArrL[SJAZEyil1v2wyYoqHb5HehM]
+    }
+
     guard
-      let SJAZELj4BVAUIW1CdfC1E9n = SJAZEnkLAphU8uUYFhKArrL["e4cb87984b078b806310573a2a50913f".SJAZET5gG1gyy5729np8EdY()] as? String,
-      let SJAZEBCR2nFfDTdsD4REASp = SJAZEnkLAphU8uUYFhKArrL["f13a214bde59d72e89643cfc4b998d9a".SJAZET5gG1gyy5729np8EdY()] as? [String],
-      let SJAZEn9xXVUjsmZIL5HwlRT = SJAZEnkLAphU8uUYFhKArrL["80e98ffa32c4f5b2db0f22cc13cb5ad3".SJAZET5gG1gyy5729np8EdY()] as? String
+      let SJAZELj4BVAUIW1CdfC1E9n = SJAZE0lmYlYb24mJ5zZXfzO("e4cb87984b078b806310573a2a50913f") as? String,
+      let SJAZEBCR2nFfDTdsD4REASp = SJAZE0lmYlYb24mJ5zZXfzO("f13a214bde59d72e89643cfc4b998d9a") as? [String],
+      let SJAZEn9xXVUjsmZIL5HwlRT = SJAZE0lmYlYb24mJ5zZXfzO("80e98ffa32c4f5b2db0f22cc13cb5ad3") as? String
     else {
       return nil
     }
@@ -73,9 +78,9 @@ extension HwsYfezKgckModel {
       SJAZELj4BVAUIW1CdfC1E9n: SJAZELj4BVAUIW1CdfC1E9n,
       SJAZEBCR2nFfDTdsD4REASp: SJAZEBCR2nFfDTdsD4REASp,
       SJAZEn9xXVUjsmZIL5HwlRT: SJAZEn9xXVUjsmZIL5HwlRT,
-      SJAZE9Er6ZUSKkEa2jaHrc4: SJAZEnkLAphU8uUYFhKArrL["51d1217b60cb373562d8a56b4599a640".SJAZET5gG1gyy5729np8EdY()] as? String,
-      SJAZEcGA3f4WMkxlgomv0W6: SJAZEnkLAphU8uUYFhKArrL["87f2ac7fba3d32932f675bd6806c60a4".SJAZET5gG1gyy5729np8EdY()] as? Int,
-      SJAZETxSMQ6uAH5IgHGQQ0G: SJAZEnkLAphU8uUYFhKArrL["6549932de1aab1a46204e3e84b69110e".SJAZET5gG1gyy5729np8EdY()] as? String
+      SJAZE9Er6ZUSKkEa2jaHrc4: SJAZE0lmYlYb24mJ5zZXfzO("51d1217b60cb373562d8a56b4599a640") as? String,
+      SJAZEcGA3f4WMkxlgomv0W6: SJAZE0lmYlYb24mJ5zZXfzO("87f2ac7fba3d32932f675bd6806c60a4") as? Int,
+      SJAZETxSMQ6uAH5IgHGQQ0G: SJAZE0lmYlYb24mJ5zZXfzO("6549932de1aab1a46204e3e84b69110e") as? String
     )
   }
 }
