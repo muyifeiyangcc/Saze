@@ -20,7 +20,7 @@ struct LwprZdcRfqfSplash: View {
       .frame(maxWidth: .infinity)
     }
     .task {
-      SJAZEHpszFi80RiCnd.fetchProducts()
+      SJAZEHpszFi80RiCnd.SJAZECnWo6b2IF6fS3yoAf()
       try? await Task.sleep(for: .seconds(1))
       SJAZEBtKPXjGjkPCjf0(SJAZEmM6fbP5wodtaiZ: SJAZEkeZaCWCAXkYDd)
       if SJAZEtE9URSe4Piuin.SJAZEv7EN1HRcsymQmi(SJAZEkeZaCWCAXkYDd) {

@@ -42,9 +42,9 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
   static func SJAZEbb8ayPFgi0gkM(from SJAZE5nNCMJjzAPMNe: [CoinProduct]) -> String {
     let SJAZEJ8g0nqZL810XF: [[String: Any]] = SJAZE5nNCMJjzAPMNe.map {
       [
-        "key": $0.id,
-        "cions": $0.coin,
-        "money": $0.price,
+        "3ffee4ad0dd10b53c279d97469acfc9a".SJAZET5gG1gyy5729np8EdY(): $0.SJAZEuhzNZ4F9JegrQqQ7c,
+        "0c6e0e49cb338f88aa8fc93b927f7d54".SJAZET5gG1gyy5729np8EdY(): $0.SJAZElp9oBREs8dyBVfPyP,
+        "8e780a2035a2c2bc980b671706b389f2".SJAZET5gG1gyy5729np8EdY(): $0.SJAZE2eI9NcmPlSV7kZHJi,
       ]
     }
     guard
@@ -197,7 +197,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       window.commentList = \(SJAZEPEkPHLyiC2jAT(SJAZECmuBcS5Nj56Jh) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
       window.chatList = \(SJAZEPEkPHLyiC2jAT(SJAZE4V9mRypWWSV8e) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
       window.messageList = \(SJAZEPEkPHLyiC2jAT(SJAZEm15mrzWzFiaxb) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
-      \(Self.SJAZE0gWrz182pzxwi(from: SJAZEMgsi9ejKKsRJs.configs))
+      \(Self.SJAZE0gWrz182pzxwi(from: SJAZEMgsi9ejKKsRJs.SJAZEMRZG6GlgZLuQQucUT))
       """
   }
 
@@ -232,7 +232,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
     }
 
     private func SJAZErUZhQ5OR2KqQn() {
-      let SJAZEVHdE23pVavRVP = LweYhriIkpPrimaryContent.SJAZE0gWrz182pzxwi(from: SJAZEMgsi9ejKKsRJs.configs)
+      let SJAZEVHdE23pVavRVP = LweYhriIkpPrimaryContent.SJAZE0gWrz182pzxwi(from: SJAZEMgsi9ejKKsRJs.SJAZEMRZG6GlgZLuQQucUT)
       SJAZE3jfUyLDnuIH9W?.evaluateJavaScript(SJAZEVHdE23pVavRVP)
     }
 
@@ -451,13 +451,8 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
             let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
             let SJAZEjK53KyxjV6CNP = SJAZEadKK2gcILbaiK["c10ae023946ddf8222309adada2ce88c".SJAZET5gG1gyy5729np8EdY()] as? String
           else { return }
-          guard
-            let SJAZEhz6Nne1fhwwoA = SJAZEMgsi9ejKKsRJs.products.first(where: {
-              $0.productIdentifier == SJAZEjK53KyxjV6CNP
-            })
-          else { return }
           Toast.SJAZEcdY89CWWjnmZSU.SJAZESQA2cPpZujcz7a()
-          SJAZEMgsi9ejKKsRJs.purchase(SJAZEhz6Nne1fhwwoA) { SJAZE26nbevlJN6N4u in
+          SJAZEMgsi9ejKKsRJs.SJAZEhZR65qKR4ULyWEhbO(SJAZElHik0NahQ3bj1vFNk: SJAZEjK53KyxjV6CNP) { SJAZE26nbevlJN6N4u in
             if SJAZE26nbevlJN6N4u > 0 {
               self.SJAZEgJownbIz5opcI.tnngDfrhGkgtAddCoins(SJAZE26nbevlJN6N4u)
               if let SJAZEIs2x77JlJqPqN = self.SJAZEgJownbIz5opcI.wfzqCubCpmUser, let SJAZEE1aOh6kVr13RW = SJAZEIs2x77JlJqPqN.SJAZEdCCqr3yHlozSZgz6ID() {
