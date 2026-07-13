@@ -2,9 +2,9 @@ import SwiftData
 import SwiftUI
 
 struct LwprZdcRfqfSplash: View {
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @EnvironmentObject var purchaseManager: VvolHdqhEszePurchase
-  @Environment(\.modelContext) private var modelContext
+  @EnvironmentObject var SJAZEtE9URSe4Piuin: RlbHdbTvacState
+  @EnvironmentObject var SJAZEHpszFi80RiCnd: VvolHdqhEszePurchase
+  @Environment(\.modelContext) private var SJAZEkeZaCWCAXkYDd
   var body: some View {
     ZStack {
       GeometryReader { _ in
@@ -20,13 +20,13 @@ struct LwprZdcRfqfSplash: View {
       .frame(maxWidth: .infinity)
     }
     .task {
-      purchaseManager.fetchProducts()
+      SJAZEHpszFi80RiCnd.fetchProducts()
       try? await Task.sleep(for: .seconds(1))
-      SJAZEBtKPXjGjkPCjf0(SJAZEmM6fbP5wodtaiZ: modelContext)
-      if appState.SJAZEv7EN1HRcsymQmi(modelContext) {
+      SJAZEBtKPXjGjkPCjf0(SJAZEmM6fbP5wodtaiZ: SJAZEkeZaCWCAXkYDd)
+      if SJAZEtE9URSe4Piuin.SJAZEv7EN1HRcsymQmi(SJAZEkeZaCWCAXkYDd) {
         return
       }
-      appState.vkyeFxuEaaPhase = .asqLicvGlkGuide
+      SJAZEtE9URSe4Piuin.vkyeFxuEaaPhase = .asqLicvGlkGuide
     }
   }
 }

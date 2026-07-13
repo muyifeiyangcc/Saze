@@ -3,7 +3,7 @@ import SwiftUI
 
 struct CnsOybInhRegister: View {
   #if DEBUG
-    @ObserveInjection var forceRedraw
+    @ObserveInjection var SJAZEtE9URSe4Piuin
   #endif
   enum Field: Hashable {
     case SJAZEP9D18bMxoNRrHS3qbS
@@ -12,17 +12,17 @@ struct CnsOybInhRegister: View {
   }
   @State var SJAZEP9D18bMxoNRrHS3qbS: String = ""
   @State var SJAZE3JHV2UnFe5sJW0IY99: String = ""
-  @State var againPassword: String = ""
-  @FocusState private var focusedField: Field?
-  @EnvironmentObject var router: SvcdXfvTsxRouter
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @Environment(\.modelContext) private var modelContext
-  @State private var isLoading = false
+  @State var SJAZEHpszFi80RiCnd: String = ""
+  @FocusState private var SJAZEkeZaCWCAXkYDd: Field?
+  @EnvironmentObject var SJAZEYpk9fy5yu6m7y: SvcdXfvTsxRouter
+  @EnvironmentObject var SJAZESW4mkK3EHJwWI: RlbHdbTvacState
+  @Environment(\.modelContext) private var SJAZEEoFMc4As3ZA7S
+  @State private var SJAZECDpBC1En2g2UA = false
   var body: some View {
     #if DEBUG
-      let _ = forceRedraw
+      let _ = SJAZEtE9URSe4Piuin
     #endif
-    GeometryReader { geometry in
+    GeometryReader { SJAZE3dMuhW59q1SlM in
       Image("SplashBg").resizable().ignoresSafeArea()
       Image("Assets/saze_sign_rw").resizable().scaledToFit().frame(width: 59.w, height: 116.h)
         .frame(maxHeight: .infinity, alignment: .topLeading).offset(x: 53.w, y: 34.h)
@@ -52,10 +52,10 @@ struct CnsOybInhRegister: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .SJAZEP9D18bMxoNRrHS3qbS)
+        .focused($SJAZEkeZaCWCAXkYDd, equals: .SJAZEP9D18bMxoNRrHS3qbS)
         .submitLabel(.next)
         .onSubmit {
-          focusedField = .SJAZE3JHV2UnFe5sJW0IY99
+          SJAZEkeZaCWCAXkYDd = .SJAZE3JHV2UnFe5sJW0IY99
         }
         Spacer().frame(height: 24.h)
         SecureField(
@@ -81,14 +81,14 @@ struct CnsOybInhRegister: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .SJAZE3JHV2UnFe5sJW0IY99)
+        .focused($SJAZEkeZaCWCAXkYDd, equals: .SJAZE3JHV2UnFe5sJW0IY99)
         .submitLabel(.next)
         .onSubmit {
-          focusedField = .againPassword
+          SJAZEkeZaCWCAXkYDd = .againPassword
         }
         Spacer().frame(height: 24.h)
         SecureField(
-          "", text: $againPassword,
+          "", text: $SJAZEHpszFi80RiCnd,
           prompt: Text(" Enter the password again")
             .foregroundColor(Color.fzs1.opacity(0.5))
             .font(.system(size: 16.sp)),
@@ -110,70 +110,70 @@ struct CnsOybInhRegister: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .againPassword)
+        .focused($SJAZEkeZaCWCAXkYDd, equals: .againPassword)
         .submitLabel(.done)
         .onSubmit {
-          focusedField = nil
+          SJAZEkeZaCWCAXkYDd = nil
         }
         Spacer()
         Button(action: {
-          guard !isLoading else { return }
-          focusedField = nil
+          guard !SJAZECDpBC1En2g2UA else { return }
+          SJAZEkeZaCWCAXkYDd = nil
 
-          let email = SJAZEP9D18bMxoNRrHS3qbS.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-          let password = SJAZE3JHV2UnFe5sJW0IY99.trimmingCharacters(in: .whitespacesAndNewlines)
-          let confirmPassword = againPassword.trimmingCharacters(in: .whitespacesAndNewlines)
+          let SJAZEDYAJRkfLGcnca = SJAZEP9D18bMxoNRrHS3qbS.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+          let SJAZEASR3aBNz03LEI = SJAZE3JHV2UnFe5sJW0IY99.trimmingCharacters(in: .whitespacesAndNewlines)
+          let SJAZEgJownbIz5opcI = SJAZEHpszFi80RiCnd.trimmingCharacters(in: .whitespacesAndNewlines)
 
-          guard !email.isEmpty, !password.isEmpty, !confirmPassword.isEmpty else {
+          guard !SJAZEDYAJRkfLGcnca.isEmpty, !SJAZEASR3aBNz03LEI.isEmpty, !SJAZEgJownbIz5opcI.isEmpty else {
             Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Please fill in all fields.")
             return
           }
 
-          guard email.contains("@"), email.contains(".") else {
+          guard SJAZEDYAJRkfLGcnca.contains("@"), SJAZEDYAJRkfLGcnca.contains(".") else {
             Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Please enter a valid email.")
             return
           }
 
-          guard password == confirmPassword else {
+          guard SJAZEASR3aBNz03LEI == SJAZEgJownbIz5opcI else {
             Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Passwords do not match.")
             return
           }
 
-          isLoading = true
-          defer { isLoading = false }
+          SJAZECDpBC1En2g2UA = true
+          defer { SJAZECDpBC1En2g2UA = false }
 
           do {
-            let descriptor = FetchDescriptor<JnixAsuGeizModel>(
-              predicate: #Predicate { $0.SJAZEP9D18bMxoNRrHS3qbS == email }
+            let SJAZEsRzxsupuDfCuA = FetchDescriptor<JnixAsuGeizModel>(
+              predicate: #Predicate { $0.SJAZEP9D18bMxoNRrHS3qbS == SJAZEDYAJRkfLGcnca }
             )
 
-            if try modelContext.fetch(descriptor).first != nil {
+            if try SJAZEEoFMc4As3ZA7S.fetch(SJAZEsRzxsupuDfCuA).first != nil {
               Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("This email is already registered.")
               return
             }
 
-            let name = email.split(separator: "@").first.map(String.init) ?? "User"
-            let newUser = JnixAsuGeizModel(
+            let SJAZEgLy0nkJAaoZlA = SJAZEDYAJRkfLGcnca.split(separator: "@").first.map(String.init) ?? "User"
+            let SJAZEMgsi9ejKKsRJs = JnixAsuGeizModel(
               SJAZElIhkpVkrSW0rayEYw6: UUID().uuidString,
-              SJAZEP9D18bMxoNRrHS3qbS: email,
-              SJAZE3JHV2UnFe5sJW0IY99: password,
+              SJAZEP9D18bMxoNRrHS3qbS: SJAZEDYAJRkfLGcnca,
+              SJAZE3JHV2UnFe5sJW0IY99: SJAZEASR3aBNz03LEI,
               SJAZEitwQEriHyuWepBXcnG:
-                "http://huanniuchat.oss-ap-northeast-1.aliyuncs.com/saze/saze_default_photo.png",
-              SJAZEgk7Ot2T1adgYgUOQFz: name,
+                "a3483a210873e9b626137f1b46d022fdf3a78aaad5bf9e82bd834238962371097bf41217c47823aa6d3d3699d1f61f80252e7dd9a0ab2e9d1a27303a2e76a924d1dc08b99f34379ef435626af1778582".SJAZET5gG1gyy5729np8EdY(),
+              SJAZEgk7Ot2T1adgYgUOQFz: SJAZEgLy0nkJAaoZlA,
               SJAZEvngXxy127zPzUvo24P: "Nothing",
               SJAZEdRu89xECFhVxnCAcEw: 0
             )
 
-            modelContext.insert(newUser)
-            try modelContext.save()
-            appState.SJAZEw6XG9fZlRZQgwEl(newUser)
-            appState.SJAZEAFUXImAX7mbSMxbzNK = true
-            appState.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
+            SJAZEEoFMc4As3ZA7S.insert(SJAZEMgsi9ejKKsRJs)
+            try SJAZEEoFMc4As3ZA7S.save()
+            SJAZESW4mkK3EHJwWI.SJAZEw6XG9fZlRZQgwEl(SJAZEMgsi9ejKKsRJs)
+            SJAZESW4mkK3EHJwWI.SJAZEAFUXImAX7mbSMxbzNK = true
+            SJAZESW4mkK3EHJwWI.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
           } catch {
             Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Sign up failed. Please try again.")
           }
         }) {
-          if isLoading {
+          if SJAZECDpBC1En2g2UA {
             ProgressView()
               .progressViewStyle(CircularProgressViewStyle(tint: .white))
               .frame(maxWidth: .infinity)
@@ -197,7 +197,7 @@ struct CnsOybInhRegister: View {
     .toolbar {
       ToolbarItem(placement: .navigationBarLeading) {
         Button {
-          router.sazePath.removeLast()
+          SJAZEYpk9fy5yu6m7y.sazePath.removeLast()
         } label: {
           Image("Assets/saze_back")
             .resizable()

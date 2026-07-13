@@ -4,44 +4,44 @@ import SwiftUI
 
 struct PprqKumkZetHome: View {
   #if DEBUG
-    @ObserveInjection var forceRedraw
+    @ObserveInjection var SJAZEtE9URSe4Piuin
   #endif
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @Environment(\.modelContext) private var modelContext
-  @EnvironmentObject var router: SvcdXfvTsxRouter
-  @Query private var dynamics: [BiekWudpWdqModel]
-  @Query private var chats: [HwsYfezKgckModel]
-  @State private var postTitleTypes = ["All", "Round", "Square", "Oval"]
-  @State private var showPostTitleType = -1
-  var filteredPictureDynamics: [BiekWudpWdqModel] {
-    let blockSet = Set(appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr ?? [])
-    return dynamics.filter { model in
-      if let SJAZElIhkpVkrSW0rayEYw6 = model.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6, blockSet.contains(SJAZElIhkpVkrSW0rayEYw6) {
+  @EnvironmentObject var SJAZEHpszFi80RiCnd: RlbHdbTvacState
+  @Environment(\.modelContext) private var SJAZEkeZaCWCAXkYDd
+  @EnvironmentObject var SJAZEYpk9fy5yu6m7y: SvcdXfvTsxRouter
+  @Query private var SJAZESW4mkK3EHJwWI: [BiekWudpWdqModel]
+  @Query private var SJAZEEoFMc4As3ZA7S: [HwsYfezKgckModel]
+  @State private var SJAZECDpBC1En2g2UA = ["All", "Round", "Square", "Oval"]
+  @State private var SJAZE3dMuhW59q1SlM = -1
+  var SJAZEDYAJRkfLGcnca: [BiekWudpWdqModel] {
+    let SJAZEASR3aBNz03LEI = Set(SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr ?? [])
+    return SJAZESW4mkK3EHJwWI.filter { SJAZEgJownbIz5opcI in
+      if let SJAZElIhkpVkrSW0rayEYw6 = SJAZEgJownbIz5opcI.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6, SJAZEASR3aBNz03LEI.contains(SJAZElIhkpVkrSW0rayEYw6) {
         return false
       }
-      guard model.SJAZEsoZ0L6YgsKwJ0DlGuU == 0 else {
+      guard SJAZEgJownbIz5opcI.SJAZEsoZ0L6YgsKwJ0DlGuU == 0 else {
         return false
       }
-      return showPostTitleType == -1 || model.SJAZEEPjTSzGukeICl2u6ue == showPostTitleType
+      return SJAZE3dMuhW59q1SlM == -1 || SJAZEgJownbIz5opcI.SJAZEEPjTSzGukeICl2u6ue == SJAZE3dMuhW59q1SlM
     }
   }
-  var filteredChats: [HwsYfezKgckModel] {
-    guard let SJAZE8aPaDfeuPau1weW9Tr = appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
+  var SJAZEsRzxsupuDfCuA: [HwsYfezKgckModel] {
+    guard let SJAZE8aPaDfeuPau1weW9Tr = SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
       return []
     }
-    return chats.filter {
+    return SJAZEEoFMc4As3ZA7S.filter {
       !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEBCR2nFfDTdsD4REASp.first ?? "")
         && !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEBCR2nFfDTdsD4REASp.last ?? "")
         && !$0.SJAZEn9xXVUjsmZIL5HwlRT.isEmpty
-        && $0.SJAZEBCR2nFfDTdsD4REASp.contains(appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 ?? "")
+        && $0.SJAZEBCR2nFfDTdsD4REASp.contains(SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 ?? "")
     }
   }
 
   var body: some View {
     #if DEBUG
-      let _ = forceRedraw
+      let _ = SJAZEtE9URSe4Piuin
     #endif
-    GeometryReader { g in
+    GeometryReader { SJAZEgLy0nkJAaoZlA in
       Image("Assets/saze_home_bg").resizable().ignoresSafeArea()
       Image("Assets/saze_home_rw").resizable().scaledToFill()
         .frame(width: 121.w, height: 238.h)
@@ -63,7 +63,7 @@ struct PprqKumkZetHome: View {
               .font(.system(size: 14.sp, weight: .bold))
           }
           .onTapGesture {
-            router.SJAZE5Y6UMc9APagan0DFzL(
+            SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
@@ -107,7 +107,7 @@ struct PprqKumkZetHome: View {
             )
         )
         .onTapGesture {
-          router.SJAZE5Y6UMc9APagan0DFzL(
+          SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
               url: URL(
                 string:
@@ -127,8 +127,8 @@ struct PprqKumkZetHome: View {
             Spacer().frame(height: 16.h)
             ScrollView(.horizontal) {
               HStack(spacing: 10.w) {
-                ForEach(filteredPictureDynamics, id: \.self) { dynamicEntity in
-                  KFImage(URL(string: dynamicEntity.SJAZEJvLqXUWCmDFJBLleGx.first!))
+                ForEach(SJAZEDYAJRkfLGcnca, id: \.self) { SJAZEMgsi9ejKKsRJs in
+                  KFImage(URL(string: SJAZEMgsi9ejKKsRJs.SJAZEJvLqXUWCmDFJBLleGx.first!))
                     .fade(duration: 0.25)
                     .resizable()
                     .scaledToFill()
@@ -169,11 +169,11 @@ struct PprqKumkZetHome: View {
                       .offset(y: -10.h), alignment: .bottom
                     )
                     .onTapGesture {
-                      router.SJAZE5Y6UMc9APagan0DFzL(
+                      SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                           url: URL(
                             string:
-                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"
+                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(SJAZEMgsi9ejKKsRJs.SJAZEVeQYjYRJfcllVneqRN)"
                           )!
                         ))
                     }
@@ -182,7 +182,7 @@ struct PprqKumkZetHome: View {
             }
             .padding(.leading, 20.w)
             Spacer().frame(height: 24.h)
-              if filteredChats.isEmpty {
+              if SJAZEsRzxsupuDfCuA.isEmpty {
                   VStack {
                     Image("Assets/saze_empty").resizable().scaledToFill().frame(
                       width: 152.r, height: 152.r)
@@ -192,8 +192,8 @@ struct PprqKumkZetHome: View {
                   }
                   .frame(maxWidth: .infinity, maxHeight: .infinity)
               }else{
-                  ForEach(filteredChats) { chat in
-                    SJAZEM0OnEKdu7gD0I8pbs5(SJAZE46goRBlwHcZ2NTR7Zj: chat)
+                  ForEach(SJAZEsRzxsupuDfCuA) { SJAZEGazFUjLd6gbaB in
+                    SJAZEM0OnEKdu7gD0I8pbs5(SJAZE46goRBlwHcZ2NTR7Zj: SJAZEGazFUjLd6gbaB)
                     .padding(.horizontal, 20.w)
                     .padding(.bottom, 8.h)
                   }

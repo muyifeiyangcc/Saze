@@ -229,16 +229,16 @@ struct DynamicDTO: Codable {
       return try? SJAZEZzBMTsbZH1eTmZ0UYE.decode([String].self, forKey: SJAZESmF9YE6Ugl08Npi4Ae(stringValue: SJAZEKkIRsdymhvGBWjm2Av)!)
     }
 
-    SJAZEVeQYjYRJfcllVneqRN = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEVeQYjYRJfcllVneqRN.rawValue, "dynamicId")
-    SJAZElIhkpVkrSW0rayEYw6 = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZElIhkpVkrSW0rayEYw6.rawValue, "userId")
-    SJAZEsoZ0L6YgsKwJ0DlGuU = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEsoZ0L6YgsKwJ0DlGuU.rawValue, "dynamicType")
-    SJAZEUVBfbq2UH81q7Ftbq3 = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEUVBfbq2UH81q7Ftbq3.rawValue, "dynamicDesc")
-    SJAZEEPjTSzGukeICl2u6ue = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEEPjTSzGukeICl2u6ue.rawValue, "dynamicTitleType")
-    SJAZECyvz14cqPBZa8BHRwd = SJAZExojJCPpyxfpsM5RIl9(CodingKeys.SJAZECyvz14cqPBZa8BHRwd.rawValue, "dynamicTag")
-    SJAZEJvLqXUWCmDFJBLleGx = try SJAZEaW0ZtsT27YYyJUOT2d(CodingKeys.SJAZEJvLqXUWCmDFJBLleGx.rawValue, "dynamicPic")
-    SJAZEjW824LNB0yW9KOqkuE = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEjW824LNB0yW9KOqkuE.rawValue, "dynamicVideo")
-    SJAZETqXs1AIbpvP9gabc3t = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZETqXs1AIbpvP9gabc3t.rawValue, "dynamicLikeCount")
-    SJAZEAyGV9lIdGdQJWQZ9Vj = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEAyGV9lIdGdQJWQZ9Vj.rawValue, "dynamicCommentCount")
+    SJAZEVeQYjYRJfcllVneqRN = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEVeQYjYRJfcllVneqRN.rawValue, "e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY())
+    SJAZElIhkpVkrSW0rayEYw6 = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZElIhkpVkrSW0rayEYw6.rawValue, "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY())
+    SJAZEsoZ0L6YgsKwJ0DlGuU = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEsoZ0L6YgsKwJ0DlGuU.rawValue, "a0f7013a3f50839229f059dd7b5aeed1".SJAZET5gG1gyy5729np8EdY())
+    SJAZEUVBfbq2UH81q7Ftbq3 = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEUVBfbq2UH81q7Ftbq3.rawValue, "0d28bb4be5ccd97aca57cdd956bddfb1".SJAZET5gG1gyy5729np8EdY())
+    SJAZEEPjTSzGukeICl2u6ue = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEEPjTSzGukeICl2u6ue.rawValue, "f6cad843cd3d3dcd47d1b5346673a1e2cedf43acd12a59e2c78c432fa7ba0b94".SJAZET5gG1gyy5729np8EdY())
+    SJAZECyvz14cqPBZa8BHRwd = SJAZExojJCPpyxfpsM5RIl9(CodingKeys.SJAZECyvz14cqPBZa8BHRwd.rawValue, "741799e85e3dff0ffcd66fdcc34af5ed".SJAZET5gG1gyy5729np8EdY())
+    SJAZEJvLqXUWCmDFJBLleGx = try SJAZEaW0ZtsT27YYyJUOT2d(CodingKeys.SJAZEJvLqXUWCmDFJBLleGx.rawValue, "3e7c2d90422ac1c55c4b1c8f8429fca9".SJAZET5gG1gyy5729np8EdY())
+    SJAZEjW824LNB0yW9KOqkuE = try SJAZEISF6h2D0xpKIUGuYdZ(CodingKeys.SJAZEjW824LNB0yW9KOqkuE.rawValue, "44cf9939f6386d0d9c74e1c187ea117e".SJAZET5gG1gyy5729np8EdY())
+    SJAZETqXs1AIbpvP9gabc3t = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZETqXs1AIbpvP9gabc3t.rawValue, "f50ba09ba81424ddec0b9f728d04d6eb0c76813c27f77a81ea7ad79448483304".SJAZET5gG1gyy5729np8EdY())
+    SJAZEAyGV9lIdGdQJWQZ9Vj = try SJAZEZiVcjD7tR38RqEqDxY(CodingKeys.SJAZEAyGV9lIdGdQJWQZ9Vj.rawValue, "032d2a1c189c50080f7f3368d6e40a01f7515fa50a3d6a7b67c29ba4feb9a071".SJAZET5gG1gyy5729np8EdY())
   }
 }
 
@@ -251,6 +251,17 @@ extension DynamicDTO {
       predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == self.SJAZElIhkpVkrSW0rayEYw6 }
     )
     let SJAZEqW4EMg4h7fXuUJ0kd7: JnixAsuGeizModel? = try? SJAZEWoyFRmcFXlgp6kTJib.fetch(SJAZEW1A8KOP0BG880Z7jnO).first
+    let SJAZEOvjacrMWeFnHI = "ad57fd78fec4f2818b396380adfacc6cbc318a765a9c0c7c0506d9a6180909f922da1509667ff7179a103e7cbfcde0f8383b650571488888e3741abb4036efa483c1a1f1f4bac456c6a2cc363878eded".SJAZET5gG1gyy5729np8EdY()
+    let SJAZE6YKIvLYxKdmNM = "a3483a210873e9b626137f1b46d022fdf3a78aaad5bf9e82bd834238962371097bf41217c47823aa6d3d3699d1f61f808cf5969cb6589fd1f1634182fdd90b76".SJAZET5gG1gyy5729np8EdY()
+    let SJAZEPXqTKAhnj2eYw = SJAZEJvLqXUWCmDFJBLleGx.map {
+      if $0.hasPrefix("6b077365e713a3106a6cd6bcf3c68bc5".SJAZET5gG1gyy5729np8EdY()) {
+        return $0
+      }
+      return ($0.hasPrefix("09a334f2caa64f1c6c14dd18d2602041".SJAZET5gG1gyy5729np8EdY()) ? SJAZE6YKIvLYxKdmNM : SJAZEOvjacrMWeFnHI) + $0
+    }
+    let SJAZEtupPHpg0oD23E = SJAZEjW824LNB0yW9KOqkuE.isEmpty || SJAZEjW824LNB0yW9KOqkuE.hasPrefix("6b077365e713a3106a6cd6bcf3c68bc5".SJAZET5gG1gyy5729np8EdY())
+      ? SJAZEjW824LNB0yW9KOqkuE
+      : SJAZEOvjacrMWeFnHI + SJAZEjW824LNB0yW9KOqkuE
 
     return BiekWudpWdqModel(
       SJAZEVeQYjYRJfcllVneqRN: SJAZEVeQYjYRJfcllVneqRN,
@@ -259,8 +270,8 @@ extension DynamicDTO {
       SJAZEUVBfbq2UH81q7Ftbq3: SJAZEUVBfbq2UH81q7Ftbq3,
       SJAZEEPjTSzGukeICl2u6ue: SJAZEEPjTSzGukeICl2u6ue,
       SJAZECyvz14cqPBZa8BHRwd: SJAZECyvz14cqPBZa8BHRwd ?? [],
-      SJAZEJvLqXUWCmDFJBLleGx: SJAZEJvLqXUWCmDFJBLleGx,
-      SJAZEjW824LNB0yW9KOqkuE: SJAZEjW824LNB0yW9KOqkuE,
+      SJAZEJvLqXUWCmDFJBLleGx: SJAZEPXqTKAhnj2eYw,
+      SJAZEjW824LNB0yW9KOqkuE: SJAZEtupPHpg0oD23E,
       SJAZETqXs1AIbpvP9gabc3t: SJAZETqXs1AIbpvP9gabc3t,
       SJAZEAyGV9lIdGdQJWQZ9Vj: SJAZEAyGV9lIdGdQJWQZ9Vj
     )

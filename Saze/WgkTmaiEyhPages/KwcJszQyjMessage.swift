@@ -4,28 +4,28 @@ import SwiftUI
 
 struct KwcJszQyjMessage: View {
   #if DEBUG
-    @ObserveInjection var forceRedraw
+    @ObserveInjection var SJAZEtE9URSe4Piuin
   #endif
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @Environment(\.modelContext) private var modelContext
-  @EnvironmentObject var router: SvcdXfvTsxRouter
-  @Query private var chats: [HwsYfezKgckModel]
-  var filteredChats: [HwsYfezKgckModel] {
-    guard let SJAZE8aPaDfeuPau1weW9Tr = appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
+  @EnvironmentObject var SJAZEHpszFi80RiCnd: RlbHdbTvacState
+  @Environment(\.modelContext) private var SJAZEkeZaCWCAXkYDd
+  @EnvironmentObject var SJAZEYpk9fy5yu6m7y: SvcdXfvTsxRouter
+  @Query private var SJAZESW4mkK3EHJwWI: [HwsYfezKgckModel]
+  var SJAZEEoFMc4As3ZA7S: [HwsYfezKgckModel] {
+    guard let SJAZE8aPaDfeuPau1weW9Tr = SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
       return []
     }
-    return chats.filter {
+    return SJAZESW4mkK3EHJwWI.filter {
       !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEBCR2nFfDTdsD4REASp.first ?? "")
         && !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEBCR2nFfDTdsD4REASp.last ?? "")
         && !$0.SJAZEn9xXVUjsmZIL5HwlRT.isEmpty
-        && $0.SJAZEBCR2nFfDTdsD4REASp.contains(appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 ?? "")
+        && $0.SJAZEBCR2nFfDTdsD4REASp.contains(SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 ?? "")
     }
   }
   var body: some View {
     #if DEBUG
-      let _ = forceRedraw
+      let _ = SJAZEtE9URSe4Piuin
     #endif
-    GeometryReader { geo in
+    GeometryReader { SJAZECDpBC1En2g2UA in
       Color.bgs1.ignoresSafeArea()
       VStack(spacing: 0) {
         Spacer().frame(height: 10.h)
@@ -35,7 +35,7 @@ struct KwcJszQyjMessage: View {
           .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
           .frame(maxWidth: .infinity, alignment: .leading)
         Spacer().frame(height: 16.h)
-        if filteredChats.isEmpty {
+        if SJAZEEoFMc4As3ZA7S.isEmpty {
           VStack {
             Image("Assets/saze_empty").resizable().scaledToFill().frame(
               width: 152.r, height: 152.r)
@@ -47,8 +47,8 @@ struct KwcJszQyjMessage: View {
         } else {
           ScrollView {
             VStack {
-              ForEach(filteredChats) { chat in
-                SJAZEM0OnEKdu7gD0I8pbs5(SJAZE46goRBlwHcZ2NTR7Zj: chat)
+              ForEach(SJAZEEoFMc4As3ZA7S) { SJAZE3dMuhW59q1SlM in
+                SJAZEM0OnEKdu7gD0I8pbs5(SJAZE46goRBlwHcZ2NTR7Zj: SJAZE3dMuhW59q1SlM)
               }
             }
           }
@@ -61,9 +61,9 @@ struct KwcJszQyjMessage: View {
 }
 
 struct SJAZEM0OnEKdu7gD0I8pbs5: View {
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @Environment(\.modelContext) private var modelContext
-  @EnvironmentObject var router: SvcdXfvTsxRouter
+  @EnvironmentObject var SJAZEHpszFi80RiCnd: RlbHdbTvacState
+  @Environment(\.modelContext) private var SJAZEkeZaCWCAXkYDd
+  @EnvironmentObject var SJAZEYpk9fy5yu6m7y: SvcdXfvTsxRouter
   let SJAZE46goRBlwHcZ2NTR7Zj: HwsYfezKgckModel
 
   private func SJAZElKdjUJkJ77eSAJL60a(_ SJAZEPPFS5wCvtlT1gjyYXm: String) -> String {
@@ -96,13 +96,13 @@ struct SJAZEM0OnEKdu7gD0I8pbs5: View {
 
   var body: some View {
     let SJAZEfOhLjqOQCP2JSVXMIa =
-      SJAZE46goRBlwHcZ2NTR7Zj.SJAZEBCR2nFfDTdsD4REASp.filter { $0 != appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 }
+      SJAZE46goRBlwHcZ2NTR7Zj.SJAZEBCR2nFfDTdsD4REASp.filter { $0 != SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 }
       .first ?? ""
     let SJAZEFDReR9Z4k3PWgjPcxb = FetchDescriptor<JnixAsuGeizModel>(
       predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == SJAZEfOhLjqOQCP2JSVXMIa }
     )
 
-    if let SJAZEehC57FNw5LSfew8qAT = try? modelContext.fetch(SJAZEFDReR9Z4k3PWgjPcxb).first {
+    if let SJAZEehC57FNw5LSfew8qAT = try? SJAZEkeZaCWCAXkYDd.fetch(SJAZEFDReR9Z4k3PWgjPcxb).first {
       HStack(spacing: 12.w) {
         KFImage(URL(string: SJAZEehC57FNw5LSfew8qAT.SJAZEitwQEriHyuWepBXcnG))
           .fade(duration: 0.2)
@@ -138,7 +138,7 @@ struct SJAZEM0OnEKdu7gD0I8pbs5: View {
       .background(.fzs1)
       .cornerRadius(41.r)
       .onTapGesture {
-        router.SJAZE5Y6UMc9APagan0DFzL(
+        SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
             url: URL(
               string:

@@ -3,7 +3,7 @@ import SwiftUI
 
 struct JfsVizaSicgLogin: View {
   #if DEBUG
-    @ObserveInjection var forceRedraw
+    @ObserveInjection var SJAZEtE9URSe4Piuin
   #endif
   enum Field: Hashable {
     case SJAZEP9D18bMxoNRrHS3qbS
@@ -11,16 +11,16 @@ struct JfsVizaSicgLogin: View {
   }
   @State var SJAZEP9D18bMxoNRrHS3qbS: String = ""
   @State var SJAZE3JHV2UnFe5sJW0IY99: String = ""
-  @FocusState private var focusedField: Field?
-  @EnvironmentObject var router: SvcdXfvTsxRouter
-  @State private var isLoading = false
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @Environment(\.modelContext) private var modelContext
+  @FocusState private var SJAZEHpszFi80RiCnd: Field?
+  @EnvironmentObject var SJAZEkeZaCWCAXkYDd: SvcdXfvTsxRouter
+  @State private var SJAZEYpk9fy5yu6m7y = false
+  @EnvironmentObject var SJAZESW4mkK3EHJwWI: RlbHdbTvacState
+  @Environment(\.modelContext) private var SJAZEEoFMc4As3ZA7S
   var body: some View {
     #if DEBUG
-      let _ = forceRedraw
+      let _ = SJAZEtE9URSe4Piuin
     #endif
-    GeometryReader { geometry in
+    GeometryReader { SJAZECDpBC1En2g2UA in
       Image("SplashBg").resizable().ignoresSafeArea()
       Image("Assets/saze_sign_rw").resizable().scaledToFit().frame(width: 59.w, height: 116.h)
         .frame(maxHeight: .infinity, alignment: .topLeading).offset(x: 53.w, y: 34.h)
@@ -50,10 +50,10 @@ struct JfsVizaSicgLogin: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .SJAZEP9D18bMxoNRrHS3qbS)
+        .focused($SJAZEHpszFi80RiCnd, equals: .SJAZEP9D18bMxoNRrHS3qbS)
         .submitLabel(.next)
         .onSubmit {
-          focusedField = .SJAZE3JHV2UnFe5sJW0IY99
+          SJAZEHpszFi80RiCnd = .SJAZE3JHV2UnFe5sJW0IY99
         }
         Spacer().frame(height: 24.h)
         SecureField(
@@ -79,32 +79,32 @@ struct JfsVizaSicgLogin: View {
           ).offset(x: 16.w),
           alignment: .leading
         )
-        .focused($focusedField, equals: .SJAZE3JHV2UnFe5sJW0IY99)
+        .focused($SJAZEHpszFi80RiCnd, equals: .SJAZE3JHV2UnFe5sJW0IY99)
         .submitLabel(.done)
         .onSubmit {
-          focusedField = nil
+          SJAZEHpszFi80RiCnd = nil
         }
         Spacer()
         Button(action: {
-          guard !SJAZEP9D18bMxoNRrHS3qbS.isEmpty, !SJAZE3JHV2UnFe5sJW0IY99.isEmpty, !isLoading else { return }
-          isLoading = true
+          guard !SJAZEP9D18bMxoNRrHS3qbS.isEmpty, !SJAZE3JHV2UnFe5sJW0IY99.isEmpty, !SJAZEYpk9fy5yu6m7y else { return }
+          SJAZEYpk9fy5yu6m7y = true
           Task {
             defer {
-              isLoading = false
+              SJAZEYpk9fy5yu6m7y = false
             }
             do {
               try await Task.sleep(for: .milliseconds(613))
-              let descriptor = FetchDescriptor<JnixAsuGeizModel>(
+              let SJAZE3dMuhW59q1SlM = FetchDescriptor<JnixAsuGeizModel>(
                 predicate: #Predicate { $0.SJAZEP9D18bMxoNRrHS3qbS == SJAZEP9D18bMxoNRrHS3qbS }
               )
-              let user = try modelContext.fetch(descriptor).first
+              let SJAZEDYAJRkfLGcnca = try SJAZEEoFMc4As3ZA7S.fetch(SJAZE3dMuhW59q1SlM).first
               await MainActor.run {
-                guard let user = user else {
+                guard let SJAZEDYAJRkfLGcnca = SJAZEDYAJRkfLGcnca else {
                   Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Invalid email or password. Please try again.")
                   return
                 }
-                appState.SJAZEw6XG9fZlRZQgwEl(user)
-                appState.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
+                SJAZESW4mkK3EHJwWI.SJAZEw6XG9fZlRZQgwEl(SJAZEDYAJRkfLGcnca)
+                SJAZESW4mkK3EHJwWI.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
               }
             } catch {
               await MainActor.run {
@@ -113,7 +113,7 @@ struct JfsVizaSicgLogin: View {
             }
           }
         }) {
-          if isLoading {
+          if SJAZEYpk9fy5yu6m7y {
             ProgressView()
               .progressViewStyle(CircularProgressViewStyle(tint: Color("text1")))
               .frame(maxWidth: .infinity)
@@ -137,7 +137,7 @@ struct JfsVizaSicgLogin: View {
     .toolbar {
       ToolbarItem(placement: .navigationBarLeading) {
         Button {
-          router.sazePath.removeLast()
+          SJAZEkeZaCWCAXkYDd.sazePath.removeLast()
         } label: {
           Image("Assets/saze_back")
             .resizable()

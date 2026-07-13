@@ -4,29 +4,29 @@ import SwiftUI
 
 struct IrlvCtgVhhFound: View {
   #if DEBUG
-    @ObserveInjection var forceRedraw
+    @ObserveInjection var SJAZEtE9URSe4Piuin
   #endif
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @Environment(\.modelContext) private var modelContext
-  @EnvironmentObject var router: SvcdXfvTsxRouter
-  @Query private var dynamics: [BiekWudpWdqModel]
-  @Query private var users: [JnixAsuGeizModel]
-  var filteredVideoDynamics: [BiekWudpWdqModel] {
-    guard let SJAZE8aPaDfeuPau1weW9Tr = appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
-      return dynamics.filter { $0.SJAZEsoZ0L6YgsKwJ0DlGuU == 1 }
+  @EnvironmentObject var SJAZEHpszFi80RiCnd: RlbHdbTvacState
+  @Environment(\.modelContext) private var SJAZEkeZaCWCAXkYDd
+  @EnvironmentObject var SJAZEYpk9fy5yu6m7y: SvcdXfvTsxRouter
+  @Query private var SJAZESW4mkK3EHJwWI: [BiekWudpWdqModel]
+  @Query private var SJAZEEoFMc4As3ZA7S: [JnixAsuGeizModel]
+  var SJAZECDpBC1En2g2UA: [BiekWudpWdqModel] {
+    guard let SJAZE8aPaDfeuPau1weW9Tr = SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr else {
+      return SJAZESW4mkK3EHJwWI.filter { $0.SJAZEsoZ0L6YgsKwJ0DlGuU == 1 }
     }
-    return dynamics.filter {
+    return SJAZESW4mkK3EHJwWI.filter {
       !SJAZE8aPaDfeuPau1weW9Tr.contains($0.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 ?? "") && $0.SJAZEsoZ0L6YgsKwJ0DlGuU == 1
     }
   }
-  var filteredUsers: [JnixAsuGeizModel] {
-    let blockSet = Set(appState.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr ?? [])
-    return users.filter { model in
-      if blockSet.contains(model.SJAZElIhkpVkrSW0rayEYw6) {
+  var SJAZE3dMuhW59q1SlM: [JnixAsuGeizModel] {
+    let SJAZEDYAJRkfLGcnca = Set(SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZE8aPaDfeuPau1weW9Tr ?? [])
+    return SJAZEEoFMc4As3ZA7S.filter { SJAZEASR3aBNz03LEI in
+      if SJAZEDYAJRkfLGcnca.contains(SJAZEASR3aBNz03LEI.SJAZElIhkpVkrSW0rayEYw6) {
         return false
       }
-      if let currentUserId = appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 {
-        return currentUserId != model.SJAZElIhkpVkrSW0rayEYw6
+      if let SJAZEgJownbIz5opcI = SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6 {
+        return SJAZEgJownbIz5opcI != SJAZEASR3aBNz03LEI.SJAZElIhkpVkrSW0rayEYw6
       }
       return true
     }
@@ -34,9 +34,9 @@ struct IrlvCtgVhhFound: View {
 
   var body: some View {
     #if DEBUG
-      let _ = forceRedraw
+      let _ = SJAZEtE9URSe4Piuin
     #endif
-    GeometryReader { geo in
+    GeometryReader { SJAZEsRzxsupuDfCuA in
       Color.bgs1.ignoresSafeArea()
       VStack(spacing: 0) {
         Spacer().frame(height: 20.h)
@@ -58,7 +58,7 @@ struct IrlvCtgVhhFound: View {
               .font(.system(size: 14.sp, weight: .bold))
           }
           .onTapGesture {
-            router.SJAZE5Y6UMc9APagan0DFzL(
+            SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
@@ -70,10 +70,10 @@ struct IrlvCtgVhhFound: View {
         Spacer().frame(height: 13.h)
         ScrollView(.horizontal) {
           HStack(spacing: 20.w) {
-            ForEach(filteredUsers, id: \.self) { user in
-              let followed = appState.wfzqCubCpmUser?.SJAZEJUP63F40vD681ZMiy6.contains(user.SJAZElIhkpVkrSW0rayEYw6) ?? false
+            ForEach(SJAZE3dMuhW59q1SlM, id: \.self) { SJAZEgLy0nkJAaoZlA in
+              let SJAZEMgsi9ejKKsRJs = SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZEJUP63F40vD681ZMiy6.contains(SJAZEgLy0nkJAaoZlA.SJAZElIhkpVkrSW0rayEYw6) ?? false
               VStack(spacing: 19.h) {
-                KFImage(URL(string: user.SJAZEitwQEriHyuWepBXcnG))
+                KFImage(URL(string: SJAZEgLy0nkJAaoZlA.SJAZEitwQEriHyuWepBXcnG))
                   .fade(duration: 0.2)
                   .resizable()
                   .scaledToFill()
@@ -81,13 +81,13 @@ struct IrlvCtgVhhFound: View {
                   .clipShape(Circle())
                   .overlay(Circle().stroke(.white.opacity(0.1), lineWidth: 2.0))
                   .overlay(
-                    Image(followed ? "Assets/saze_gou_icon" : "Assets/saze_video_add_icon")
+                    Image(SJAZEMgsi9ejKKsRJs ? "Assets/saze_gou_icon" : "Assets/saze_video_add_icon")
                       .resizable().scaledToFit().frame(width: 8.r, height: 8.r)
                       .frame(width: 14.r, height: 14.r)
                       .background(.white)
                       .clipShape(Circle()),
                     alignment: .bottomTrailing)
-                Text(user.SJAZEgk7Ot2T1adgYgUOQFz)
+                Text(SJAZEgLy0nkJAaoZlA.SJAZEgk7Ot2T1adgYgUOQFz)
                   .padding(.vertical, 6.h)
                   .padding(.horizontal, 10.w)
                   .frame(width: 80.w)
@@ -132,11 +132,11 @@ struct IrlvCtgVhhFound: View {
               )
               .contentShape(RoundedRectangle(cornerRadius: 30.r))
               .onTapGesture {
-                router.SJAZE5Y6UMc9APagan0DFzL(
+                SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                     url: URL(
                       string:
-                        "5e0f812461366afc492a2284cee5f382".SJAZET5gG1gyy5729np8EdY()+"\(user.SJAZElIhkpVkrSW0rayEYw6)"
+                        "5e0f812461366afc492a2284cee5f382".SJAZET5gG1gyy5729np8EdY()+"\(SJAZEgLy0nkJAaoZlA.SJAZElIhkpVkrSW0rayEYw6)"
                     )!
                   ))
               }
@@ -148,27 +148,27 @@ struct IrlvCtgVhhFound: View {
         Spacer().frame(height: 24.h)
         ScrollView(.vertical) {
           VStack(spacing: 12.h) {
-            ForEach(filteredVideoDynamics, id: \.self) { dynamicEntity in
+            ForEach(SJAZECDpBC1En2g2UA, id: \.self) { SJAZEGazFUjLd6gbaB in
               VStack(spacing: 0) {
                 HStack(spacing: 8.w) {
-                  KFImage(URL(string: dynamicEntity.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZEitwQEriHyuWepBXcnG ?? ""))
+                  KFImage(URL(string: SJAZEGazFUjLd6gbaB.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZEitwQEriHyuWepBXcnG ?? ""))
                     .fade(duration: 0.25)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 44.r, height: 44.r)
                     .clipShape(Circle())
-                  Text("\(dynamicEntity.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZEgk7Ot2T1adgYgUOQFz ?? "")")
+                  Text("\(SJAZEGazFUjLd6gbaB.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZEgk7Ot2T1adgYgUOQFz ?? "")")
                     .font(.system(size: 16.sp, weight: .bold))
                     .foregroundColor(.fzs1)
                   Spacer()
                 }
-                Text(dynamicEntity.SJAZEUVBfbq2UH81q7Ftbq3)
+                Text(SJAZEGazFUjLd6gbaB.SJAZEUVBfbq2UH81q7Ftbq3)
                   .foregroundColor(Color(red: 0.13, green: 0.13, blue: 0.13))
                   .lineLimit(1)
                   .font(.system(size: 14.sp))
                   .frame(maxWidth: .infinity, alignment: .leading)
                   .padding(.vertical, 10.h)
-                KFImage(URL(string: dynamicEntity.SJAZEJvLqXUWCmDFJBLleGx.first!))
+                KFImage(URL(string: SJAZEGazFUjLd6gbaB.SJAZEJvLqXUWCmDFJBLleGx.first!))
                   .fade(duration: 0.25)
                   .resizable()
                   .scaledToFill()
@@ -201,11 +201,11 @@ struct IrlvCtgVhhFound: View {
                   )
               )
               .onTapGesture {
-                router.SJAZE5Y6UMc9APagan0DFzL(
+                SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                     url: URL(
                       string:
-                        "a500ea99647cdcf57b4b633170e479af87bed8d63909abd0d58c0d82da0738ac".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"
+                        "a500ea99647cdcf57b4b633170e479af87bed8d63909abd0d58c0d82da0738ac".SJAZET5gG1gyy5729np8EdY()+"\(SJAZEGazFUjLd6gbaB.SJAZEVeQYjYRJfcllVneqRN)"
                     )!
                   ))
               }

@@ -4,25 +4,25 @@ import SwiftUI
 
 struct EckPjrFxxkProfile: View {
   #if DEBUG
-    @ObserveInjection var forceRedraw
+    @ObserveInjection var SJAZEtE9URSe4Piuin
   #endif
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @Environment(\.modelContext) private var modelContext
-  @EnvironmentObject var router: SvcdXfvTsxRouter
-  @Query private var dynamics: [BiekWudpWdqModel]
-  var filteredPictureDynamics: [BiekWudpWdqModel] {
-    return dynamics.filter {
+  @EnvironmentObject var SJAZEHpszFi80RiCnd: RlbHdbTvacState
+  @Environment(\.modelContext) private var SJAZEkeZaCWCAXkYDd
+  @EnvironmentObject var SJAZEYpk9fy5yu6m7y: SvcdXfvTsxRouter
+  @Query private var SJAZESW4mkK3EHJwWI: [BiekWudpWdqModel]
+  var SJAZEEoFMc4As3ZA7S: [BiekWudpWdqModel] {
+    return SJAZESW4mkK3EHJwWI.filter {
       $0.SJAZEsoZ0L6YgsKwJ0DlGuU == 0
-        && $0.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 == appState.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6
+        && $0.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 == SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZElIhkpVkrSW0rayEYw6
     }
   }
-  let columns = [
+  let SJAZECDpBC1En2g2UA = [
     GridItem(.flexible(), spacing: 25),
     GridItem(.flexible(), spacing: 25),
   ]
   var body: some View {
     #if DEBUG
-      let _ = forceRedraw
+      let _ = SJAZEtE9URSe4Piuin
     #endif
     GeometryReader { _ in
       Image("Assets/saze_profile_bg").resizable().ignoresSafeArea()
@@ -30,14 +30,14 @@ struct EckPjrFxxkProfile: View {
         Spacer().frame(height: 12.h)
         HStack(alignment: .top, spacing: 0) {
           HStack(spacing: 10.w) {
-            KFImage(URL(string: appState.wfzqCubCpmUser?.SJAZEitwQEriHyuWepBXcnG ?? ""))
+            KFImage(URL(string: SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZEitwQEriHyuWepBXcnG ?? ""))
               .fade(duration: 0.2)
               .resizable()
               .scaledToFill()
               .frame(width: 62.r, height: 62.r)
               .clipShape(Circle())
               .overlay(Circle().stroke(.white.opacity(0.1), lineWidth: 4.0))
-            Text(appState.wfzqCubCpmUser?.SJAZEgk7Ot2T1adgYgUOQFz ?? "")
+            Text(SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZEgk7Ot2T1adgYgUOQFz ?? "")
               .foregroundColor(.zs1)
               .font(.system(size: 16.sp, weight: .black))
               .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
@@ -46,7 +46,7 @@ struct EckPjrFxxkProfile: View {
                 width: 12.r, height: 12.r)
           }
           .onTapGesture {
-            router.SJAZE5Y6UMc9APagan0DFzL(
+            SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
@@ -60,7 +60,7 @@ struct EckPjrFxxkProfile: View {
               width: 24.r, height: 24.r
             )
             .onTapGesture {
-              router.SJAZE5Y6UMc9APagan0DFzL(
+              SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                   url: URL(
                     string:
@@ -73,7 +73,7 @@ struct EckPjrFxxkProfile: View {
         HStack(spacing: 0) {
           VStack(alignment: .leading, spacing: 6.h) {
             Text(
-              "\(appState.wfzqCubCpmUser?.SJAZEJUP63F40vD681ZMiy6.count ?? 0)"
+              "\(SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZEJUP63F40vD681ZMiy6.count ?? 0)"
             )
             .foregroundColor(
               .fzs1
@@ -87,7 +87,7 @@ struct EckPjrFxxkProfile: View {
             .font(.system(size: 12.sp))
           }
           .onTapGesture {
-            router.SJAZE5Y6UMc9APagan0DFzL(
+            SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
@@ -98,7 +98,7 @@ struct EckPjrFxxkProfile: View {
           Spacer()
           VStack(alignment: .leading, spacing: 6.h) {
             Text(
-              "\(appState.wfzqCubCpmUser?.SJAZEekGs3S5kuus384RPpr.count ?? 0)"
+              "\(SJAZEHpszFi80RiCnd.wfzqCubCpmUser?.SJAZEekGs3S5kuus384RPpr.count ?? 0)"
             )
             .foregroundColor(
               .fzs1
@@ -112,7 +112,7 @@ struct EckPjrFxxkProfile: View {
             .font(.system(size: 12.sp))
           }
           .onTapGesture {
-            router.SJAZE5Y6UMc9APagan0DFzL(
+            SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                 url: URL(
                   string:
@@ -141,7 +141,7 @@ struct EckPjrFxxkProfile: View {
         .background(.ultraThinMaterial)
         .cornerRadius(40.r)
         .onTapGesture {
-          router.SJAZE5Y6UMc9APagan0DFzL(
+          SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
               url: URL(
                 string:
@@ -151,7 +151,7 @@ struct EckPjrFxxkProfile: View {
         }
         .padding(.horizontal, 30.w)
         Spacer().frame(height: 16.h)
-        if filteredPictureDynamics.isEmpty {
+        if SJAZEEoFMc4As3ZA7S.isEmpty {
           VStack {
             Spacer().frame(height: 20.h)
             Text("POST")
@@ -182,14 +182,14 @@ struct EckPjrFxxkProfile: View {
               .SJAZEwYTuBtb5heaf78(SJAZEZInLVMwuK3b7Nt: .fzs1, SJAZEaXDVDe3fq251lp: 4)
               .padding(.leading, 20.w)
               .frame(maxWidth: .infinity, alignment: .leading)
-            LazyVGrid(columns: columns) {
-              ForEach(filteredPictureDynamics, id: \.self) { dynamicEntity in
-                GeometryReader { geometry in
-                  KFImage(URL(string: dynamicEntity.SJAZEJvLqXUWCmDFJBLleGx.first!))
+            LazyVGrid(columns: SJAZECDpBC1En2g2UA) {
+              ForEach(SJAZEEoFMc4As3ZA7S, id: \.self) { SJAZE3dMuhW59q1SlM in
+                GeometryReader { SJAZEDYAJRkfLGcnca in
+                  KFImage(URL(string: SJAZE3dMuhW59q1SlM.SJAZEJvLqXUWCmDFJBLleGx.first!))
                     .fade(duration: 0.25)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: geometry.size.width)
+                    .frame(width: SJAZEDYAJRkfLGcnca.size.width)
                     .frame(height: 211.h)
                     .clipped()
                     .cornerRadius(40.r)
@@ -228,11 +228,11 @@ struct EckPjrFxxkProfile: View {
                       .offset(y: -10.h), alignment: .bottom
                     )
                     .onTapGesture {
-                      router.SJAZE5Y6UMc9APagan0DFzL(
+                      SJAZEYpk9fy5yu6m7y.SJAZE5Y6UMc9APagan0DFzL(
                       WwaQhwoEkuMainRoute.wfueZroFsmnPrimary(
                           url: URL(
                             string:
-                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(dynamicEntity.SJAZEVeQYjYRJfcllVneqRN)"
+                              "84e811b58c548019d61e1208cadd2b4a".SJAZET5gG1gyy5729np8EdY()+"\(SJAZE3dMuhW59q1SlM.SJAZEVeQYjYRJfcllVneqRN)"
                           )!
                         ))
                     }

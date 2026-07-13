@@ -3,21 +3,21 @@ import SwiftUI
 
 struct YwxKvvRbdkGuide: View {
   #if DEBUG
-    @ObserveInjection var forceRedraw
+    @ObserveInjection var SJAZEtE9URSe4Piuin
   #endif
   private let SJAZEuKXhyaL8SY2zlyCFBd = "sazeDidAgreeEula"
-  @State private var isLoading = false
-  @State private var isAgreeEula = UserDefaults.standard.bool(forKey: "sazeDidAgreeEula")
-  @State private var isShowEula = false
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @Environment(\.modelContext) private var modelContext
-  @StateObject private var router: SvcdXfvTsxRouter = SvcdXfvTsxRouter()
+  @State private var SJAZEHpszFi80RiCnd = false
+  @State private var SJAZEkeZaCWCAXkYDd = UserDefaults.standard.bool(forKey: "sazeDidAgreeEula")
+  @State private var SJAZEYpk9fy5yu6m7y = false
+  @EnvironmentObject var SJAZESW4mkK3EHJwWI: RlbHdbTvacState
+  @Environment(\.modelContext) private var SJAZEEoFMc4As3ZA7S
+  @StateObject private var SJAZECDpBC1En2g2UA: SvcdXfvTsxRouter = SvcdXfvTsxRouter()
   var body: some View {
     #if DEBUG
-      let _ = forceRedraw
+      let _ = SJAZEtE9URSe4Piuin
     #endif
-    NavigationStack(path: $router.sazePath) {
-      GeometryReader { geometry in
+    NavigationStack(path: $SJAZECDpBC1En2g2UA.sazePath) {
+      GeometryReader { SJAZE3dMuhW59q1SlM in
         Image("Assets/saze_guide_bg")
           .resizable()
           .ignoresSafeArea()
@@ -35,17 +35,17 @@ struct YwxKvvRbdkGuide: View {
               .background(.white.opacity(0.2))
               .cornerRadius(10)
               .onTapGesture {
-                isShowEula = true
+                SJAZEYpk9fy5yu6m7y = true
               }
               .padding(.top, 6.h)
           }
           .padding(.horizontal, 18.w)
           Spacer()
           Button(action: {
-            if isAgreeEula {
-              router.sazePath.append(WwaQhwoEkuRoute.gingFfkFidqLogin)
+            if SJAZEkeZaCWCAXkYDd {
+              SJAZECDpBC1En2g2UA.sazePath.append(WwaQhwoEkuRoute.gingFfkFidqLogin)
             } else {
-              isShowEula = true
+              SJAZEYpk9fy5yu6m7y = true
             }
           }) {
             Text("LOGIN BY EMAIL")
@@ -61,45 +61,45 @@ struct YwxKvvRbdkGuide: View {
           .padding(.horizontal, 73.w)
           Spacer().frame(height: 20.h)
           Button(action: {
-            guard !isLoading else { return }
-            guard isAgreeEula else {
-              isShowEula = true
+            guard !SJAZEHpszFi80RiCnd else { return }
+            guard SJAZEkeZaCWCAXkYDd else {
+              SJAZEYpk9fy5yu6m7y = true
               return
             }
             let SJAZEP9D18bMxoNRrHS3qbS = "vtfrvbdvtr@gmail.com"
-            let newUser = JnixAsuGeizModel(
+            let SJAZEDYAJRkfLGcnca = JnixAsuGeizModel(
               SJAZElIhkpVkrSW0rayEYw6: "u99",
               SJAZEP9D18bMxoNRrHS3qbS: SJAZEP9D18bMxoNRrHS3qbS,
               SJAZE3JHV2UnFe5sJW0IY99: "123456789",
               SJAZEitwQEriHyuWepBXcnG:
-                "http://huanniuchat.oss-ap-northeast-1.aliyuncs.com/saze/saze_default_photo.png",
+                "a3483a210873e9b626137f1b46d022fdf3a78aaad5bf9e82bd834238962371097bf41217c47823aa6d3d3699d1f61f80252e7dd9a0ab2e9d1a27303a2e76a924d1dc08b99f34379ef435626af1778582".SJAZET5gG1gyy5729np8EdY(),
               SJAZEgk7Ot2T1adgYgUOQFz: "User6516",
               SJAZEvngXxy127zPzUvo24P: "Nothing",
               SJAZEdRu89xECFhVxnCAcEw: 0
             )
             Task {
-              await MainActor.run { isLoading = true }
-              defer { isLoading = false }
+              await MainActor.run { SJAZEHpszFi80RiCnd = true }
+              defer { SJAZEHpszFi80RiCnd = false }
               do {
                 try await Task.sleep(for: .milliseconds(518))
-                let descriptor = FetchDescriptor<JnixAsuGeizModel>(
+                let SJAZEASR3aBNz03LEI = FetchDescriptor<JnixAsuGeizModel>(
                   predicate: #Predicate { $0.SJAZEP9D18bMxoNRrHS3qbS == SJAZEP9D18bMxoNRrHS3qbS }
                 )
-                let user = try modelContext.fetch(descriptor).first
+                let SJAZEgJownbIz5opcI = try SJAZEEoFMc4As3ZA7S.fetch(SJAZEASR3aBNz03LEI).first
                 await MainActor.run {
-                  if let user = user {
-                    appState.SJAZEw6XG9fZlRZQgwEl(user)
+                  if let SJAZEgJownbIz5opcI = SJAZEgJownbIz5opcI {
+                    SJAZESW4mkK3EHJwWI.SJAZEw6XG9fZlRZQgwEl(SJAZEgJownbIz5opcI)
                   } else {
-                    modelContext.insert(newUser)
-                    appState.SJAZEw6XG9fZlRZQgwEl(newUser)
+                    SJAZEEoFMc4As3ZA7S.insert(SJAZEDYAJRkfLGcnca)
+                    SJAZESW4mkK3EHJwWI.SJAZEw6XG9fZlRZQgwEl(SJAZEDYAJRkfLGcnca)
                   }
-                  appState.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
+                  SJAZESW4mkK3EHJwWI.vkyeFxuEaaPhase = .vzxtUcsAkqqMain
                 }
               } catch {
               }
             }
           }) {
-            if isLoading {
+            if SJAZEHpszFi80RiCnd {
               ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: .white))
                 .frame(maxWidth: .infinity)
@@ -126,22 +126,22 @@ struct YwxKvvRbdkGuide: View {
               .underline()
               .foregroundColor(.black)
               .onTapGesture {
-                if isAgreeEula {
-                  router.sazePath.append(WwaQhwoEkuRoute.vccMliWsyRegister)
+                if SJAZEkeZaCWCAXkYDd {
+                  SJAZECDpBC1En2g2UA.sazePath.append(WwaQhwoEkuRoute.vccMliWsyRegister)
                 } else {
-                  isShowEula = true
+                  SJAZEYpk9fy5yu6m7y = true
                 }
               }
           }
           Spacer().frame(height: 56.h)
           HStack {
-            Image(isAgreeEula ? "Assets/saze_guide_checked" : "Assets/saze_guide_uncheck")
+            Image(SJAZEkeZaCWCAXkYDd ? "Assets/saze_guide_checked" : "Assets/saze_guide_uncheck")
               .resizable()
               .scaledToFit()
               .frame(width: 19.r, height: 19.r)
               .onTapGesture {
-                isAgreeEula.toggle()
-                UserDefaults.standard.set(isAgreeEula, forKey: SJAZEuKXhyaL8SY2zlyCFBd)
+                SJAZEkeZaCWCAXkYDd.toggle()
+                UserDefaults.standard.set(SJAZEkeZaCWCAXkYDd, forKey: SJAZEuKXhyaL8SY2zlyCFBd)
               }
             HStack(spacing: 0) {
               Text("Agree with  ")
@@ -152,7 +152,7 @@ struct YwxKvvRbdkGuide: View {
                 .font(.system(size: 14.sp))
                 .underline()
                 .onTapGesture {
-                  router.sazePath.append(
+                  SJAZECDpBC1En2g2UA.sazePath.append(
                     WwaQhwoEkuRoute.wfueZroFsmnPrimary(
                       url: URL(string: "700fd2d489dc5595a739a1cf71131326".SJAZET5gG1gyy5729np8EdY())!))
                 }
@@ -164,7 +164,7 @@ struct YwxKvvRbdkGuide: View {
                 .font(.system(size: 14.sp))
                 .underline()
                 .onTapGesture {
-                  router.sazePath.append(
+                  SJAZECDpBC1En2g2UA.sazePath.append(
                     WwaQhwoEkuRoute.wfueZroFsmnPrimary(
                       url: URL(string: "a567708a9115a1d84c52702fdc3a5ad6".SJAZET5gG1gyy5729np8EdY())!))
                 }
@@ -173,18 +173,18 @@ struct YwxKvvRbdkGuide: View {
         }
       }
       .overlay {
-        if isShowEula {
+        if SJAZEYpk9fy5yu6m7y {
           QngkUgjVaosEula(
-            SJAZElk5cR2mJTpUpBW: $isAgreeEula,
-            SJAZETmH1ztuz9Pe2hI: $isShowEula,
+            SJAZElk5cR2mJTpUpBW: $SJAZEkeZaCWCAXkYDd,
+            SJAZETmH1ztuz9Pe2hI: $SJAZEYpk9fy5yu6m7y,
             SJAZE5Y6UMc9APagan0DFzL: SJAZEuKXhyaL8SY2zlyCFBd
           )
         }
       }
-      .navigationDestination(for: WwaQhwoEkuRoute.self) { route in
-        switch route {
-        case .wfueZroFsmnPrimary(let url):
-          LweYhriIkpPrimary(trvudfhvSsxcUrl: url)
+      .navigationDestination(for: WwaQhwoEkuRoute.self) { SJAZEsRzxsupuDfCuA in
+        switch SJAZEsRzxsupuDfCuA {
+        case .wfueZroFsmnPrimary(let SJAZEgLy0nkJAaoZlA):
+          LweYhriIkpPrimary(trvudfhvSsxcUrl: SJAZEgLy0nkJAaoZlA)
         case .gingFfkFidqLogin:
           JfsVizaSicgLogin()
         case .vccMliWsyRegister:
@@ -196,7 +196,7 @@ struct YwxKvvRbdkGuide: View {
         }
       }
     }
-    .environmentObject(router)
+    .environmentObject(SJAZECDpBC1En2g2UA)
     .enableInjection()
   }
 }

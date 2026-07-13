@@ -196,29 +196,34 @@ struct UserDTO: Codable {
       return []
     }
 
-    SJAZElIhkpVkrSW0rayEYw6 = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZElIhkpVkrSW0rayEYw6.rawValue, "userId")
-    SJAZEP9D18bMxoNRrHS3qbS = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEP9D18bMxoNRrHS3qbS.rawValue, "email")
-    SJAZE3JHV2UnFe5sJW0IY99 = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZE3JHV2UnFe5sJW0IY99.rawValue, "password")
-    SJAZEitwQEriHyuWepBXcnG = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEitwQEriHyuWepBXcnG.rawValue, "avatar")
-    SJAZEgk7Ot2T1adgYgUOQFz = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEgk7Ot2T1adgYgUOQFz.rawValue, "name", "userName")
-    SJAZEvngXxy127zPzUvo24P = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEvngXxy127zPzUvo24P.rawValue, "about", "userDesc")
-    SJAZEdRu89xECFhVxnCAcEw = try SJAZEbyKTokdCesaJOWy3GE(CodingKeys.SJAZEdRu89xECFhVxnCAcEw.rawValue, "coins", "gender")
-    SJAZEJUP63F40vD681ZMiy6 = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEJUP63F40vD681ZMiy6.rawValue, "follow", "followList")
-    SJAZEekGs3S5kuus384RPpr = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEekGs3S5kuus384RPpr.rawValue, "fans", "fansList")
-    SJAZE8aPaDfeuPau1weW9Tr = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZE8aPaDfeuPau1weW9Tr.rawValue, "blockList")
-    SJAZElT7WVEApYsaQGqay6O = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZElT7WVEApYsaQGqay6O.rawValue, "picPostLikeIds")
-    SJAZEKNpH3EiofObgwdb2XP = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEKNpH3EiofObgwdb2XP.rawValue, "videoPostLikeIds")
+    SJAZElIhkpVkrSW0rayEYw6 = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZElIhkpVkrSW0rayEYw6.rawValue, "648b7302c4ffa4b054fa5d1e4939b31e".SJAZET5gG1gyy5729np8EdY())
+    SJAZEP9D18bMxoNRrHS3qbS = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEP9D18bMxoNRrHS3qbS.rawValue, "9ecd97e9a63b98e2d473cca2dab72a93".SJAZET5gG1gyy5729np8EdY())
+    SJAZE3JHV2UnFe5sJW0IY99 = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZE3JHV2UnFe5sJW0IY99.rawValue, "d659f02861456d14bd57269871f10e9d".SJAZET5gG1gyy5729np8EdY())
+    SJAZEitwQEriHyuWepBXcnG = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEitwQEriHyuWepBXcnG.rawValue, "27274062c7e2431266a12b6a7fbc51cf".SJAZET5gG1gyy5729np8EdY())
+    SJAZEgk7Ot2T1adgYgUOQFz = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEgk7Ot2T1adgYgUOQFz.rawValue, "58bfd5af727f1b843c15df60a668899f".SJAZET5gG1gyy5729np8EdY(), "2c447afec9aba0a84f9eda8ebf8a9dc1".SJAZET5gG1gyy5729np8EdY())
+    SJAZEvngXxy127zPzUvo24P = try SJAZES2esTmmgnftTVXKURY(CodingKeys.SJAZEvngXxy127zPzUvo24P.rawValue, "a9673cee69d054ffac664e0a93a24480".SJAZET5gG1gyy5729np8EdY(), "9ffdf8dfe877904ca140a82036516d3c".SJAZET5gG1gyy5729np8EdY())
+    SJAZEdRu89xECFhVxnCAcEw = try SJAZEbyKTokdCesaJOWy3GE(CodingKeys.SJAZEdRu89xECFhVxnCAcEw.rawValue, "81bf44aaa75aa1002400c5c042eab2de".SJAZET5gG1gyy5729np8EdY(), "0ee8208cea1194cd2e2d4b6ca1a1608a".SJAZET5gG1gyy5729np8EdY())
+    SJAZEJUP63F40vD681ZMiy6 = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEJUP63F40vD681ZMiy6.rawValue, "13dab376a49b2d0df66f10e1837ff47b".SJAZET5gG1gyy5729np8EdY(), "d8526280cc7209e34e5ed7c48c2048b8".SJAZET5gG1gyy5729np8EdY())
+    SJAZEekGs3S5kuus384RPpr = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEekGs3S5kuus384RPpr.rawValue, "ddfbcc815da3d53152347328ffe1ecfb".SJAZET5gG1gyy5729np8EdY(), "21833f329a7ac7393beec8efba1cf0e8".SJAZET5gG1gyy5729np8EdY())
+    SJAZE8aPaDfeuPau1weW9Tr = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZE8aPaDfeuPau1weW9Tr.rawValue, "1d9c2eda3ab63bf6dfb784ef01472bf9".SJAZET5gG1gyy5729np8EdY())
+    SJAZElT7WVEApYsaQGqay6O = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZElT7WVEApYsaQGqay6O.rawValue, "c74cd2106ab0c1327a4ba82bbe2c96bc".SJAZET5gG1gyy5729np8EdY())
+    SJAZEKNpH3EiofObgwdb2XP = SJAZEURvXfUxj1SQF9geMwH(CodingKeys.SJAZEKNpH3EiofObgwdb2XP.rawValue, "a50ab131fd56db604423e7a5c9c361374bc9c93b38dc18a112deed2877c212f8".SJAZET5gG1gyy5729np8EdY())
   }
 }
 
 extension UserDTO {
 
   func SJAZEJPFy9ykqn9XXvxsPWy() -> JnixAsuGeizModel {
+    let SJAZEPXqTKAhnj2eYw = "a3483a210873e9b626137f1b46d022fdf3a78aaad5bf9e82bd834238962371097bf41217c47823aa6d3d3699d1f61f808cf5969cb6589fd1f1634182fdd90b76".SJAZET5gG1gyy5729np8EdY()
+    let SJAZEv4QLVd0HQN9ft = SJAZEitwQEriHyuWepBXcnG.hasPrefix("6b077365e713a3106a6cd6bcf3c68bc5".SJAZET5gG1gyy5729np8EdY())
+      ? SJAZEitwQEriHyuWepBXcnG
+      : SJAZEPXqTKAhnj2eYw + SJAZEitwQEriHyuWepBXcnG
+
     return JnixAsuGeizModel(
       SJAZElIhkpVkrSW0rayEYw6: SJAZElIhkpVkrSW0rayEYw6,
       SJAZEP9D18bMxoNRrHS3qbS: SJAZEP9D18bMxoNRrHS3qbS,
       SJAZE3JHV2UnFe5sJW0IY99: SJAZE3JHV2UnFe5sJW0IY99,
-      SJAZEitwQEriHyuWepBXcnG: SJAZEitwQEriHyuWepBXcnG,
+      SJAZEitwQEriHyuWepBXcnG: SJAZEv4QLVd0HQN9ft,
       SJAZEgk7Ot2T1adgYgUOQFz: SJAZEgk7Ot2T1adgYgUOQFz,
       SJAZEvngXxy127zPzUvo24P: SJAZEvngXxy127zPzUvo24P,
       SJAZEdRu89xECFhVxnCAcEw: SJAZEdRu89xECFhVxnCAcEw,

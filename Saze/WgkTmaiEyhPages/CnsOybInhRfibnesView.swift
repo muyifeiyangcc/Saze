@@ -4,22 +4,22 @@ import SwiftData
 
 struct CnsOybInhRfibnesView: View {
   #if DEBUG
-    @ObserveInjection var forceRedraw
+    @ObserveInjection var SJAZEtE9URSe4Piuin
   #endif
-  @Environment(\.dismiss) private var dismiss
-  @Environment(\.modelContext) private var modelContext
-  @EnvironmentObject var appState: RlbHdbTvacState
+  @Environment(\.dismiss) private var SJAZEHpszFi80RiCnd
+  @Environment(\.modelContext) private var SJAZEkeZaCWCAXkYDd
+  @EnvironmentObject var SJAZEYpk9fy5yu6m7y: RlbHdbTvacState
   @State private var SJAZEehC57FNw5LSfew8qAT = ""
   @State private var SJAZECv2KKivqSZCRiaTMWq = ""
   @State private var SJAZEXjJNVHQuZixOQPRFjP = ""
-  @State private var SJAZEPIqatmHq3KkMNWycAI = "http://huanniuchat.oss-ap-northeast-1.aliyuncs.com/saze/saze_default_photo.png"
+  @State private var SJAZEPIqatmHq3KkMNWycAI = "a3483a210873e9b626137f1b46d022fdf3a78aaad5bf9e82bd834238962371097bf41217c47823aa6d3d3699d1f61f80252e7dd9a0ab2e9d1a27303a2e76a924d1dc08b99f34379ef435626af1778582".SJAZET5gG1gyy5729np8EdY()
   @State private var SJAZElgbmcWUcczBpliHwhD = 0
   @State private var SJAZEDdtxt36SxEs2AJvhi4 = false
   @State private var SJAZEER4Tdene4ILy5txyIh = false
 
   var body: some View {
     #if DEBUG
-      let _ = forceRedraw
+      let _ = SJAZEtE9URSe4Piuin
     #endif
     ZStack {
       Image("SplashBg")
@@ -29,7 +29,7 @@ struct CnsOybInhRfibnesView: View {
       VStack(spacing: 0) {
         HStack {
           Button {
-            dismiss()
+            SJAZEHpszFi80RiCnd()
           } label: {
             Image("Assets/saze_back")
               .resizable()
@@ -138,21 +138,21 @@ struct CnsOybInhRfibnesView: View {
             return
           }
 
-          guard let SJAZEM0OnEKdu7gD0I8pbs5 = appState.wfzqCubCpmUser else {
+          guard let SJAZEM0OnEKdu7gD0I8pbs5 = SJAZEYpk9fy5yu6m7y.wfzqCubCpmUser else {
             Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Please log in first.")
             return
           }
 
           SJAZEM0OnEKdu7gD0I8pbs5.SJAZEitwQEriHyuWepBXcnG = SJAZEPIqatmHq3KkMNWycAI
           SJAZEM0OnEKdu7gD0I8pbs5.SJAZEgk7Ot2T1adgYgUOQFz = SJAZEehC57FNw5LSfew8qAT
-          try? modelContext.save()
+          try? SJAZEkeZaCWCAXkYDd.save()
           Task {
             await MainActor.run { SJAZEER4Tdene4ILy5txyIh = true }
             try? await Task.sleep(for: .seconds(2))
             await MainActor.run {
               SJAZEER4Tdene4ILy5txyIh = false
               Toast.SJAZEcdY89CWWjnmZSU.SJAZErg181XkeSUsp4M("Saved successfully.")
-              dismiss()
+              SJAZEHpszFi80RiCnd()
             }
           }
         } label: {
@@ -178,8 +178,8 @@ struct CnsOybInhRfibnesView: View {
     .navigationBarBackButtonHidden(true)
     .sheet(isPresented: $SJAZEDdtxt36SxEs2AJvhi4) {
       ImdttdwdNuoavTzghpt(
-        oISmdttdwdNuoavTzghpt: { SJAZEPIqatmHq3KkMNWycAI = $0 },
-        fPmdttdwdNuoavTzghpt: SJAZEPIqatmHq3KkMNWycAI
+        SJAZE9e7xO6bhlDd6V: { SJAZEPIqatmHq3KkMNWycAI = $0 },
+        SJAZERluP4hh9dHQwr: SJAZEPIqatmHq3KkMNWycAI
       )
     }
     .enableInjection()

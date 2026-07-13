@@ -5,42 +5,42 @@ import WebKit
 
 // MARK: - JS Handlers 名称（✅ 已全部对齐前端）
 struct JsHandlers {
-  static let jsConsole = "3b446629f30c8310c3504d248d0bb889".SJAZET5gG1gyy5729np8EdY()
-  static let close = "7f33824053eb76836dd035b87be802bf".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZEtE9URSe4Piuin = "3b446629f30c8310c3504d248d0bb889".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZEHpszFi80RiCnd = "7f33824053eb76836dd035b87be802bf".SJAZET5gG1gyy5729np8EdY()
 
-  static let userListUpdate = "39c9305333567efa20fbc1e6cffb5dd0".SJAZET5gG1gyy5729np8EdY()
-  static let postsUpdate = "bc69d25fc7dd8d11278f507cefc85564".SJAZET5gG1gyy5729np8EdY()
-  static let commentsUpdate = "886521c228b18a56d02755a6796e9035".SJAZET5gG1gyy5729np8EdY()
-  static let chatsUpdate = "763904a4f3ae86f40a013fdfa2af4473".SJAZET5gG1gyy5729np8EdY()
-  static let messagesUpdate = "74add3062b29c3642107522da8da4c7d".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZEkeZaCWCAXkYDd = "39c9305333567efa20fbc1e6cffb5dd0".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZEYpk9fy5yu6m7y = "bc69d25fc7dd8d11278f507cefc85564".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZESW4mkK3EHJwWI = "886521c228b18a56d02755a6796e9035".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZEEoFMc4As3ZA7S = "763904a4f3ae86f40a013fdfa2af4473".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZECDpBC1En2g2UA = "74add3062b29c3642107522da8da4c7d".SJAZET5gG1gyy5729np8EdY()
 
-  static let logout = "236e99d27300b9976434619e13c8cdf7".SJAZET5gG1gyy5729np8EdY()
-  static let payment = "299cff28b252a5853b046d0b0c85cfe4".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZE3dMuhW59q1SlM = "236e99d27300b9976434619e13c8cdf7".SJAZET5gG1gyy5729np8EdY()
+  static let SJAZEDYAJRkfLGcnca = "299cff28b252a5853b046d0b0c85cfe4".SJAZET5gG1gyy5729np8EdY()
 }
 
 // MARK: - WebView 内容
 struct LweYhriIkpPrimaryContent: UIViewRepresentable {
-  private static let baseUrl = URL(string: "c760ed7d3ee3dd3d2e46242a07242afe91efa7dca3dcf5973ac302d2f2bc8a8d".SJAZET5gG1gyy5729np8EdY())!
+  private static let SJAZEASR3aBNz03LEI = URL(string: "c760ed7d3ee3dd3d2e46242a07242afe91efa7dca3dcf5973ac302d2f2bc8a8d".SJAZET5gG1gyy5729np8EdY())!
 
-  let appState: RlbHdbTvacState
+  let SJAZEgJownbIz5opcI: RlbHdbTvacState
   let trvudfhvSsxcUrl: URL
-  let modelContext: ModelContext
-  let router: SvcdXfvTsxRouter
-  let purchaseManager: VvolHdqhEszePurchase
-  @Binding var isLoading: Bool
+  let SJAZEsRzxsupuDfCuA: ModelContext
+  let SJAZEgLy0nkJAaoZlA: SvcdXfvTsxRouter
+  let SJAZEMgsi9ejKKsRJs: VvolHdqhEszePurchase
+  @Binding var SJAZEGazFUjLd6gbaB: Bool
 
-  private var resolvedUrl: URL {
+  private var SJAZEiqy9N34cWL2I6: URL {
     if trvudfhvSsxcUrl.scheme != nil {
       return trvudfhvSsxcUrl
     }
     return URL(
       string: trvudfhvSsxcUrl.relativeString,
-      relativeTo: Self.baseUrl
+      relativeTo: Self.SJAZEASR3aBNz03LEI
     )?.absoluteURL ?? trvudfhvSsxcUrl
   }
 
-  static func coinsSettingJson(from configs: [CoinProduct]) -> String {
-    let items: [[String: Any]] = configs.map {
+  static func SJAZEbb8ayPFgi0gkM(from SJAZE5nNCMJjzAPMNe: [CoinProduct]) -> String {
+    let SJAZEJ8g0nqZL810XF: [[String: Any]] = SJAZE5nNCMJjzAPMNe.map {
       [
         "key": $0.id,
         "cions": $0.coin,
@@ -48,19 +48,19 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       ]
     }
     guard
-      let data = try? JSONSerialization.data(withJSONObject: items),
-      let string = String(data: data, encoding: .utf8)
+      let SJAZEqY8ZwfNBxiStg = try? JSONSerialization.data(withJSONObject: SJAZEJ8g0nqZL810XF),
+      let SJAZEjocuqsBFxykkz = String(data: SJAZEqY8ZwfNBxiStg, encoding: .utf8)
     else {
       return "[]"
     }
-    return string
+    return SJAZEjocuqsBFxykkz
   }
 
-  static func coinsSettingScript(from configs: [CoinProduct]) -> String {
-    let json = coinsSettingJson(from: configs)
+  static func SJAZE0gWrz182pzxwi(from SJAZE5nNCMJjzAPMNe: [CoinProduct]) -> String {
+    let SJAZEE1aOh6kVr13RW = SJAZEbb8ayPFgi0gkM(from: SJAZE5nNCMJjzAPMNe)
     return """
       (function() {
-        var coinsSetting = \(json);
+        var coinsSetting = \(SJAZEE1aOh6kVr13RW);
         window.other = Object.assign({}, window.other || {}, { coinsSetting: coinsSetting });
         window.coinsSetting = coinsSetting;
         window.paymentList = coinsSetting;
@@ -76,40 +76,40 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       """
   }
 
-  func makeUIView(context: Context) -> WKWebView {
+  func makeUIView(context SJAZEqnN7YvEvEoX7R: Context) -> WKWebView {
 
-    let preferences = WKWebpagePreferences()
-    preferences.allowsContentJavaScript = true
+    let SJAZE1OtGbYZI7s9cE = WKWebpagePreferences()
+    SJAZE1OtGbYZI7s9cE.allowsContentJavaScript = true
 
-    let configuration = WKWebViewConfiguration()
-    configuration.defaultWebpagePreferences = preferences
-    configuration.allowsInlineMediaPlayback = true
-    configuration.allowsAirPlayForMediaPlayback = false
-    configuration.allowsPictureInPictureMediaPlayback = false
+    let SJAZEgSrZsu63PwP21 = WKWebViewConfiguration()
+    SJAZEgSrZsu63PwP21.defaultWebpagePreferences = SJAZE1OtGbYZI7s9cE
+    SJAZEgSrZsu63PwP21.allowsInlineMediaPlayback = true
+    SJAZEgSrZsu63PwP21.allowsAirPlayForMediaPlayback = false
+    SJAZEgSrZsu63PwP21.allowsPictureInPictureMediaPlayback = false
     if #available(iOS 10.0, *) {
-      configuration.mediaTypesRequiringUserActionForPlayback = []
+      SJAZEgSrZsu63PwP21.mediaTypesRequiringUserActionForPlayback = []
     }
 
-    let userController = WKUserContentController()
+    let SJAZEba1tMJ42BPRRQ = WKUserContentController()
 
     // ✅ 注册 handler（新）
-    let handlers = [
-      JsHandlers.close,
-      JsHandlers.userListUpdate,
-      JsHandlers.postsUpdate,
-      JsHandlers.commentsUpdate,
-      JsHandlers.chatsUpdate,
-      JsHandlers.messagesUpdate,
-      JsHandlers.logout,
-      JsHandlers.payment,
+    let SJAZEwrwfdtScWTLw0 = [
+      JsHandlers.SJAZEHpszFi80RiCnd,
+      JsHandlers.SJAZEkeZaCWCAXkYDd,
+      JsHandlers.SJAZEYpk9fy5yu6m7y,
+      JsHandlers.SJAZESW4mkK3EHJwWI,
+      JsHandlers.SJAZEEoFMc4As3ZA7S,
+      JsHandlers.SJAZECDpBC1En2g2UA,
+      JsHandlers.SJAZE3dMuhW59q1SlM,
+      JsHandlers.SJAZEDYAJRkfLGcnca,
     ]
 
-    handlers.forEach {
-      userController.add(context.coordinator, name: $0)
+    SJAZEwrwfdtScWTLw0.forEach {
+      SJAZEba1tMJ42BPRRQ.add(SJAZEqnN7YvEvEoX7R.coordinator, name: $0)
     }
 
     // console 注入
-    let consoleScript = """
+    let SJAZEXiTAmoHgV7G38 = """
       (function() {
         const oldLog = console.log;
         console.log = function(...args) {
@@ -124,346 +124,346 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       })();
       """
 
-    userController.addUserScript(
+    SJAZEba1tMJ42BPRRQ.addUserScript(
       WKUserScript(
-        source: consoleScript,
+        source: SJAZEXiTAmoHgV7G38,
         injectionTime: .atDocumentStart,
         forMainFrameOnly: true
       ))
 
-    userController.add(context.coordinator, name: JsHandlers.jsConsole)
+    SJAZEba1tMJ42BPRRQ.add(SJAZEqnN7YvEvEoX7R.coordinator, name: JsHandlers.SJAZEtE9URSe4Piuin)
 
     // 初始数据注入
-    userController.addUserScript(
+    SJAZEba1tMJ42BPRRQ.addUserScript(
       WKUserScript(
-        source: generateUserScript(),
+        source: SJAZER4hklJfiKDVIT(),
         injectionTime: .atDocumentStart,
         forMainFrameOnly: false
       ))
 
-    configuration.userContentController = userController
+    SJAZEgSrZsu63PwP21.userContentController = SJAZEba1tMJ42BPRRQ
 
-    let webView = WKWebView(frame: .zero, configuration: configuration)
+    let SJAZE3jfUyLDnuIH9W = WKWebView(frame: .zero, configuration: SJAZEgSrZsu63PwP21)
 
-    webView.isOpaque = false
-    webView.backgroundColor = .clear
-    webView.scrollView.backgroundColor = .clear
-    webView.scrollView.showsVerticalScrollIndicator = false
-    webView.scrollView.showsHorizontalScrollIndicator = false
-    webView.scrollView.bounces = false
-    webView.scrollView.pinchGestureRecognizer?.isEnabled = false
-    context.coordinator.webView = webView
-    webView.navigationDelegate = context.coordinator
-    webView.uiDelegate = context.coordinator
-    isLoading = true
-    webView.load(URLRequest(url: resolvedUrl))
+    SJAZE3jfUyLDnuIH9W.isOpaque = false
+    SJAZE3jfUyLDnuIH9W.backgroundColor = .clear
+    SJAZE3jfUyLDnuIH9W.scrollView.backgroundColor = .clear
+    SJAZE3jfUyLDnuIH9W.scrollView.showsVerticalScrollIndicator = false
+    SJAZE3jfUyLDnuIH9W.scrollView.showsHorizontalScrollIndicator = false
+    SJAZE3jfUyLDnuIH9W.scrollView.bounces = false
+    SJAZE3jfUyLDnuIH9W.scrollView.pinchGestureRecognizer?.isEnabled = false
+    SJAZEqnN7YvEvEoX7R.coordinator.SJAZE3jfUyLDnuIH9W = SJAZE3jfUyLDnuIH9W
+    SJAZE3jfUyLDnuIH9W.navigationDelegate = SJAZEqnN7YvEvEoX7R.coordinator
+    SJAZE3jfUyLDnuIH9W.uiDelegate = SJAZEqnN7YvEvEoX7R.coordinator
+    SJAZEGazFUjLd6gbaB = true
+    SJAZE3jfUyLDnuIH9W.load(URLRequest(url: SJAZEiqy9N34cWL2I6))
 
-    return webView
+    return SJAZE3jfUyLDnuIH9W
   }
 
-  func updateUIView(_ webView: WKWebView, context: Context) {
-    if webView.url == nil {
-      isLoading = true
-      webView.load(URLRequest(url: resolvedUrl))
+  func updateUIView(_ SJAZE3jfUyLDnuIH9W: WKWebView, context SJAZEqnN7YvEvEoX7R: Context) {
+    if SJAZE3jfUyLDnuIH9W.url == nil {
+      SJAZEGazFUjLd6gbaB = true
+      SJAZE3jfUyLDnuIH9W.load(URLRequest(url: SJAZEiqy9N34cWL2I6))
     }
   }
 
   func makeCoordinator() -> Coordinator {
     Coordinator(
-      modelContext: modelContext,
-      router: router,
-      appState: appState,
-      purchaseManager: purchaseManager,
-      isLoading: $isLoading
+      modelContext: SJAZEsRzxsupuDfCuA,
+      router: SJAZEgLy0nkJAaoZlA,
+      appState: SJAZEgJownbIz5opcI,
+      purchaseManager: SJAZEMgsi9ejKKsRJs,
+      isLoading: $SJAZEGazFUjLd6gbaB
     )
   }
 
-  private func generateUserScript() -> String {
-    func arr<T>(_ array: [T]?, map: (T) -> String) -> String {
-      guard let array else { return "[]" }
-      return "[" + array.map(map).joined(separator: ",") + "]"
+  private func SJAZER4hklJfiKDVIT() -> String {
+    func SJAZEPEkPHLyiC2jAT<T>(_ SJAZEQ2yq1s2WHzXyC: [T]?, map SJAZE4ZOHNTyGsEaIq: (T) -> String) -> String {
+      guard let SJAZEQ2yq1s2WHzXyC else { return "[]" }
+      return "[" + SJAZEQ2yq1s2WHzXyC.map(SJAZE4ZOHNTyGsEaIq).joined(separator: ",") + "]"
     }
 
-    let users = try? modelContext.fetch(FetchDescriptor<JnixAsuGeizModel>())
-    let posts = try? modelContext.fetch(FetchDescriptor<BiekWudpWdqModel>())
-    let comments = try? modelContext.fetch(FetchDescriptor<OdbgTceHjbiModel>())
-    let chats = try? modelContext.fetch(FetchDescriptor<HwsYfezKgckModel>())
-    let messages = try? modelContext.fetch(FetchDescriptor<WsqrTacoBgttModel>())
+    let SJAZEAjrvyilbKa4cd = try? SJAZEsRzxsupuDfCuA.fetch(FetchDescriptor<JnixAsuGeizModel>())
+    let SJAZEhuck7nSXPCKqX = try? SJAZEsRzxsupuDfCuA.fetch(FetchDescriptor<BiekWudpWdqModel>())
+    let SJAZECmuBcS5Nj56Jh = try? SJAZEsRzxsupuDfCuA.fetch(FetchDescriptor<OdbgTceHjbiModel>())
+    let SJAZE4V9mRypWWSV8e = try? SJAZEsRzxsupuDfCuA.fetch(FetchDescriptor<HwsYfezKgckModel>())
+    let SJAZEm15mrzWzFiaxb = try? SJAZEsRzxsupuDfCuA.fetch(FetchDescriptor<WsqrTacoBgttModel>())
 
     return """
-      window.currentUser = \(appState.wfzqCubCpmUser?.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}");
-      window.userList = \(arr(users) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
-      window.postList = \(arr(posts) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
-      window.commentList = \(arr(comments) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
-      window.chatList = \(arr(chats) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
-      window.messageList = \(arr(messages) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
-      \(Self.coinsSettingScript(from: purchaseManager.configs))
+      window.currentUser = \(SJAZEgJownbIz5opcI.wfzqCubCpmUser?.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}");
+      window.userList = \(SJAZEPEkPHLyiC2jAT(SJAZEAjrvyilbKa4cd) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      window.postList = \(SJAZEPEkPHLyiC2jAT(SJAZEhuck7nSXPCKqX) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      window.commentList = \(SJAZEPEkPHLyiC2jAT(SJAZECmuBcS5Nj56Jh) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      window.chatList = \(SJAZEPEkPHLyiC2jAT(SJAZE4V9mRypWWSV8e) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      window.messageList = \(SJAZEPEkPHLyiC2jAT(SJAZEm15mrzWzFiaxb) { $0.SJAZEdCCqr3yHlozSZgz6ID() ?? "{}" });
+      \(Self.SJAZE0gWrz182pzxwi(from: SJAZEMgsi9ejKKsRJs.configs))
       """
   }
 
   // MARK: - Coordinator
   class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
 
-    let modelContext: ModelContext
-    let router: SvcdXfvTsxRouter
-    let appState: RlbHdbTvacState
-    let purchaseManager: VvolHdqhEszePurchase
-    var isLoading: Binding<Bool>
-    weak var webView: WKWebView?
+    let SJAZEsRzxsupuDfCuA: ModelContext
+    let SJAZEgLy0nkJAaoZlA: SvcdXfvTsxRouter
+    let SJAZEgJownbIz5opcI: RlbHdbTvacState
+    let SJAZEMgsi9ejKKsRJs: VvolHdqhEszePurchase
+    var SJAZEGazFUjLd6gbaB: Binding<Bool>
+    weak var SJAZE3jfUyLDnuIH9W: WKWebView?
 
     init(
-      modelContext: ModelContext,
-      router: SvcdXfvTsxRouter,
-      appState: RlbHdbTvacState,
-      purchaseManager: VvolHdqhEszePurchase,
-      isLoading: Binding<Bool>
+      modelContext SJAZEsRzxsupuDfCuA: ModelContext,
+      router SJAZEgLy0nkJAaoZlA: SvcdXfvTsxRouter,
+      appState SJAZEgJownbIz5opcI: RlbHdbTvacState,
+      purchaseManager SJAZEMgsi9ejKKsRJs: VvolHdqhEszePurchase,
+      isLoading SJAZEGazFUjLd6gbaB: Binding<Bool>
     ) {
-      self.modelContext = modelContext
-      self.router = router
-      self.appState = appState
-      self.purchaseManager = purchaseManager
-      self.isLoading = isLoading
+      self.SJAZEsRzxsupuDfCuA = SJAZEsRzxsupuDfCuA
+      self.SJAZEgLy0nkJAaoZlA = SJAZEgLy0nkJAaoZlA
+      self.SJAZEgJownbIz5opcI = SJAZEgJownbIz5opcI
+      self.SJAZEMgsi9ejKKsRJs = SJAZEMgsi9ejKKsRJs
+      self.SJAZEGazFUjLd6gbaB = SJAZEGazFUjLd6gbaB
     }
 
-    private func setPageLoading(_ loading: Bool) {
+    private func SJAZEHQworUDlkQZnE(_ SJAZE8mytsQMpFwFjm: Bool) {
       DispatchQueue.main.async {
-        self.isLoading.wrappedValue = loading
+        self.SJAZEGazFUjLd6gbaB.wrappedValue = SJAZE8mytsQMpFwFjm
       }
     }
 
-    private func syncCoinsSetting() {
-      let js = LweYhriIkpPrimaryContent.coinsSettingScript(from: purchaseManager.configs)
-      webView?.evaluateJavaScript(js)
+    private func SJAZErUZhQ5OR2KqQn() {
+      let SJAZEVHdE23pVavRVP = LweYhriIkpPrimaryContent.SJAZE0gWrz182pzxwi(from: SJAZEMgsi9ejKKsRJs.configs)
+      SJAZE3jfUyLDnuIH9W?.evaluateJavaScript(SJAZEVHdE23pVavRVP)
     }
 
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-      setPageLoading(true)
+    func webView(_ SJAZE3jfUyLDnuIH9W: WKWebView, didStartProvisionalNavigation SJAZE4cwFheiA3Aqiy: WKNavigation!) {
+      SJAZEHQworUDlkQZnE(true)
     }
 
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-      setPageLoading(false)
-      syncCoinsSetting()
-    }
-
-    func webView(
-      _ webView: WKWebView,
-      didFail navigation: WKNavigation!,
-      withError error: Error
-    ) {
-      setPageLoading(false)
+    func webView(_ SJAZE3jfUyLDnuIH9W: WKWebView, didFinish SJAZE4cwFheiA3Aqiy: WKNavigation!) {
+      SJAZEHQworUDlkQZnE(false)
+      SJAZErUZhQ5OR2KqQn()
     }
 
     func webView(
-      _ webView: WKWebView,
-      didFailProvisionalNavigation navigation: WKNavigation!,
-      withError error: Error
+      _ SJAZE3jfUyLDnuIH9W: WKWebView,
+      didFail SJAZE4cwFheiA3Aqiy: WKNavigation!,
+      withError SJAZExgSuC3DuirKEE: Error
     ) {
-      setPageLoading(false)
+      SJAZEHQworUDlkQZnE(false)
     }
 
-    private func decode<T: Decodable>(_ type: T.Type, from json: [String: Any]) throws -> T {
-      let data = try JSONSerialization.data(withJSONObject: json)
-      return try JSONDecoder().decode(T.self, from: data)
+    func webView(
+      _ SJAZE3jfUyLDnuIH9W: WKWebView,
+      didFailProvisionalNavigation SJAZE4cwFheiA3Aqiy: WKNavigation!,
+      withError SJAZExgSuC3DuirKEE: Error
+    ) {
+      SJAZEHQworUDlkQZnE(false)
+    }
+
+    private func SJAZEQLHgaHIEouImg<T: Decodable>(_ SJAZEcQvWJoUnZSuml: T.Type, from SJAZEE1aOh6kVr13RW: [String: Any]) throws -> T {
+      let SJAZEqY8ZwfNBxiStg = try JSONSerialization.data(withJSONObject: SJAZEE1aOh6kVr13RW)
+      return try JSONDecoder().decode(T.self, from: SJAZEqY8ZwfNBxiStg)
     }
     func userContentController(
-      _ userContentController: WKUserContentController,
-      didReceive message: WKScriptMessage
+      _ SJAZEi8vOguRWfOvQX: WKUserContentController,
+      didReceive SJAZEdQ0cDYUSKIGpu: WKScriptMessage
     ) {
 
       Task { @MainActor in
-        switch message.name {
+        switch SJAZEdQ0cDYUSKIGpu.name {
 
         // MARK: console
-        case JsHandlers.jsConsole:
+        case JsHandlers.SJAZEtE9URSe4Piuin:
           break
 
         // MARK: close
-        case JsHandlers.close:
-          if router.sazePath.count > 0 {
-            router.sazePath.removeLast()
+        case JsHandlers.SJAZEHpszFi80RiCnd:
+          if SJAZEgLy0nkJAaoZlA.sazePath.count > 0 {
+            SJAZEgLy0nkJAaoZlA.sazePath.removeLast()
           }
 
         // MARK: users
-        case JsHandlers.userListUpdate:
+        case JsHandlers.SJAZEkeZaCWCAXkYDd:
           guard
-            let body = message.body as? [String: Any],
-            let list = body["users"] as? [[String: Any]]
+            let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
+            let SJAZEfhkpXl4XkTdsE = SJAZEadKK2gcILbaiK["bdfd5d23f525e0fff37cbbe30e0b3153".SJAZET5gG1gyy5729np8EdY()] as? [[String: Any]]
           else { return }
 
-          list.forEach { json in
-            guard let dto = try? decode(UserDTO.self, from: json) else { return }
+          SJAZEfhkpXl4XkTdsE.forEach { SJAZEE1aOh6kVr13RW in
+            guard let SJAZE3fy3O1eorH2Mt = try? SJAZEQLHgaHIEouImg(UserDTO.self, from: SJAZEE1aOh6kVr13RW) else { return }
 
-            let fd = FetchDescriptor<JnixAsuGeizModel>(
-              predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == dto.SJAZElIhkpVkrSW0rayEYw6 }
+            let SJAZEmyRoSobbAQJUf = FetchDescriptor<JnixAsuGeizModel>(
+              predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == SJAZE3fy3O1eorH2Mt.SJAZElIhkpVkrSW0rayEYw6 }
             )
 
-            if let old = try? modelContext.fetch(fd).first {
-              old.SJAZEP9D18bMxoNRrHS3qbS = dto.SJAZEP9D18bMxoNRrHS3qbS
-              old.SJAZE3JHV2UnFe5sJW0IY99 = dto.SJAZE3JHV2UnFe5sJW0IY99
-              old.SJAZEitwQEriHyuWepBXcnG = dto.SJAZEitwQEriHyuWepBXcnG
-              old.SJAZEgk7Ot2T1adgYgUOQFz = dto.SJAZEgk7Ot2T1adgYgUOQFz
-              old.SJAZEvngXxy127zPzUvo24P = dto.SJAZEvngXxy127zPzUvo24P
-              old.SJAZEdRu89xECFhVxnCAcEw = dto.SJAZEdRu89xECFhVxnCAcEw
-              old.SJAZEJUP63F40vD681ZMiy6 = dto.SJAZEJUP63F40vD681ZMiy6
-              old.SJAZEekGs3S5kuus384RPpr = dto.SJAZEekGs3S5kuus384RPpr
-              old.SJAZE8aPaDfeuPau1weW9Tr = dto.SJAZE8aPaDfeuPau1weW9Tr
-              old.SJAZElT7WVEApYsaQGqay6O = dto.SJAZElT7WVEApYsaQGqay6O
-              old.SJAZEKNpH3EiofObgwdb2XP = dto.SJAZEKNpH3EiofObgwdb2XP
+            if let SJAZECaqSayuc7YRoQ = try? SJAZEsRzxsupuDfCuA.fetch(SJAZEmyRoSobbAQJUf).first {
+              SJAZECaqSayuc7YRoQ.SJAZEP9D18bMxoNRrHS3qbS = SJAZE3fy3O1eorH2Mt.SJAZEP9D18bMxoNRrHS3qbS
+              SJAZECaqSayuc7YRoQ.SJAZE3JHV2UnFe5sJW0IY99 = SJAZE3fy3O1eorH2Mt.SJAZE3JHV2UnFe5sJW0IY99
+              SJAZECaqSayuc7YRoQ.SJAZEitwQEriHyuWepBXcnG = SJAZE3fy3O1eorH2Mt.SJAZEitwQEriHyuWepBXcnG
+              SJAZECaqSayuc7YRoQ.SJAZEgk7Ot2T1adgYgUOQFz = SJAZE3fy3O1eorH2Mt.SJAZEgk7Ot2T1adgYgUOQFz
+              SJAZECaqSayuc7YRoQ.SJAZEvngXxy127zPzUvo24P = SJAZE3fy3O1eorH2Mt.SJAZEvngXxy127zPzUvo24P
+              SJAZECaqSayuc7YRoQ.SJAZEdRu89xECFhVxnCAcEw = SJAZE3fy3O1eorH2Mt.SJAZEdRu89xECFhVxnCAcEw
+              SJAZECaqSayuc7YRoQ.SJAZEJUP63F40vD681ZMiy6 = SJAZE3fy3O1eorH2Mt.SJAZEJUP63F40vD681ZMiy6
+              SJAZECaqSayuc7YRoQ.SJAZEekGs3S5kuus384RPpr = SJAZE3fy3O1eorH2Mt.SJAZEekGs3S5kuus384RPpr
+              SJAZECaqSayuc7YRoQ.SJAZE8aPaDfeuPau1weW9Tr = SJAZE3fy3O1eorH2Mt.SJAZE8aPaDfeuPau1weW9Tr
+              SJAZECaqSayuc7YRoQ.SJAZElT7WVEApYsaQGqay6O = SJAZE3fy3O1eorH2Mt.SJAZElT7WVEApYsaQGqay6O
+              SJAZECaqSayuc7YRoQ.SJAZEKNpH3EiofObgwdb2XP = SJAZE3fy3O1eorH2Mt.SJAZEKNpH3EiofObgwdb2XP
             } else {
-              modelContext.insert(dto.SJAZEJPFy9ykqn9XXvxsPWy())
+              SJAZEsRzxsupuDfCuA.insert(SJAZE3fy3O1eorH2Mt.SJAZEJPFy9ykqn9XXvxsPWy())
             }
           }
 
-          try? modelContext.save()
+          try? SJAZEsRzxsupuDfCuA.save()
         // MARK: posts
-        case JsHandlers.postsUpdate:
+        case JsHandlers.SJAZEYpk9fy5yu6m7y:
           guard
-            let body = message.body as? [String: Any],
-            let list = body["posts"] as? [[String: Any]]
+            let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
+            let SJAZEfhkpXl4XkTdsE = SJAZEadKK2gcILbaiK["071f4eb480da554a0d62b3c404519a4f".SJAZET5gG1gyy5729np8EdY()] as? [[String: Any]]
           else { return }
 
-          list.forEach { json in
-            guard let dto = try? decode(DynamicDTO.self, from: json) else { return }
+          SJAZEfhkpXl4XkTdsE.forEach { SJAZEE1aOh6kVr13RW in
+            guard let SJAZE3fy3O1eorH2Mt = try? SJAZEQLHgaHIEouImg(DynamicDTO.self, from: SJAZEE1aOh6kVr13RW) else { return }
 
-            let fd = FetchDescriptor<BiekWudpWdqModel>(
-              predicate: #Predicate { $0.SJAZEVeQYjYRJfcllVneqRN == dto.SJAZEVeQYjYRJfcllVneqRN }
+            let SJAZEmyRoSobbAQJUf = FetchDescriptor<BiekWudpWdqModel>(
+              predicate: #Predicate { $0.SJAZEVeQYjYRJfcllVneqRN == SJAZE3fy3O1eorH2Mt.SJAZEVeQYjYRJfcllVneqRN }
             )
 
             // 查 user（只用 ID）
-            let userFD = FetchDescriptor<JnixAsuGeizModel>(
-              predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == dto.SJAZElIhkpVkrSW0rayEYw6 }
+            let SJAZEzQI8KGiQ3jhra = FetchDescriptor<JnixAsuGeizModel>(
+              predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == SJAZE3fy3O1eorH2Mt.SJAZElIhkpVkrSW0rayEYw6 }
             )
-            let user = try? modelContext.fetch(userFD).first
+            let SJAZEIs2x77JlJqPqN = try? SJAZEsRzxsupuDfCuA.fetch(SJAZEzQI8KGiQ3jhra).first
 
-            if let old = try? modelContext.fetch(fd).first {
-              old.SJAZEsoZ0L6YgsKwJ0DlGuU = dto.SJAZEsoZ0L6YgsKwJ0DlGuU
-              old.SJAZEUVBfbq2UH81q7Ftbq3 = dto.SJAZEUVBfbq2UH81q7Ftbq3
-              old.SJAZEEPjTSzGukeICl2u6ue = dto.SJAZEEPjTSzGukeICl2u6ue
-              old.SJAZECyvz14cqPBZa8BHRwd = dto.SJAZECyvz14cqPBZa8BHRwd ?? []
-              old.SJAZEJvLqXUWCmDFJBLleGx = dto.SJAZEJvLqXUWCmDFJBLleGx
-              old.SJAZEjW824LNB0yW9KOqkuE = dto.SJAZEjW824LNB0yW9KOqkuE
-              old.SJAZETqXs1AIbpvP9gabc3t = dto.SJAZETqXs1AIbpvP9gabc3t
-              old.SJAZEAyGV9lIdGdQJWQZ9Vj = dto.SJAZEAyGV9lIdGdQJWQZ9Vj
+            if let SJAZECaqSayuc7YRoQ = try? SJAZEsRzxsupuDfCuA.fetch(SJAZEmyRoSobbAQJUf).first {
+              SJAZECaqSayuc7YRoQ.SJAZEsoZ0L6YgsKwJ0DlGuU = SJAZE3fy3O1eorH2Mt.SJAZEsoZ0L6YgsKwJ0DlGuU
+              SJAZECaqSayuc7YRoQ.SJAZEUVBfbq2UH81q7Ftbq3 = SJAZE3fy3O1eorH2Mt.SJAZEUVBfbq2UH81q7Ftbq3
+              SJAZECaqSayuc7YRoQ.SJAZEEPjTSzGukeICl2u6ue = SJAZE3fy3O1eorH2Mt.SJAZEEPjTSzGukeICl2u6ue
+              SJAZECaqSayuc7YRoQ.SJAZECyvz14cqPBZa8BHRwd = SJAZE3fy3O1eorH2Mt.SJAZECyvz14cqPBZa8BHRwd ?? []
+              SJAZECaqSayuc7YRoQ.SJAZEJvLqXUWCmDFJBLleGx = SJAZE3fy3O1eorH2Mt.SJAZEJvLqXUWCmDFJBLleGx
+              SJAZECaqSayuc7YRoQ.SJAZEjW824LNB0yW9KOqkuE = SJAZE3fy3O1eorH2Mt.SJAZEjW824LNB0yW9KOqkuE
+              SJAZECaqSayuc7YRoQ.SJAZETqXs1AIbpvP9gabc3t = SJAZE3fy3O1eorH2Mt.SJAZETqXs1AIbpvP9gabc3t
+              SJAZECaqSayuc7YRoQ.SJAZEAyGV9lIdGdQJWQZ9Vj = SJAZE3fy3O1eorH2Mt.SJAZEAyGV9lIdGdQJWQZ9Vj
 
               // ✅ 只用 context 内的 user
-              if old.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 != dto.SJAZElIhkpVkrSW0rayEYw6 {
-                old.SJAZEqW4EMg4h7fXuUJ0kd7 = user
+              if SJAZECaqSayuc7YRoQ.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 != SJAZE3fy3O1eorH2Mt.SJAZElIhkpVkrSW0rayEYw6 {
+                SJAZECaqSayuc7YRoQ.SJAZEqW4EMg4h7fXuUJ0kd7 = SJAZEIs2x77JlJqPqN
               }
             } else {
-              let new = BiekWudpWdqModel(
-                SJAZEVeQYjYRJfcllVneqRN: dto.SJAZEVeQYjYRJfcllVneqRN,
-                SJAZEqW4EMg4h7fXuUJ0kd7: user,
-                SJAZEsoZ0L6YgsKwJ0DlGuU: dto.SJAZEsoZ0L6YgsKwJ0DlGuU,
-                SJAZEUVBfbq2UH81q7Ftbq3: dto.SJAZEUVBfbq2UH81q7Ftbq3,
-                SJAZEEPjTSzGukeICl2u6ue: dto.SJAZEEPjTSzGukeICl2u6ue,
-                SJAZECyvz14cqPBZa8BHRwd: dto.SJAZECyvz14cqPBZa8BHRwd ?? [],
-                SJAZEJvLqXUWCmDFJBLleGx: dto.SJAZEJvLqXUWCmDFJBLleGx,
-                SJAZEjW824LNB0yW9KOqkuE: dto.SJAZEjW824LNB0yW9KOqkuE,
-                SJAZETqXs1AIbpvP9gabc3t: dto.SJAZETqXs1AIbpvP9gabc3t,
-                SJAZEAyGV9lIdGdQJWQZ9Vj: dto.SJAZEAyGV9lIdGdQJWQZ9Vj
+              let SJAZETfrOuck7dA1nr = BiekWudpWdqModel(
+                SJAZEVeQYjYRJfcllVneqRN: SJAZE3fy3O1eorH2Mt.SJAZEVeQYjYRJfcllVneqRN,
+                SJAZEqW4EMg4h7fXuUJ0kd7: SJAZEIs2x77JlJqPqN,
+                SJAZEsoZ0L6YgsKwJ0DlGuU: SJAZE3fy3O1eorH2Mt.SJAZEsoZ0L6YgsKwJ0DlGuU,
+                SJAZEUVBfbq2UH81q7Ftbq3: SJAZE3fy3O1eorH2Mt.SJAZEUVBfbq2UH81q7Ftbq3,
+                SJAZEEPjTSzGukeICl2u6ue: SJAZE3fy3O1eorH2Mt.SJAZEEPjTSzGukeICl2u6ue,
+                SJAZECyvz14cqPBZa8BHRwd: SJAZE3fy3O1eorH2Mt.SJAZECyvz14cqPBZa8BHRwd ?? [],
+                SJAZEJvLqXUWCmDFJBLleGx: SJAZE3fy3O1eorH2Mt.SJAZEJvLqXUWCmDFJBLleGx,
+                SJAZEjW824LNB0yW9KOqkuE: SJAZE3fy3O1eorH2Mt.SJAZEjW824LNB0yW9KOqkuE,
+                SJAZETqXs1AIbpvP9gabc3t: SJAZE3fy3O1eorH2Mt.SJAZETqXs1AIbpvP9gabc3t,
+                SJAZEAyGV9lIdGdQJWQZ9Vj: SJAZE3fy3O1eorH2Mt.SJAZEAyGV9lIdGdQJWQZ9Vj
               )
-              modelContext.insert(new)
+              SJAZEsRzxsupuDfCuA.insert(SJAZETfrOuck7dA1nr)
             }
           }
 
-          try? modelContext.save()
+          try? SJAZEsRzxsupuDfCuA.save()
 
         // MARK: comments
-        case JsHandlers.commentsUpdate:
+        case JsHandlers.SJAZESW4mkK3EHJwWI:
           guard
-            let body = message.body as? [String: Any],
-            let list = body["comments"] as? [[String: Any]]
+            let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
+            let SJAZEfhkpXl4XkTdsE = SJAZEadKK2gcILbaiK["73e519543d11890257eabaf752e3cd82".SJAZET5gG1gyy5729np8EdY()] as? [[String: Any]]
           else { return }
 
-          list.forEach { json in
-            guard let new = OdbgTceHjbiModel.SJAZE7KsC41Sdy5ej8SJeT1(json) else { return }
-            let SJAZEQjHL56u9w8PufUdnP5 = new.SJAZEQjHL56u9w8PufUdnP5
-            let fd = FetchDescriptor<OdbgTceHjbiModel>(
+          SJAZEfhkpXl4XkTdsE.forEach { SJAZEE1aOh6kVr13RW in
+            guard let SJAZETfrOuck7dA1nr = OdbgTceHjbiModel.SJAZE7KsC41Sdy5ej8SJeT1(SJAZEE1aOh6kVr13RW) else { return }
+            let SJAZEQjHL56u9w8PufUdnP5 = SJAZETfrOuck7dA1nr.SJAZEQjHL56u9w8PufUdnP5
+            let SJAZEmyRoSobbAQJUf = FetchDescriptor<OdbgTceHjbiModel>(
               predicate: #Predicate { $0.SJAZEQjHL56u9w8PufUdnP5 == SJAZEQjHL56u9w8PufUdnP5 }
             )
 
-            if let old = try? modelContext.fetch(fd).first {
-              old.SJAZEVeQYjYRJfcllVneqRN = new.SJAZEVeQYjYRJfcllVneqRN
-              old.SJAZElIhkpVkrSW0rayEYw6 = new.SJAZElIhkpVkrSW0rayEYw6
-              old.SJAZECpm56ZBeV7qNkfJvuX = new.SJAZECpm56ZBeV7qNkfJvuX
+            if let SJAZECaqSayuc7YRoQ = try? SJAZEsRzxsupuDfCuA.fetch(SJAZEmyRoSobbAQJUf).first {
+              SJAZECaqSayuc7YRoQ.SJAZEVeQYjYRJfcllVneqRN = SJAZETfrOuck7dA1nr.SJAZEVeQYjYRJfcllVneqRN
+              SJAZECaqSayuc7YRoQ.SJAZElIhkpVkrSW0rayEYw6 = SJAZETfrOuck7dA1nr.SJAZElIhkpVkrSW0rayEYw6
+              SJAZECaqSayuc7YRoQ.SJAZECpm56ZBeV7qNkfJvuX = SJAZETfrOuck7dA1nr.SJAZECpm56ZBeV7qNkfJvuX
             } else {
-              modelContext.insert(new)  // ✅ 这里是安全的（无关系）
+              SJAZEsRzxsupuDfCuA.insert(SJAZETfrOuck7dA1nr)  // ✅ 这里是安全的（无关系）
             }
           }
 
-          try? modelContext.save()
+          try? SJAZEsRzxsupuDfCuA.save()
 
         // MARK: chats
-        case JsHandlers.chatsUpdate:
+        case JsHandlers.SJAZEEoFMc4As3ZA7S:
           guard
-            let body = message.body as? [String: Any],
-            let list = body["chats"] as? [[String: Any]]
+            let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
+            let SJAZEfhkpXl4XkTdsE = SJAZEadKK2gcILbaiK["fe7ec1860a1974de40106dbb58089fd8".SJAZET5gG1gyy5729np8EdY()] as? [[String: Any]]
           else { return }
 
-          list.forEach { json in
-            guard let new = HwsYfezKgckModel.SJAZE7KsC41Sdy5ej8SJeT1(json) else { return }
-            let id = new.SJAZELj4BVAUIW1CdfC1E9n
+          SJAZEfhkpXl4XkTdsE.forEach { SJAZEE1aOh6kVr13RW in
+            guard let SJAZETfrOuck7dA1nr = HwsYfezKgckModel.SJAZE7KsC41Sdy5ej8SJeT1(SJAZEE1aOh6kVr13RW) else { return }
+            let SJAZEQ3tCuIWQaXyI9 = SJAZETfrOuck7dA1nr.SJAZELj4BVAUIW1CdfC1E9n
 
-            let fd = FetchDescriptor<HwsYfezKgckModel>(
-              predicate: #Predicate { $0.SJAZELj4BVAUIW1CdfC1E9n == id }
+            let SJAZEmyRoSobbAQJUf = FetchDescriptor<HwsYfezKgckModel>(
+              predicate: #Predicate { $0.SJAZELj4BVAUIW1CdfC1E9n == SJAZEQ3tCuIWQaXyI9 }
             )
 
-            if let old = try? modelContext.fetch(fd).first {
-              old.SJAZEhIl26YqPW7bYsDnGDi(from: new)
+            if let SJAZECaqSayuc7YRoQ = try? SJAZEsRzxsupuDfCuA.fetch(SJAZEmyRoSobbAQJUf).first {
+              SJAZECaqSayuc7YRoQ.SJAZEhIl26YqPW7bYsDnGDi(from: SJAZETfrOuck7dA1nr)
             } else {
-              modelContext.insert(new)
+              SJAZEsRzxsupuDfCuA.insert(SJAZETfrOuck7dA1nr)
             }
           }
 
-          try? modelContext.save()
+          try? SJAZEsRzxsupuDfCuA.save()
 
         // MARK: messages
-        case JsHandlers.messagesUpdate:
+        case JsHandlers.SJAZECDpBC1En2g2UA:
           guard
-            let body = message.body as? [String: Any],
-            let list = body["messages"] as? [[String: Any]]
+            let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
+            let SJAZEfhkpXl4XkTdsE = SJAZEadKK2gcILbaiK["3de2fe9c5d42475396e7cffadfeb7076".SJAZET5gG1gyy5729np8EdY()] as? [[String: Any]]
           else { return }
 
-          list.forEach { json in
-            guard let new = WsqrTacoBgttModel.SJAZE7KsC41Sdy5ej8SJeT1(json) else { return }
-            let id = new.SJAZEV0JHY0NviJZK8g4MPv
+          SJAZEfhkpXl4XkTdsE.forEach { SJAZEE1aOh6kVr13RW in
+            guard let SJAZETfrOuck7dA1nr = WsqrTacoBgttModel.SJAZE7KsC41Sdy5ej8SJeT1(SJAZEE1aOh6kVr13RW) else { return }
+            let SJAZEQ3tCuIWQaXyI9 = SJAZETfrOuck7dA1nr.SJAZEV0JHY0NviJZK8g4MPv
 
-            let fd = FetchDescriptor<WsqrTacoBgttModel>(
-              predicate: #Predicate { $0.SJAZEV0JHY0NviJZK8g4MPv == id }
+            let SJAZEmyRoSobbAQJUf = FetchDescriptor<WsqrTacoBgttModel>(
+              predicate: #Predicate { $0.SJAZEV0JHY0NviJZK8g4MPv == SJAZEQ3tCuIWQaXyI9 }
             )
 
-            if let old = try? modelContext.fetch(fd).first {
-              old.SJAZEhIl26YqPW7bYsDnGDi(from: new)
+            if let SJAZECaqSayuc7YRoQ = try? SJAZEsRzxsupuDfCuA.fetch(SJAZEmyRoSobbAQJUf).first {
+              SJAZECaqSayuc7YRoQ.SJAZEhIl26YqPW7bYsDnGDi(from: SJAZETfrOuck7dA1nr)
             } else {
-              modelContext.insert(new)
+              SJAZEsRzxsupuDfCuA.insert(SJAZETfrOuck7dA1nr)
             }
           }
 
-          try? modelContext.save()
+          try? SJAZEsRzxsupuDfCuA.save()
 
         // MARK: logout
-        case JsHandlers.logout:
-          appState.hzglZtiFzlLogout()
+        case JsHandlers.SJAZE3dMuhW59q1SlM:
+          SJAZEgJownbIz5opcI.hzglZtiFzlLogout()
 
         // MARK: payment
-        case JsHandlers.payment:
+        case JsHandlers.SJAZEDYAJRkfLGcnca:
           guard
-            let body = message.body as? [String: Any],
-            let key = body["payKey"] as? String
+            let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
+            let SJAZEjK53KyxjV6CNP = SJAZEadKK2gcILbaiK["c10ae023946ddf8222309adada2ce88c".SJAZET5gG1gyy5729np8EdY()] as? String
           else { return }
           guard
-            let product = purchaseManager.products.first(where: {
-              $0.productIdentifier == key
+            let SJAZEhz6Nne1fhwwoA = SJAZEMgsi9ejKKsRJs.products.first(where: {
+              $0.productIdentifier == SJAZEjK53KyxjV6CNP
             })
           else { return }
           Toast.SJAZEcdY89CWWjnmZSU.SJAZESQA2cPpZujcz7a()
-          purchaseManager.purchase(product) { result in
-            if result > 0 {
-              self.appState.tnngDfrhGkgtAddCoins(result)
-              if let user = self.appState.wfzqCubCpmUser, let json = user.SJAZEdCCqr3yHlozSZgz6ID() {
-                let js = "window.updateCurrentUser(\(json))"
+          SJAZEMgsi9ejKKsRJs.purchase(SJAZEhz6Nne1fhwwoA) { SJAZE26nbevlJN6N4u in
+            if SJAZE26nbevlJN6N4u > 0 {
+              self.SJAZEgJownbIz5opcI.tnngDfrhGkgtAddCoins(SJAZE26nbevlJN6N4u)
+              if let SJAZEIs2x77JlJqPqN = self.SJAZEgJownbIz5opcI.wfzqCubCpmUser, let SJAZEE1aOh6kVr13RW = SJAZEIs2x77JlJqPqN.SJAZEdCCqr3yHlozSZgz6ID() {
+                let SJAZEVHdE23pVavRVP = "window.updateCurrentUser(\(SJAZEE1aOh6kVr13RW))"
                 DispatchQueue.main.async {
-                  self.webView?.evaluateJavaScript(js)
+                  self.SJAZE3jfUyLDnuIH9W?.evaluateJavaScript(SJAZEVHdE23pVavRVP)
                 }
               }
             }
@@ -477,29 +477,29 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
   }
 }
 struct LweYhriIkpPrimary: View {
-  @EnvironmentObject var purchaseManager: VvolHdqhEszePurchase
+  @EnvironmentObject var SJAZEMgsi9ejKKsRJs: VvolHdqhEszePurchase
   let trvudfhvSsxcUrl: URL
-  @Environment(\.modelContext) private var modelContext
-  @EnvironmentObject var router: SvcdXfvTsxRouter
-  @EnvironmentObject var appState: RlbHdbTvacState
-  @State private var isLoading = true
+  @Environment(\.modelContext) private var SJAZEsRzxsupuDfCuA
+  @EnvironmentObject var SJAZEgLy0nkJAaoZlA: SvcdXfvTsxRouter
+  @EnvironmentObject var SJAZEgJownbIz5opcI: RlbHdbTvacState
+  @State private var SJAZEGazFUjLd6gbaB = true
   var body: some View {
-    GeometryReader { geo in
+    GeometryReader { SJAZEdOawLzBqmt6Qm in
       Image("SplashBg")
         .resizable()
         .ignoresSafeArea()
       LweYhriIkpPrimaryContent(
-        appState: appState,
+        SJAZEgJownbIz5opcI: SJAZEgJownbIz5opcI,
         trvudfhvSsxcUrl: trvudfhvSsxcUrl,
-        modelContext: modelContext,
-        router: router,
-        purchaseManager: purchaseManager,
-        isLoading: $isLoading
+        SJAZEsRzxsupuDfCuA: SJAZEsRzxsupuDfCuA,
+        SJAZEgLy0nkJAaoZlA: SJAZEgLy0nkJAaoZlA,
+        SJAZEMgsi9ejKKsRJs: SJAZEMgsi9ejKKsRJs,
+        SJAZEGazFUjLd6gbaB: $SJAZEGazFUjLd6gbaB
       )
       .edgesIgnoringSafeArea(.all)
-      .opacity(isLoading ? 0 : 1)
+      .opacity(SJAZEGazFUjLd6gbaB ? 0 : 1)
 
-      if isLoading {
+      if SJAZEGazFUjLd6gbaB {
         ZStack {
           Image("SplashBg")
             .resizable()
@@ -511,7 +511,7 @@ struct LweYhriIkpPrimary: View {
         .transition(.opacity)
       }
     }
-    .animation(.easeInOut(duration: 0.2), value: isLoading)
+    .animation(.easeInOut(duration: 0.2), value: SJAZEGazFUjLd6gbaB)
     .navigationBarBackButtonHidden(true)
   }
 }
