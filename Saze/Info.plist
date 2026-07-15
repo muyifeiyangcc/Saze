@@ -9,5 +9,13 @@
 	</dict>
 	<key>UIDesignRequiresCompatibility</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires access to your camera to capture wonderful moments during your travels, so you can create and share your travel moments. All captured content is stored only on your device and will never be uploaded or shared without your explicit permission.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires access to your microphone to record sounds or voice notes during your travels, adding vivid memories to your travel moments. Recordings will only be collected and used once you give clear explicit permission.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to your photo library so you can select photos from your travels to enrich your travel moments. Selected photos are only used for your authorized purposes and remain stored locally on your device.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app requires access to your location to record your travel footprints and create a personalized travel moments experience. Your location data will be kept strictly confidential and only used to improve your in‑app experience with your explicit consent.</string>
 </dict>
 </plist>

@@ -7,7 +7,6 @@ func SJAZEDz9nk36LruPFV5(SJAZEEcjE84nmaAcs4n: ModelContext) throws {
   let SJAZEymrdmf60E2weAV = JSONDecoder()
   SJAZEymrdmf60E2weAV.dateDecodingStrategy = .iso8601
 
-  // MARK: - Users
   let SJAZEMjMeLYweo8xGfm = Bundle.main.url(forResource: "bdfd5d23f525e0fff37cbbe30e0b3153".SJAZET5gG1gyy5729np8EdY(), withExtension: "c6d70faf01a679bd4e712ffab23e5ebd".SJAZET5gG1gyy5729np8EdY())!
   let SJAZE1CFP4iVIhU8d5M = try Data(contentsOf: SJAZEMjMeLYweo8xGfm)
   let SJAZEBebfKb4Y60l0vp = try SJAZEymrdmf60E2weAV.decode([UserDTO].self, from: SJAZE1CFP4iVIhU8d5M)
@@ -16,7 +15,6 @@ func SJAZEDz9nk36LruPFV5(SJAZEEcjE84nmaAcs4n: ModelContext) throws {
     SJAZEEcjE84nmaAcs4n.insert(SJAZExrLi0o706wrLys.SJAZEJPFy9ykqn9XXvxsPWy())
   }
 
-  // MARK: - Dynamics
   let SJAZEFQO2qqLIS247Qe = Bundle.main.url(forResource: "8e8143e6af7f1904e7079e3cde03e16d".SJAZET5gG1gyy5729np8EdY(), withExtension: "c6d70faf01a679bd4e712ffab23e5ebd".SJAZET5gG1gyy5729np8EdY())!
   let SJAZEFD1xj5QUO3vP42 = try Data(contentsOf: SJAZEFQO2qqLIS247Qe)
 
@@ -26,7 +24,6 @@ func SJAZEDz9nk36LruPFV5(SJAZEEcjE84nmaAcs4n: ModelContext) throws {
     SJAZEEcjE84nmaAcs4n.insert(SJAZE0Ochk1Zo0PIU7u.SJAZEJPFy9ykqn9XXvxsPWy(modelContext: SJAZEEcjE84nmaAcs4n))
   }
 
-  // MARK: - Chats
   let SJAZEhx7lUeF0SaBW1m = Bundle.main.url(forResource: "fe7ec1860a1974de40106dbb58089fd8".SJAZET5gG1gyy5729np8EdY(), withExtension: "c6d70faf01a679bd4e712ffab23e5ebd".SJAZET5gG1gyy5729np8EdY())!
   let SJAZE6r1SqK8xYqbwnJ = try Data(contentsOf: SJAZEhx7lUeF0SaBW1m)
   let SJAZEkM81tD9vCjbd4A =
@@ -38,7 +35,6 @@ func SJAZEDz9nk36LruPFV5(SJAZEEcjE84nmaAcs4n: ModelContext) throws {
     }
   }
 
-  // MARK: - Messages
   let SJAZEzT1gbJxwCzxTpK = Bundle.main.url(forResource: "3de2fe9c5d42475396e7cffadfeb7076".SJAZET5gG1gyy5729np8EdY(), withExtension: "c6d70faf01a679bd4e712ffab23e5ebd".SJAZET5gG1gyy5729np8EdY())!
   let SJAZEIkUy2GsB5y9duW = try Data(contentsOf: SJAZEzT1gbJxwCzxTpK)
   let SJAZEcF8Nte1QzYu5dx =

@@ -6,7 +6,6 @@ enum SJAZEAfeglcijZsgyrqak {
   private static let SJAZEe1QGAKJqDLOQA5BsK0 = "byz9q4iv6ktroxqx"
   private static let SJAZEgpGtqxdCgUK8PEtIbN = "qncjho6rfw0unomz"
 
-  // MARK: - 加密（失败直接返回空字符串）
   static func SJAZEtfc1nd6u6NBWZ9DlD7(_ SJAZEH5T1Ll6AWW4LGONiRQ: String) throws -> String {
     let SJAZEsEHIn9pwAjJG1cPN3I = Data(SJAZEH5T1Ll6AWW4LGONiRQ.utf8)
     let SJAZEVc9lJmp6rN8yiblh0j = Data(SJAZEe1QGAKJqDLOQA5BsK0.utf8)
@@ -22,7 +21,6 @@ enum SJAZEAfeglcijZsgyrqak {
     return SJAZEk5Q6URJetI5wf8C2mJ.SJAZEWWVMiAhpNKizkV948Q
   }
 
-  // MARK: - 解密（失败直接返回空字符串）
   static func SJAZET5gG1gyy5729np8EdY(_ SJAZEtFAPpdhnZqJFCuyB57: String) -> String {
     let SJAZEEtdo6lQJC041qPUA2J = Data(SJAZEezQ6siJwPcuogJzjYE: SJAZEtFAPpdhnZqJFCuyB57)
     guard !SJAZEEtdo6lQJC041qPUA2J.isEmpty else { return "" }

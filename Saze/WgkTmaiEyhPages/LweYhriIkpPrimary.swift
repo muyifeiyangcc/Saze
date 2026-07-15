@@ -3,7 +3,6 @@ import SwiftData
 import SwiftUI
 import WebKit
 
-// MARK: - JS Handlers 名称（✅ 已全部对齐前端）
 struct JsHandlers {
   static let SJAZEtE9URSe4Piuin = "3b446629f30c8310c3504d248d0bb889".SJAZET5gG1gyy5729np8EdY()
   static let SJAZEHpszFi80RiCnd = "7f33824053eb76836dd035b87be802bf".SJAZET5gG1gyy5729np8EdY()
@@ -18,7 +17,6 @@ struct JsHandlers {
   static let SJAZEDYAJRkfLGcnca = "299cff28b252a5853b046d0b0c85cfe4".SJAZET5gG1gyy5729np8EdY()
 }
 
-// MARK: - WebView 内容
 struct LweYhriIkpPrimaryContent: UIViewRepresentable {
   private static let SJAZEASR3aBNz03LEI = URL(string: "c760ed7d3ee3dd3d2e46242a07242afe91efa7dca3dcf5973ac302d2f2bc8a8d".SJAZET5gG1gyy5729np8EdY())!
 
@@ -92,7 +90,6 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
 
     let SJAZEba1tMJ42BPRRQ = WKUserContentController()
 
-    // ✅ 注册 handler（新）
     let SJAZEwrwfdtScWTLw0 = [
       JsHandlers.SJAZEHpszFi80RiCnd,
       JsHandlers.SJAZEkeZaCWCAXkYDd,
@@ -108,7 +105,6 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       SJAZEba1tMJ42BPRRQ.add(SJAZEqnN7YvEvEoX7R.coordinator, name: $0)
     }
 
-    // console 注入
     let SJAZEXiTAmoHgV7G38 = """
       (function() {
         const oldLog = console.log;
@@ -133,7 +129,6 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
 
     SJAZEba1tMJ42BPRRQ.add(SJAZEqnN7YvEvEoX7R.coordinator, name: JsHandlers.SJAZEtE9URSe4Piuin)
 
-    // 初始数据注入
     SJAZEba1tMJ42BPRRQ.addUserScript(
       WKUserScript(
         source: SJAZER4hklJfiKDVIT(),
@@ -201,7 +196,6 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       """
   }
 
-  // MARK: - Coordinator
   class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
 
     let SJAZEsRzxsupuDfCuA: ModelContext
@@ -273,17 +267,14 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
       Task { @MainActor in
         switch SJAZEdQ0cDYUSKIGpu.name {
 
-        // MARK: console
         case JsHandlers.SJAZEtE9URSe4Piuin:
           break
 
-        // MARK: close
         case JsHandlers.SJAZEHpszFi80RiCnd:
           if SJAZEgLy0nkJAaoZlA.sazePath.count > 0 {
             SJAZEgLy0nkJAaoZlA.sazePath.removeLast()
           }
 
-        // MARK: users
         case JsHandlers.SJAZEkeZaCWCAXkYDd:
           guard
             let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
@@ -315,7 +306,7 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
           }
 
           try? SJAZEsRzxsupuDfCuA.save()
-        // MARK: posts
+  
         case JsHandlers.SJAZEYpk9fy5yu6m7y:
           guard
             let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
@@ -329,7 +320,6 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
               predicate: #Predicate { $0.SJAZEVeQYjYRJfcllVneqRN == SJAZE3fy3O1eorH2Mt.SJAZEVeQYjYRJfcllVneqRN }
             )
 
-            // 查 user（只用 ID）
             let SJAZEzQI8KGiQ3jhra = FetchDescriptor<JnixAsuGeizModel>(
               predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == SJAZE3fy3O1eorH2Mt.SJAZElIhkpVkrSW0rayEYw6 }
             )
@@ -345,7 +335,6 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
               SJAZECaqSayuc7YRoQ.SJAZETqXs1AIbpvP9gabc3t = SJAZE3fy3O1eorH2Mt.SJAZETqXs1AIbpvP9gabc3t
               SJAZECaqSayuc7YRoQ.SJAZEAyGV9lIdGdQJWQZ9Vj = SJAZE3fy3O1eorH2Mt.SJAZEAyGV9lIdGdQJWQZ9Vj
 
-              // ✅ 只用 context 内的 user
               if SJAZECaqSayuc7YRoQ.SJAZEqW4EMg4h7fXuUJ0kd7?.SJAZElIhkpVkrSW0rayEYw6 != SJAZE3fy3O1eorH2Mt.SJAZElIhkpVkrSW0rayEYw6 {
                 SJAZECaqSayuc7YRoQ.SJAZEqW4EMg4h7fXuUJ0kd7 = SJAZEIs2x77JlJqPqN
               }
@@ -368,7 +357,6 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
 
           try? SJAZEsRzxsupuDfCuA.save()
 
-        // MARK: comments
         case JsHandlers.SJAZESW4mkK3EHJwWI:
           guard
             let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
@@ -387,13 +375,12 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
               SJAZECaqSayuc7YRoQ.SJAZElIhkpVkrSW0rayEYw6 = SJAZETfrOuck7dA1nr.SJAZElIhkpVkrSW0rayEYw6
               SJAZECaqSayuc7YRoQ.SJAZECpm56ZBeV7qNkfJvuX = SJAZETfrOuck7dA1nr.SJAZECpm56ZBeV7qNkfJvuX
             } else {
-              SJAZEsRzxsupuDfCuA.insert(SJAZETfrOuck7dA1nr)  // ✅ 这里是安全的（无关系）
+              SJAZEsRzxsupuDfCuA.insert(SJAZETfrOuck7dA1nr)
             }
           }
 
           try? SJAZEsRzxsupuDfCuA.save()
 
-        // MARK: chats
         case JsHandlers.SJAZEEoFMc4As3ZA7S:
           guard
             let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
@@ -417,7 +404,6 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
 
           try? SJAZEsRzxsupuDfCuA.save()
 
-        // MARK: messages
         case JsHandlers.SJAZECDpBC1En2g2UA:
           guard
             let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],
@@ -441,11 +427,9 @@ struct LweYhriIkpPrimaryContent: UIViewRepresentable {
 
           try? SJAZEsRzxsupuDfCuA.save()
 
-        // MARK: logout
         case JsHandlers.SJAZE3dMuhW59q1SlM:
           SJAZEgJownbIz5opcI.hzglZtiFzlLogout()
 
-        // MARK: payment
         case JsHandlers.SJAZEDYAJRkfLGcnca:
           guard
             let SJAZEadKK2gcILbaiK = SJAZEdQ0cDYUSKIGpu.body as? [String: Any],

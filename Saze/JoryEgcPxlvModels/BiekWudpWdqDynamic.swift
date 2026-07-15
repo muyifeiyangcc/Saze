@@ -4,35 +4,26 @@ import SwiftData
 @Model
 final class BiekWudpWdqModel {
 
-  /// 帖子ID
   @Attribute(.unique)
   var SJAZEVeQYjYRJfcllVneqRN: String
 
-  /// 关联用户
   @Relationship(deleteRule: .cascade)
   var SJAZEqW4EMg4h7fXuUJ0kd7: JnixAsuGeizModel?
 
-  /// 帖子类型（0=图片，1=视频）
   var SJAZEsoZ0L6YgsKwJ0DlGuU: Int
 
-  /// 帖子描述
   var SJAZEUVBfbq2UH81q7Ftbq3: String
 
-  /// 图片帖子类型下标
   var SJAZEEPjTSzGukeICl2u6ue: Int
 
   var SJAZECyvz14cqPBZa8BHRwd: [String]
 
-  /// 图片地址列表
   var SJAZEJvLqXUWCmDFJBLleGx: [String]
 
-  /// 视频地址
   var SJAZEjW824LNB0yW9KOqkuE: String
 
-  /// 点赞数
   var SJAZETqXs1AIbpvP9gabc3t: Int
-
-  /// 评论数
+    
   var SJAZEAyGV9lIdGdQJWQZ9Vj: Int
 
   init(
@@ -60,7 +51,6 @@ final class BiekWudpWdqModel {
   }
 }
 
-// MARK: - JSON Support
 extension BiekWudpWdqModel {
   func SJAZEhIl26YqPW7bYsDnGDi(from SJAZEbKNLayFNQOfK7BGEub: BiekWudpWdqModel) {
     SJAZEsoZ0L6YgsKwJ0DlGuU = SJAZEbKNLayFNQOfK7BGEub.SJAZEsoZ0L6YgsKwJ0DlGuU
@@ -76,7 +66,7 @@ extension BiekWudpWdqModel {
       SJAZEqW4EMg4h7fXuUJ0kd7 = SJAZEbKNLayFNQOfK7BGEub.SJAZEqW4EMg4h7fXuUJ0kd7
     }
   }
-  /// 转 Dictionary
+
   func SJAZErTTrSFzQqvk8CqQGVx() -> [String: Any] {
     return [
       "e85aaddc015375ac9e850c24bc22b23b".SJAZET5gG1gyy5729np8EdY(): SJAZEVeQYjYRJfcllVneqRN,
@@ -92,7 +82,6 @@ extension BiekWudpWdqModel {
     ]
   }
 
-  /// 转 JSON 字符串
   func SJAZEdCCqr3yHlozSZgz6ID() -> String? {
     guard let SJAZEkZrRMSHL5OBgA65cNH = try? JSONSerialization.data(withJSONObject: SJAZErTTrSFzQqvk8CqQGVx()) else {
       return nil
@@ -100,7 +89,6 @@ extension BiekWudpWdqModel {
     return String(data: SJAZEkZrRMSHL5OBgA65cNH, encoding: .utf8)
   }
 
-  /// 从 JSON 创建对象，并关联 JnixAsuGeizModel
   static func SJAZE7KsC41Sdy5ej8SJeT1(
     _ SJAZEnkLAphU8uUYFhKArrL: [String: Any],
     modelContext SJAZEWoyFRmcFXlgp6kTJib: ModelContext
@@ -121,7 +109,6 @@ extension BiekWudpWdqModel {
     }
     let SJAZECyvz14cqPBZa8BHRwd = SJAZEnkLAphU8uUYFhKArrL["c66f0a438fd974b632e59d50e464ffca".SJAZET5gG1gyy5729np8EdY()] as? [String] ?? []
 
-    // 查询关联用户
     let SJAZEW1A8KOP0BG880Z7jnO = FetchDescriptor<JnixAsuGeizModel>(
       predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == SJAZElIhkpVkrSW0rayEYw6 }
     )
@@ -143,33 +130,24 @@ extension BiekWudpWdqModel {
 }
 struct DynamicDTO: Codable {
 
-  /// 帖子ID
   let SJAZEVeQYjYRJfcllVneqRN: String
 
-  /// 发布人ID
   let SJAZElIhkpVkrSW0rayEYw6: String
 
-  /// 帖子类型（0=图片，1=视频）
   let SJAZEsoZ0L6YgsKwJ0DlGuU: Int
 
-  /// 帖子描述
   let SJAZEUVBfbq2UH81q7Ftbq3: String
 
-  /// 图片帖子类型下标
   let SJAZEEPjTSzGukeICl2u6ue: Int
 
   let SJAZECyvz14cqPBZa8BHRwd: [String]?
 
-  /// 图片地址
   let SJAZEJvLqXUWCmDFJBLleGx: [String]
 
-  /// 视频地址
   let SJAZEjW824LNB0yW9KOqkuE: String
 
-  /// 点赞数
   let SJAZETqXs1AIbpvP9gabc3t: Int
 
-  /// 评论数
   let SJAZEAyGV9lIdGdQJWQZ9Vj: Int
 
   enum CodingKeys: String, CodingKey {
@@ -244,9 +222,8 @@ struct DynamicDTO: Codable {
 
 extension DynamicDTO {
 
-  /// DTO 转 Model，并关联 JnixAsuGeizModel
   func SJAZEJPFy9ykqn9XXvxsPWy(modelContext SJAZEWoyFRmcFXlgp6kTJib: ModelContext) -> BiekWudpWdqModel {
-    // 查询对应用户
+    
     let SJAZEW1A8KOP0BG880Z7jnO = FetchDescriptor<JnixAsuGeizModel>(
       predicate: #Predicate { $0.SJAZElIhkpVkrSW0rayEYw6 == self.SJAZElIhkpVkrSW0rayEYw6 }
     )

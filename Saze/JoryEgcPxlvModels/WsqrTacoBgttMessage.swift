@@ -4,35 +4,25 @@ import SwiftData
 @Model
 final class WsqrTacoBgttModel {
 
-  /// 发送中状态
   var SJAZE4aOsw2iWPPkxu1080X: Bool?
 
-  /// 消息ID
   @Attribute(.unique)
   var SJAZEV0JHY0NviJZK8g4MPv: String
 
-  /// 会话ID
   var SJAZELj4BVAUIW1CdfC1E9n: String
 
-  /// 发送人ID
   var SJAZElIhkpVkrSW0rayEYw6: String
 
-  /// 用户名
   var SJAZEgk7Ot2T1adgYgUOQFz: String?
 
-  /// 头像
   var SJAZEitwQEriHyuWepBXcnG: String?
 
-  /// 消息位置（left/right）
   var SJAZE8oqYzAMSa6f1FlJDva: String?
 
-  /// 文本内容
   var SJAZEh8TGBtYc153tJnv69x: String
 
-  /// 图片URL
   var SJAZE3yBY2FOAR0QlYHLIML: String
 
-  /// 发送时间
   var SJAZEM4cS8csFnzWCulr6jU: String?
 
   init(
@@ -60,7 +50,6 @@ final class WsqrTacoBgttModel {
   }
 }
 
-// MARK: - JSON Support
 extension WsqrTacoBgttModel {
   func SJAZEhIl26YqPW7bYsDnGDi(from SJAZEbKNLayFNQOfK7BGEub: WsqrTacoBgttModel) {
     SJAZE4aOsw2iWPPkxu1080X = SJAZEbKNLayFNQOfK7BGEub.SJAZE4aOsw2iWPPkxu1080X
@@ -73,7 +62,7 @@ extension WsqrTacoBgttModel {
     SJAZE3yBY2FOAR0QlYHLIML = SJAZEbKNLayFNQOfK7BGEub.SJAZE3yBY2FOAR0QlYHLIML
     SJAZEM4cS8csFnzWCulr6jU = SJAZEbKNLayFNQOfK7BGEub.SJAZEM4cS8csFnzWCulr6jU
   }
-  /// 转 Dictionary
+  
   func SJAZErTTrSFzQqvk8CqQGVx() -> [String: Any] {
     return [
       "12245d91f902a3046159f5fb454b6348".SJAZET5gG1gyy5729np8EdY(): SJAZE4aOsw2iWPPkxu1080X as Any,
@@ -89,7 +78,6 @@ extension WsqrTacoBgttModel {
     ]
   }
 
-  /// 转 JSON String
   func SJAZEdCCqr3yHlozSZgz6ID() -> String? {
     guard let SJAZEkZrRMSHL5OBgA65cNH = try? JSONSerialization.data(withJSONObject: SJAZErTTrSFzQqvk8CqQGVx()) else {
       return nil
@@ -97,7 +85,6 @@ extension WsqrTacoBgttModel {
     return String(data: SJAZEkZrRMSHL5OBgA65cNH, encoding: .utf8)
   }
 
-  /// 从 JSON 创建对象
   static func SJAZE7KsC41Sdy5ej8SJeT1(_ SJAZEnkLAphU8uUYFhKArrL: [String: Any]) -> WsqrTacoBgttModel? {
     func SJAZE0lmYlYb24mJ5zZXfzO(_ SJAZEyil1v2wyYoqHb5HehM: String) -> Any? {
       SJAZEnkLAphU8uUYFhKArrL[SJAZEyil1v2wyYoqHb5HehM.SJAZET5gG1gyy5729np8EdY()]
